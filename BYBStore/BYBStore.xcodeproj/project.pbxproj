@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F38F4FF71F76178A00848619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF61F76178A00848619 /* main.m */; };
+		F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF91F76178A00848619 /* AppDelegate.m */; };
+		F38F50021F76178A00848619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38F50011F76178A00848619 /* Assets.xcassets */; };
+		F38F50051F76178A00848619 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38F50031F76178A00848619 /* LaunchScreen.storyboard */; };
+		F38F502E1F761CCC00848619 /* BYBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F502B1F761CCC00848619 /* BYBNavigationController.m */; };
+		F38F502F1F761CCC00848619 /* BYBTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F502D1F761CCC00848619 /* BYBTabBarController.m */; };
+		F38F50341F761D1000848619 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50311F761D1000848619 /* UIColor+Extension.m */; };
+		F38F50351F761D1000848619 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50331F761D1000848619 /* UIImage+Image.m */; };
+		F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50391F76209B00848619 /* BYBControllerManger.m */; };
+		F38F503C1F76252300848619 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38F503B1F76252300848619 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F38F4FF21F76178A00848619 /* BYBStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BYBStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F38F4FF61F76178A00848619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F38F4FF81F76178A00848619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
+		F38F4FF91F76178A00848619 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../../AppDelegate.m; sourceTree = "<group>"; };
+		F38F50011F76178A00848619 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F38F50041F76178A00848619 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F38F50061F76178A00848619 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F38F50291F761C8F00848619 /* Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		F38F502A1F761CCC00848619 /* BYBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBNavigationController.h; sourceTree = "<group>"; };
+		F38F502B1F761CCC00848619 /* BYBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBNavigationController.m; sourceTree = "<group>"; };
+		F38F502C1F761CCC00848619 /* BYBTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBTabBarController.h; sourceTree = "<group>"; };
+		F38F502D1F761CCC00848619 /* BYBTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBTabBarController.m; sourceTree = "<group>"; };
+		F38F50301F761D1000848619 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		F38F50311F761D1000848619 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		F38F50321F761D1000848619 /* UIImage+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Image.h"; sourceTree = "<group>"; };
+		F38F50331F761D1000848619 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
+		F38F50371F761DC500848619 /* BYBStore.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYBStore.pch; sourceTree = "<group>"; };
+		F38F50381F76209B00848619 /* BYBControllerManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBControllerManger.h; sourceTree = "<group>"; };
+		F38F50391F76209B00848619 /* BYBControllerManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBControllerManger.m; sourceTree = "<group>"; };
+		F38F503B1F76252300848619 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F38F4FEF1F76178A00848619 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F38F4FE91F76178A00848619 = {
+			isa = PBXGroup;
+			children = (
+				F38F4FF41F76178A00848619 /* BYBStore */,
+				F38F4FF31F76178A00848619 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F38F4FF31F76178A00848619 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F38F4FF21F76178A00848619 /* BYBStore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F38F4FF41F76178A00848619 /* BYBStore */ = {
+			isa = PBXGroup;
+			children = (
+				F38F500C1F761A9100848619 /* Classes */,
+				F38F50011F76178A00848619 /* Assets.xcassets */,
+				F38F50031F76178A00848619 /* LaunchScreen.storyboard */,
+				F38F50061F76178A00848619 /* Info.plist */,
+				F38F503B1F76252300848619 /* Images.xcassets */,
+				F38F4FF51F76178A00848619 /* Supporting Files */,
+			);
+			path = BYBStore;
+			sourceTree = "<group>";
+		};
+		F38F4FF51F76178A00848619 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F38F4FF61F76178A00848619 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F38F500C1F761A9100848619 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50111F761A9100848619 /* Common */,
+				F38F50191F761A9100848619 /* Main */,
+				F38F500D1F761A9100848619 /* Category（分类） */,
+				F38F50151F761A9100848619 /* Home（首页） */,
+				F38F501D1F761A9100848619 /* Mine（我） */,
+				F38F50211F761A9100848619 /* ShareOrder（逛晒单） */,
+				F38F50251F761A9100848619 /* ShopCar（购物车） */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F38F500D1F761A9100848619 /* Category（分类） */ = {
+			isa = PBXGroup;
+			children = (
+				F38F500E1F761A9100848619 /* Controller */,
+				F38F500F1F761A9100848619 /* Model */,
+				F38F50101F761A9100848619 /* View */,
+			);
+			path = "Category（分类）";
+			sourceTree = "<group>";
+		};
+		F38F500E1F761A9100848619 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F38F500F1F761A9100848619 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F38F50101F761A9100848619 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38F50111F761A9100848619 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50121F761A9100848619 /* Base */,
+				F38F50131F761A9100848619 /* Category */,
+				F38F50141F761A9100848619 /* Tools */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F38F50121F761A9100848619 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50291F761C8F00848619 /* Define.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F38F50131F761A9100848619 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50301F761D1000848619 /* UIColor+Extension.h */,
+				F38F50311F761D1000848619 /* UIColor+Extension.m */,
+				F38F50321F761D1000848619 /* UIImage+Image.h */,
+				F38F50331F761D1000848619 /* UIImage+Image.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F38F50141F761A9100848619 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50381F76209B00848619 /* BYBControllerManger.h */,
+				F38F50391F76209B00848619 /* BYBControllerManger.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F38F50151F761A9100848619 /* Home（首页） */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50161F761A9100848619 /* Controller */,
+				F38F50171F761A9100848619 /* Model */,
+				F38F50181F761A9100848619 /* View */,
+			);
+			path = "Home（首页）";
+			sourceTree = "<group>";
+		};
+		F38F50161F761A9100848619 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F38F50171F761A9100848619 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F38F50181F761A9100848619 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38F50191F761A9100848619 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50361F761D7F00848619 /* Others */,
+				F38F501A1F761A9100848619 /* Controller */,
+				F38F501B1F761A9100848619 /* Login&Register */,
+				F38F501C1F761A9100848619 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F38F501A1F761A9100848619 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F38F502A1F761CCC00848619 /* BYBNavigationController.h */,
+				F38F502B1F761CCC00848619 /* BYBNavigationController.m */,
+				F38F502C1F761CCC00848619 /* BYBTabBarController.h */,
+				F38F502D1F761CCC00848619 /* BYBTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F38F501B1F761A9100848619 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
+		F38F501C1F761A9100848619 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38F501D1F761A9100848619 /* Mine（我） */ = {
+			isa = PBXGroup;
+			children = (
+				F38F501E1F761A9100848619 /* Controller */,
+				F38F501F1F761A9100848619 /* Model */,
+				F38F50201F761A9100848619 /* View */,
+			);
+			path = "Mine（我）";
+			sourceTree = "<group>";
+		};
+		F38F501E1F761A9100848619 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F38F501F1F761A9100848619 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F38F50201F761A9100848619 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38F50211F761A9100848619 /* ShareOrder（逛晒单） */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50221F761A9100848619 /* Controller */,
+				F38F50231F761A9100848619 /* Model */,
+				F38F50241F761A9100848619 /* View */,
+			);
+			path = "ShareOrder（逛晒单）";
+			sourceTree = "<group>";
+		};
+		F38F50221F761A9100848619 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F38F50231F761A9100848619 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F38F50241F761A9100848619 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38F50251F761A9100848619 /* ShopCar（购物车） */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50261F761A9100848619 /* Controller */,
+				F38F50271F761A9100848619 /* Model */,
+				F38F50281F761A9100848619 /* View */,
+			);
+			path = "ShopCar（购物车）";
+			sourceTree = "<group>";
+		};
+		F38F50261F761A9100848619 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F38F50271F761A9100848619 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F38F50281F761A9100848619 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38F50361F761D7F00848619 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				F38F4FF81F76178A00848619 /* AppDelegate.h */,
+				F38F4FF91F76178A00848619 /* AppDelegate.m */,
+				F38F50371F761DC500848619 /* BYBStore.pch */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F38F4FF11F76178A00848619 /* BYBStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F38F50091F76178A00848619 /* Build configuration list for PBXNativeTarget "BYBStore" */;
+			buildPhases = (
+				F38F4FEE1F76178A00848619 /* Sources */,
+				F38F4FEF1F76178A00848619 /* Frameworks */,
+				F38F4FF01F76178A00848619 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BYBStore;
+			productName = BYBStore;
+			productReference = F38F4FF21F76178A00848619 /* BYBStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F38F4FEA1F76178A00848619 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BYB;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = BYBStore;
+				TargetAttributes = {
+					F38F4FF11F76178A00848619 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F38F4FED1F76178A00848619 /* Build configuration list for PBXProject "BYBStore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F38F4FE91F76178A00848619;
+			productRefGroup = F38F4FF31F76178A00848619 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F38F4FF11F76178A00848619 /* BYBStore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F38F4FF01F76178A00848619 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F38F503C1F76252300848619 /* Images.xcassets in Resources */,
+				F38F50051F76178A00848619 /* LaunchScreen.storyboard in Resources */,
+				F38F50021F76178A00848619 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F38F4FEE1F76178A00848619 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */,
+				F38F502E1F761CCC00848619 /* BYBNavigationController.m in Sources */,
+				F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */,
+				F38F50341F761D1000848619 /* UIColor+Extension.m in Sources */,
+				F38F50351F761D1000848619 /* UIImage+Image.m in Sources */,
+				F38F502F1F761CCC00848619 /* BYBTabBarController.m in Sources */,
+				F38F4FF71F76178A00848619 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F38F50031F76178A00848619 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F38F50041F76178A00848619 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F38F50071F76178A00848619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F38F50081F76178A00848619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F38F500A1F76178A00848619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BYBStore/Classes/Main/Others/BYBStore.pch";
+				INFOPLIST_FILE = BYBStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BYBStore.BYBStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F38F500B1F76178A00848619 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BYBStore/Classes/Main/Others/BYBStore.pch";
+				INFOPLIST_FILE = BYBStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BYBStore.BYBStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F38F4FED1F76178A00848619 /* Build configuration list for PBXProject "BYBStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F38F50071F76178A00848619 /* Debug */,
+				F38F50081F76178A00848619 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F38F50091F76178A00848619 /* Build configuration list for PBXNativeTarget "BYBStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F38F500A1F76178A00848619 /* Debug */,
+				F38F500B1F76178A00848619 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F38F4FEA1F76178A00848619 /* Project object */;
+}
