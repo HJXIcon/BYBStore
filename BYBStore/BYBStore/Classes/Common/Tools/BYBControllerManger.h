@@ -12,4 +12,7 @@
 
 + (UIViewController *)chooseRootController;
 
++ (void)presentLoginController;
+
++ (void)presentRegisterController;
 @end

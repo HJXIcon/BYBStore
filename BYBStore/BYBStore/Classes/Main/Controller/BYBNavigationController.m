@@ -64,7 +64,7 @@
     [bar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
     
     //设置一张空的图片
-//    [bar setShadowImage:[[UIImage alloc] init]];
+//    [bar setShadowImage:[UIImage imageNamed:@"login_background"]];
     
     NSMutableDictionary *dicBar = [NSMutableDictionary dictionary];
     

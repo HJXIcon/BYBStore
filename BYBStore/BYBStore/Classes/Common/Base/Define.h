@@ -34,6 +34,13 @@
 
 
 
+// 弱引用
+#define JXWeakSelf __weak typeof(self) weakSelf = self;
+
+
+
+
+
 /*!   ------  网络请求 -------       */
 /*
  
@@ -66,6 +73,12 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #import "UIImage+Image.h"
 #import "UIColor+Extension.h"
 #import "BYBControllerManger.h"
+#import "UIView+Extension.h"
 
+
+// 主题颜色
+#define BYBThemeColor [UIColor colorWithHexString:@"0xfb1951"]
+// 背景颜色
+#define BYBBGColor [UIColor colorWithHexString:@"0xdddddd"]
 
 #endif /* Define_h */

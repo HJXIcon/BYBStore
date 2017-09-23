@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bg0-Id-tYd" customClass="BYBAccountLoginView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="234"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号/用户名/邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vTt-rF-9Xo">
+                    <rect key="frame" x="30" y="10" width="315" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="xBr-jn-RxA"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCf-Yb-4PJ">
+                    <rect key="frame" x="30" y="128" width="315" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="5UH-tA-dyV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loginAction:" destination="bg0-Id-tYd" eventType="touchUpInside" id="uZt-li-dKe"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2C-zT-Jhz">
+                    <rect key="frame" x="287" y="187" width="58" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="立即注册">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="registerAction:" destination="bg0-Id-tYd" eventType="touchUpInside" id="FHy-Sd-Gq3"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-iM-CCm">
+                    <rect key="frame" x="30" y="69" width="315" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="nge-Vh-dDr"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoU-hM-Hro">
+                    <rect key="frame" x="30" y="187" width="54" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="忘记密码">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="forgetAction:" destination="bg0-Id-tYd" eventType="touchUpInside" id="a1l-bu-8qx"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vTt-rF-9Xo" firstAttribute="leading" secondItem="bg0-Id-tYd" secondAttribute="leading" constant="30" id="0Rv-HS-RLz"/>
+                <constraint firstItem="JCf-Yb-4PJ" firstAttribute="leading" secondItem="bg0-Id-tYd" secondAttribute="leading" constant="30" id="DnY-T7-Zlx"/>
+                <constraint firstItem="ggq-iM-CCm" firstAttribute="top" secondItem="vTt-rF-9Xo" secondAttribute="bottom" constant="15" id="FSO-VO-rG6"/>
+                <constraint firstAttribute="trailing" secondItem="ggq-iM-CCm" secondAttribute="trailing" constant="30" id="QLK-up-DmE"/>
+                <constraint firstItem="ggq-iM-CCm" firstAttribute="leading" secondItem="bg0-Id-tYd" secondAttribute="leading" constant="30" id="SDm-VF-ERg"/>
+                <constraint firstItem="UoU-hM-Hro" firstAttribute="top" secondItem="JCf-Yb-4PJ" secondAttribute="bottom" constant="15" id="cgW-3w-BQR"/>
+                <constraint firstItem="vTt-rF-9Xo" firstAttribute="top" secondItem="bg0-Id-tYd" secondAttribute="top" constant="10" id="dQN-08-fid"/>
+                <constraint firstItem="u2C-zT-Jhz" firstAttribute="trailing" secondItem="JCf-Yb-4PJ" secondAttribute="trailing" id="gO4-4L-axK"/>
+                <constraint firstAttribute="trailing" secondItem="vTt-rF-9Xo" secondAttribute="trailing" constant="30" id="ima-0c-c3K"/>
+                <constraint firstItem="u2C-zT-Jhz" firstAttribute="top" secondItem="JCf-Yb-4PJ" secondAttribute="bottom" constant="15" id="kQp-um-wig"/>
+                <constraint firstItem="UoU-hM-Hro" firstAttribute="leading" secondItem="JCf-Yb-4PJ" secondAttribute="leading" id="mwz-Gd-pkZ"/>
+                <constraint firstAttribute="trailing" secondItem="JCf-Yb-4PJ" secondAttribute="trailing" constant="30" id="sk0-gP-C5A"/>
+                <constraint firstItem="JCf-Yb-4PJ" firstAttribute="top" secondItem="ggq-iM-CCm" secondAttribute="bottom" constant="15" id="uvY-JM-30t"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="accountTextF" destination="ggq-iM-CCm" id="KEi-n1-pfQ"/>
+                <outlet property="loginBtn" destination="JCf-Yb-4PJ" id="I2u-20-dle"/>
+                <outlet property="phoneTextF" destination="vTt-rF-9Xo" id="GCu-Wr-Hcc"/>
+                <outlet property="registerBtn" destination="u2C-zT-Jhz" id="EdC-DW-gPS"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="-63"/>
+        </view>
+    </objects>
+</document>

@@ -8,6 +8,11 @@
 
 #import "BYBTabBarController.h"
 #import "BYBNavigationController.h"
+#import "BYBHomeViewController.h"
+#import "BYBMineViewController.h"
+#import "BYBShopCarViewController.h"
+#import "BYBShareOrderViewController.h"
+#import "BYBCategoryViewController.h"
 
 @interface BYBTabBarController ()
 
@@ -52,11 +57,11 @@
 
 - (void)setUpAllChildVc
 {
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newshouye_25x25_" selectedImage:@"newshouye-on_25x25_" title:@"首页"];
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newfenlei_25x25_" selectedImage:@"newfenlei-on_25x25_" title:@"分类"];
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newguangshaidan_25x25_" selectedImage:@"newguangshaidan-on_25x25_" title:@"逛晒单"];
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newgouwuche_25x25_" selectedImage:@"newgouwuche-on_25x25_" title:@"购物车"];
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newwode_25x25_" selectedImage:@"newwode-on_25x25_" title:@"我"];
+    [self setUpOneChildVcWithVc:[[BYBHomeViewController alloc]init] Image:@"newshouye_25x25_" selectedImage:@"newshouye-on_25x25_" title:@"首页"];
+    [self setUpOneChildVcWithVc:[[BYBCategoryViewController alloc]init] Image:@"newfenlei_25x25_" selectedImage:@"newfenlei-on_25x25_" title:@"分类"];
+    [self setUpOneChildVcWithVc:[[BYBShareOrderViewController alloc]init] Image:@"newguangshaidan_25x25_" selectedImage:@"newguangshaidan-on_25x25_" title:@"逛晒单"];
+    [self setUpOneChildVcWithVc:[[BYBShopCarViewController alloc]init] Image:@"newgouwuche_25x25_" selectedImage:@"newgouwuche-on_25x25_" title:@"购物车"];
+    [self setUpOneChildVcWithVc:[[BYBMineViewController alloc]init] Image:@"newwode_25x25_" selectedImage:@"newwode-on_25x25_" title:@"我"];
 
     
 }

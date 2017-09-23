@@ -18,6 +18,24 @@
 		F38F50351F761D1000848619 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50331F761D1000848619 /* UIImage+Image.m */; };
 		F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50391F76209B00848619 /* BYBControllerManger.m */; };
 		F38F503C1F76252300848619 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38F503B1F76252300848619 /* Images.xcassets */; };
+		F38F50421F76373600848619 /* BYBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50411F76373600848619 /* BYBBaseViewController.m */; };
+		F38F50451F76376300848619 /* BYBBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50441F76376300848619 /* BYBBaseTableViewCell.m */; };
+		F38F50481F7637BF00848619 /* BYBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50471F7637BF00848619 /* BYBLoginViewController.m */; };
+		F38F504B1F76397500848619 /* BYBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F504A1F76397500848619 /* BYBHomeViewController.m */; };
+		F38F504E1F76398000848619 /* BYBMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F504D1F76398000848619 /* BYBMineViewController.m */; };
+		F38F50511F76398F00848619 /* BYBShareOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50501F76398F00848619 /* BYBShareOrderViewController.m */; };
+		F38F50541F76399B00848619 /* BYBShopCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50531F76399B00848619 /* BYBShopCarViewController.m */; };
+		F38F50571F7639DA00848619 /* BYBCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50561F7639DA00848619 /* BYBCategoryViewController.m */; };
+		F38F505A1F76400900848619 /* BYBLoginSegmentBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50591F76400900848619 /* BYBLoginSegmentBtnView.m */; };
+		F38F505E1F76412E00848619 /* JXRelayoutButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F505D1F76412E00848619 /* JXRelayoutButton.m */; };
+		F38F50611F76453000848619 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50601F76453000848619 /* UIView+Extension.m */; };
+		F38F50671F764C2A00848619 /* BYBPhoneLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50661F764C2A00848619 /* BYBPhoneLoginView.m */; };
+		F38F50691F764C3200848619 /* BYBPhoneLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38F50681F764C3200848619 /* BYBPhoneLoginView.xib */; };
+		F38F506C1F764E4200848619 /* BYBBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F506B1F764E4200848619 /* BYBBaseView.m */; };
+		F38F506F1F764F6E00848619 /* BYBAccountLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F506E1F764F6E00848619 /* BYBAccountLoginView.m */; };
+		F38F50711F764F7800848619 /* BYBAccountLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38F50701F764F7800848619 /* BYBAccountLoginView.xib */; };
+		F38F50751F7661AF00848619 /* BYBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50731F7661AF00848619 /* BYBRegisterViewController.m */; };
+		F38F50781F7661DD00848619 /* BYBRegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38F50771F7661DD00848619 /* BYBRegisterViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +62,39 @@
 		F38F50381F76209B00848619 /* BYBControllerManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBControllerManger.h; sourceTree = "<group>"; };
 		F38F50391F76209B00848619 /* BYBControllerManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBControllerManger.m; sourceTree = "<group>"; };
 		F38F503B1F76252300848619 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F38F50401F76373600848619 /* BYBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBBaseViewController.h; sourceTree = "<group>"; };
+		F38F50411F76373600848619 /* BYBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBBaseViewController.m; sourceTree = "<group>"; };
+		F38F50431F76376300848619 /* BYBBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBBaseTableViewCell.h; sourceTree = "<group>"; };
+		F38F50441F76376300848619 /* BYBBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBBaseTableViewCell.m; sourceTree = "<group>"; };
+		F38F50461F7637BF00848619 /* BYBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBLoginViewController.h; sourceTree = "<group>"; };
+		F38F50471F7637BF00848619 /* BYBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBLoginViewController.m; sourceTree = "<group>"; };
+		F38F50491F76397500848619 /* BYBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeViewController.h; sourceTree = "<group>"; };
+		F38F504A1F76397500848619 /* BYBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeViewController.m; sourceTree = "<group>"; };
+		F38F504C1F76398000848619 /* BYBMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBMineViewController.h; sourceTree = "<group>"; };
+		F38F504D1F76398000848619 /* BYBMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBMineViewController.m; sourceTree = "<group>"; };
+		F38F504F1F76398F00848619 /* BYBShareOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBShareOrderViewController.h; sourceTree = "<group>"; };
+		F38F50501F76398F00848619 /* BYBShareOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBShareOrderViewController.m; sourceTree = "<group>"; };
+		F38F50521F76399B00848619 /* BYBShopCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBShopCarViewController.h; sourceTree = "<group>"; };
+		F38F50531F76399B00848619 /* BYBShopCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBShopCarViewController.m; sourceTree = "<group>"; };
+		F38F50551F7639DA00848619 /* BYBCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBCategoryViewController.h; sourceTree = "<group>"; };
+		F38F50561F7639DA00848619 /* BYBCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBCategoryViewController.m; sourceTree = "<group>"; };
+		F38F50581F76400900848619 /* BYBLoginSegmentBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBLoginSegmentBtnView.h; sourceTree = "<group>"; };
+		F38F50591F76400900848619 /* BYBLoginSegmentBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBLoginSegmentBtnView.m; sourceTree = "<group>"; };
+		F38F505C1F76412E00848619 /* JXRelayoutButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXRelayoutButton.h; sourceTree = "<group>"; };
+		F38F505D1F76412E00848619 /* JXRelayoutButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXRelayoutButton.m; sourceTree = "<group>"; };
+		F38F505F1F76453000848619 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		F38F50601F76453000848619 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		F38F50651F764C2A00848619 /* BYBPhoneLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBPhoneLoginView.h; sourceTree = "<group>"; };
+		F38F50661F764C2A00848619 /* BYBPhoneLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBPhoneLoginView.m; sourceTree = "<group>"; };
+		F38F50681F764C3200848619 /* BYBPhoneLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYBPhoneLoginView.xib; sourceTree = "<group>"; };
+		F38F506A1F764E4200848619 /* BYBBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBBaseView.h; sourceTree = "<group>"; };
+		F38F506B1F764E4200848619 /* BYBBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBBaseView.m; sourceTree = "<group>"; };
+		F38F506D1F764F6E00848619 /* BYBAccountLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBAccountLoginView.h; sourceTree = "<group>"; };
+		F38F506E1F764F6E00848619 /* BYBAccountLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBAccountLoginView.m; sourceTree = "<group>"; };
+		F38F50701F764F7800848619 /* BYBAccountLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYBAccountLoginView.xib; sourceTree = "<group>"; };
+		F38F50721F7661AF00848619 /* BYBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBRegisterViewController.h; sourceTree = "<group>"; };
+		F38F50731F7661AF00848619 /* BYBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBRegisterViewController.m; sourceTree = "<group>"; };
+		F38F50771F7661DD00848619 /* BYBRegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BYBRegisterViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +192,8 @@
 		F38F500E1F761A9100848619 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F38F50551F7639DA00848619 /* BYBCategoryViewController.h */,
+				F38F50561F7639DA00848619 /* BYBCategoryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,6 +215,7 @@
 		F38F50111F761A9100848619 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F38F505B1F7640AA00848619 /* SubClass */,
 				F38F50121F761A9100848619 /* Base */,
 				F38F50131F761A9100848619 /* Category */,
 				F38F50141F761A9100848619 /* Tools */,
@@ -173,6 +227,12 @@
 			isa = PBXGroup;
 			children = (
 				F38F50291F761C8F00848619 /* Define.h */,
+				F38F50401F76373600848619 /* BYBBaseViewController.h */,
+				F38F50411F76373600848619 /* BYBBaseViewController.m */,
+				F38F50431F76376300848619 /* BYBBaseTableViewCell.h */,
+				F38F50441F76376300848619 /* BYBBaseTableViewCell.m */,
+				F38F506A1F764E4200848619 /* BYBBaseView.h */,
+				F38F506B1F764E4200848619 /* BYBBaseView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -180,6 +240,8 @@
 		F38F50131F761A9100848619 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F38F505F1F76453000848619 /* UIView+Extension.h */,
+				F38F50601F76453000848619 /* UIView+Extension.m */,
 				F38F50301F761D1000848619 /* UIColor+Extension.h */,
 				F38F50311F761D1000848619 /* UIColor+Extension.m */,
 				F38F50321F761D1000848619 /* UIImage+Image.h */,
@@ -210,6 +272,8 @@
 		F38F50161F761A9100848619 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F38F50491F76397500848619 /* BYBHomeViewController.h */,
+				F38F504A1F76397500848619 /* BYBHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,6 +317,9 @@
 		F38F501B1F761A9100848619 /* Login&Register */ = {
 			isa = PBXGroup;
 			children = (
+				F38F503D1F7636FE00848619 /* Controller */,
+				F38F503E1F7636FE00848619 /* Model */,
+				F38F503F1F7636FE00848619 /* View */,
 			);
 			path = "Login&Register";
 			sourceTree = "<group>";
@@ -277,6 +344,8 @@
 		F38F501E1F761A9100848619 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F38F504C1F76398000848619 /* BYBMineViewController.h */,
+				F38F504D1F76398000848619 /* BYBMineViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -308,6 +377,8 @@
 		F38F50221F761A9100848619 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F38F504F1F76398F00848619 /* BYBShareOrderViewController.h */,
+				F38F50501F76398F00848619 /* BYBShareOrderViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -339,6 +410,8 @@
 		F38F50261F761A9100848619 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F38F50521F76399B00848619 /* BYBShopCarViewController.h */,
+				F38F50531F76399B00848619 /* BYBShopCarViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -365,6 +438,49 @@
 				F38F50371F761DC500848619 /* BYBStore.pch */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		F38F503D1F7636FE00848619 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50461F7637BF00848619 /* BYBLoginViewController.h */,
+				F38F50471F7637BF00848619 /* BYBLoginViewController.m */,
+				F38F50721F7661AF00848619 /* BYBRegisterViewController.h */,
+				F38F50731F7661AF00848619 /* BYBRegisterViewController.m */,
+				F38F50771F7661DD00848619 /* BYBRegisterViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F38F503E1F7636FE00848619 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F38F503F1F7636FE00848619 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F38F50581F76400900848619 /* BYBLoginSegmentBtnView.h */,
+				F38F50591F76400900848619 /* BYBLoginSegmentBtnView.m */,
+				F38F50651F764C2A00848619 /* BYBPhoneLoginView.h */,
+				F38F50661F764C2A00848619 /* BYBPhoneLoginView.m */,
+				F38F50681F764C3200848619 /* BYBPhoneLoginView.xib */,
+				F38F506D1F764F6E00848619 /* BYBAccountLoginView.h */,
+				F38F506E1F764F6E00848619 /* BYBAccountLoginView.m */,
+				F38F50701F764F7800848619 /* BYBAccountLoginView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38F505B1F7640AA00848619 /* SubClass */ = {
+			isa = PBXGroup;
+			children = (
+				F38F505C1F76412E00848619 /* JXRelayoutButton.h */,
+				F38F505D1F76412E00848619 /* JXRelayoutButton.m */,
+			);
+			path = SubClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +546,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F38F503C1F76252300848619 /* Images.xcassets in Resources */,
+				F38F50691F764C3200848619 /* BYBPhoneLoginView.xib in Resources */,
+				F38F50711F764F7800848619 /* BYBAccountLoginView.xib in Resources */,
 				F38F50051F76178A00848619 /* LaunchScreen.storyboard in Resources */,
+				F38F50781F7661DD00848619 /* BYBRegisterViewController.storyboard in Resources */,
 				F38F50021F76178A00848619 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,12 +615,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F38F506F1F764F6E00848619 /* BYBAccountLoginView.m in Sources */,
+				F38F50751F7661AF00848619 /* BYBRegisterViewController.m in Sources */,
+				F38F50611F76453000848619 /* UIView+Extension.m in Sources */,
 				F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */,
+				F38F50571F7639DA00848619 /* BYBCategoryViewController.m in Sources */,
+				F38F506C1F764E4200848619 /* BYBBaseView.m in Sources */,
+				F38F50541F76399B00848619 /* BYBShopCarViewController.m in Sources */,
+				F38F50421F76373600848619 /* BYBBaseViewController.m in Sources */,
+				F38F50451F76376300848619 /* BYBBaseTableViewCell.m in Sources */,
+				F38F504E1F76398000848619 /* BYBMineViewController.m in Sources */,
 				F38F502E1F761CCC00848619 /* BYBNavigationController.m in Sources */,
+				F38F50481F7637BF00848619 /* BYBLoginViewController.m in Sources */,
 				F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */,
 				F38F50341F761D1000848619 /* UIColor+Extension.m in Sources */,
+				F38F505E1F76412E00848619 /* JXRelayoutButton.m in Sources */,
+				F38F50671F764C2A00848619 /* BYBPhoneLoginView.m in Sources */,
+				F38F504B1F76397500848619 /* BYBHomeViewController.m in Sources */,
+				F38F505A1F76400900848619 /* BYBLoginSegmentBtnView.m in Sources */,
 				F38F50351F761D1000848619 /* UIImage+Image.m in Sources */,
 				F38F502F1F761CCC00848619 /* BYBTabBarController.m in Sources */,
+				F38F50511F76398F00848619 /* BYBShareOrderViewController.m in Sources */,
 				F38F4FF71F76178A00848619 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
