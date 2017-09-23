@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AF949742EF8AAD8993E9411 /* libPods-BYBStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */; };
 		F38F4FF71F76178A00848619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF61F76178A00848619 /* main.m */; };
 		F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF91F76178A00848619 /* AppDelegate.m */; };
 		F38F50021F76178A00848619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38F50011F76178A00848619 /* Assets.xcassets */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B238622EB5D08EC3F32AAB9E /* Pods-BYBStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.debug.xcconfig"; sourceTree = "<group>"; };
+		CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BYBStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F331BA313C508C63468B4D7F /* Pods-BYBStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.release.xcconfig"; sourceTree = "<group>"; };
 		F38F4FF21F76178A00848619 /* BYBStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BYBStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38F4FF61F76178A00848619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F38F4FF81F76178A00848619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -47,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AF949742EF8AAD8993E9411 /* libPods-BYBStore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		095A557C7409A4964A758285 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22BC64649CD964313D999ABE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B238622EB5D08EC3F32AAB9E /* Pods-BYBStore.debug.xcconfig */,
+				F331BA313C508C63468B4D7F /* Pods-BYBStore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F38F4FE91F76178A00848619 = {
 			isa = PBXGroup;
 			children = (
 				F38F4FF41F76178A00848619 /* BYBStore */,
 				F38F4FF31F76178A00848619 /* Products */,
+				22BC64649CD964313D999ABE /* Pods */,
+				095A557C7409A4964A758285 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -350,9 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F38F50091F76178A00848619 /* Build configuration list for PBXNativeTarget "BYBStore" */;
 			buildPhases = (
+				1B35B86F297EEB263BE1AC3D /* [CP] Check Pods Manifest.lock */,
 				F38F4FEE1F76178A00848619 /* Sources */,
 				F38F4FEF1F76178A00848619 /* Frameworks */,
 				F38F4FF01F76178A00848619 /* Resources */,
+				99231F1AE34263E8CF8EBD7B /* [CP] Embed Pods Frameworks */,
+				A9B26F0B3A6E706B876B6558 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -409,6 +436,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B35B86F297EEB263BE1AC3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BYBStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99231F1AE34263E8CF8EBD7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9B26F0B3A6E706B876B6558 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F38F4FEE1F76178A00848619 /* Sources */ = {
@@ -533,6 +614,7 @@
 		};
 		F38F500A1F76178A00848619 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B238622EB5D08EC3F32AAB9E /* Pods-BYBStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -548,6 +630,7 @@
 		};
 		F38F500B1F76178A00848619 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F331BA313C508C63468B4D7F /* Pods-BYBStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -580,6 +663,7 @@
 				F38F500B1F76178A00848619 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

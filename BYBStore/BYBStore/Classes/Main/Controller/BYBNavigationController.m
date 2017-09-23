@@ -26,8 +26,8 @@
         [_backBtn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
         _backBtn.titleLabel.font = [UIFont systemFontOfSize:16];
         
-        [_backBtn setImage:[UIImage imageNamed:@"back_2"] forState:UIControlStateNormal];
-        [_backBtn setImage:[UIImage imageNamed:@"back_2"] forState:UIControlStateHighlighted
+        [_backBtn setImage:[UIImage imageNamed:@"fanhui_25x25_"] forState:UIControlStateNormal];
+        [_backBtn setImage:[UIImage imageNamed:@"fanhui_25x25_"] forState:UIControlStateHighlighted
          ];
         [_backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
         _backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
@@ -54,19 +54,22 @@
     
     UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    dic[NSFontAttributeName] = [UIFont systemFontOfSize:19.0];
-    dic[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    dic[NSFontAttributeName] = [UIFont boldSystemFontOfSize:19.0];
+    dic[NSForegroundColorAttributeName] = [UIColor blackColor];
     [item setTitleTextAttributes:dic forState:UIControlStateNormal];
     
     // 全局navigationBar
     UINavigationBar *bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
     
-    [bar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"0xf16156"]] forBarMetrics:UIBarMetricsDefault];
+    [bar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+    
+    //设置一张空的图片
+//    [bar setShadowImage:[[UIImage alloc] init]];
     
     NSMutableDictionary *dicBar = [NSMutableDictionary dictionary];
     
     //    dicBar[NSFontAttributeName] = [UIFont systemFontOfSize:15];
-    dicBar[NSForegroundColorAttributeName] = [UIColor whiteColor];
+    dicBar[NSForegroundColorAttributeName] = [UIColor blackColor];
     [bar setTitleTextAttributes:dicBar];
     
 }

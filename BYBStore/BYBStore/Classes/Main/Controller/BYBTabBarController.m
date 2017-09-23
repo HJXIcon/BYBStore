@@ -24,14 +24,13 @@
     UITabBarItem *tabBarItem = [UITabBarItem appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
     
     NSMutableDictionary *dictNormal = [NSMutableDictionary dictionary];
-    dictNormal[NSForegroundColorAttributeName] = [UIColor blackColor];
-    dictNormal[NSFontAttributeName] = [UIFont systemFontOfSize:9];
-    
+    dictNormal[NSForegroundColorAttributeName] = [UIColor grayColor];
+    dictNormal[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     NSMutableDictionary *dictSelected = [NSMutableDictionary dictionary];
     
     dictSelected[NSForegroundColorAttributeName] = [UIColor colorWithHexString:@"0xf16156"];
     
-    dictSelected[NSFontAttributeName] = [UIFont systemFontOfSize:9];
+    dictSelected[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     
     [tabBarItem setTitleTextAttributes:dictNormal forState:UIControlStateNormal];
     [tabBarItem setTitleTextAttributes:dictSelected forState:UIControlStateSelected];
@@ -53,11 +52,11 @@
 
 - (void)setUpAllChildVc
 {
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"home_tabbar_normal" selectedImage:@"home_tabbar_select" title:@"首页"];
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"task_tabbar_normal" selectedImage:@"task_tabbar_select" title:@"我的需求"];
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"square_tabbar_normal" selectedImage:@"square_tabbar_select" title:@"云广场"];
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"tabbar_message_normal" selectedImage:@"tabbar_message_select" title:@"消息"];
-    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"personCenter_tabbar_normal" selectedImage:@"personCenter_tabbar_select" title:@"企业中心"];
+    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newshouye_25x25_" selectedImage:@"newshouye-on_25x25_" title:@"首页"];
+    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newfenlei_25x25_" selectedImage:@"newfenlei-on_25x25_" title:@"分类"];
+    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newguangshaidan_25x25_" selectedImage:@"newguangshaidan-on_25x25_" title:@"逛晒单"];
+    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newgouwuche_25x25_" selectedImage:@"newgouwuche-on_25x25_" title:@"购物车"];
+    [self setUpOneChildVcWithVc:[[UIViewController alloc]init] Image:@"newwode_25x25_" selectedImage:@"newwode-on_25x25_" title:@"我"];
 
     
 }
