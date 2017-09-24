@@ -15,5 +15,6 @@ pod 'MJExtension', '~> 3.0.13'
 pod 'JPFPSStatus', '~> 0.1' #FPS
 pod 'DOPDropDownMenu-Enhanced', '~> 1.0.0'#下拉选择菜单
 pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
+pod 'MBProgressHUD', '~> 1.0.0'
 
 end

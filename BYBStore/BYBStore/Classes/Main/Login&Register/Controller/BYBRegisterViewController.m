@@ -16,11 +16,22 @@
 @property (weak, nonatomic) IBOutlet UITextField *pdwTextF;
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 @property (weak, nonatomic) IBOutlet UILabel *agreementLabel;
-
+@property(strong,nonatomic) NSTimer *timer;
 @property (nonatomic, strong) UIButton *rightBtn;
 @end
 
 @implementation BYBRegisterViewController
+- (NSTimer *)timer{
+    if (_timer == nil) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval: 1
+                                                  target: self
+                                                selector: @selector(timerAction:)
+                                                userInfo: nil
+                                                 repeats: YES];
+        [[NSRunLoop currentRunLoop]addTimer:_timer forMode:UITrackingRunLoopMode];
+    }
+    return _timer;
+}
 
 - (UIButton *)rightBtn{
     if (_rightBtn == nil) {
@@ -40,6 +51,7 @@
     
     UIView *rightView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 34, 24)];
     [rightView addSubview:self.rightBtn];
+    self.pdwTextF.rightViewMode = UITextFieldViewModeAlways;
     self.pdwTextF.rightView = rightView;
     self.pdwTextF.secureTextEntry = YES;
     
@@ -52,7 +64,32 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textChangeAction) name:UITextFieldTextDidChangeNotification object:nil];
     
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(agreementAction)];
+    self.agreementLabel.userInteractionEnabled = YES;
+    [self.agreementLabel addGestureRecognizer:tap];
+    
+    
+    self.getCodeBtn.enabled = NO;
+    [self dealGetCodeBtn];
+    
 }
+
+
+#pragma mark - Private Method
+- (void)dealGetCodeBtn{
+    self.getCodeBtn.layer.cornerRadius = 5;
+    self.getCodeBtn.layer.masksToBounds = YES;
+    self.getCodeBtn.layer.borderWidth = 0.5;
+    self.getCodeBtn.layer.borderColor = self.getCodeBtn.enabled ?  BYBThemeColor.CGColor : BYBBGColor.CGColor;
+    [self.getCodeBtn setTitleColor:self.getCodeBtn.enabled ? BYBThemeColor : BYBBGColor forState:UIControlStateNormal];
+}
+
+#pragma mark - Actions
+- (void)timerAction:(NSTimer *)theTimer{
+    
+}
+
 - (IBAction)commitAction:(id)sender {
     
 }
@@ -77,6 +114,13 @@
     }else{
         self.commitBtn.enabled = NO;
     }
+    
+    self.getCodeBtn.enabled = self.phoneTextF.text.length > 0;
+    [self dealGetCodeBtn];
+}
+
+- (void)agreementAction{
+    JXLog(@"agreementAction --- ");
 }
 
 - (void)dealloc{

@@ -30,11 +30,8 @@
     self.phoneTextF.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.codeTextF.clearButtonMode = UITextFieldViewModeWhileEditing;
     
-    self.getCodeBtn.layer.cornerRadius = 5;
-    self.getCodeBtn.layer.masksToBounds = YES;
-    self.getCodeBtn.layer.borderWidth = 0.5;
-    self.getCodeBtn.layer.borderColor = BYBBGColor.CGColor;
-    
+    self.getCodeBtn.enabled = NO;
+    [self dealGetCodeBtn];
     
     [self.regitserBtn setTitleColor:BYBThemeColor forState:UIControlStateNormal];
     
@@ -42,6 +39,16 @@
     
 }
 
+#pragma mark - Private Method
+- (void)dealGetCodeBtn{
+    self.getCodeBtn.layer.cornerRadius = 5;
+    self.getCodeBtn.layer.masksToBounds = YES;
+    self.getCodeBtn.layer.borderWidth = 0.5;
+    self.getCodeBtn.layer.borderColor = self.getCodeBtn.enabled ?  BYBThemeColor.CGColor : BYBBGColor.CGColor;
+    [self.getCodeBtn setTitleColor:self.getCodeBtn.enabled ? BYBThemeColor : BYBBGColor forState:UIControlStateNormal];
+}
+
+#pragma mark - Actions
 - (IBAction)loginAction:(UIButton *)sender {
     
 }
@@ -63,6 +70,11 @@
     }else{
         self.loginBtn.enabled = NO;
     }
+    
+    
+    self.getCodeBtn.enabled = self.phoneTextF.text.length > 0;
+    [self dealGetCodeBtn];
+    
 }
 
 - (void)dealloc{

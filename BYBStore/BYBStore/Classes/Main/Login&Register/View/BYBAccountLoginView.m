@@ -54,6 +54,7 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textChangeAction) name:UITextFieldTextDidChangeNotification object:nil];
     
+    
 }
 
 
