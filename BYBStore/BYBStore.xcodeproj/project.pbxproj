@@ -36,6 +36,20 @@
 		F38F50711F764F7800848619 /* BYBAccountLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38F50701F764F7800848619 /* BYBAccountLoginView.xib */; };
 		F38F50751F7661AF00848619 /* BYBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50731F7661AF00848619 /* BYBRegisterViewController.m */; };
 		F38F50781F7661DD00848619 /* BYBRegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38F50771F7661DD00848619 /* BYBRegisterViewController.storyboard */; };
+		F3C04A601F78A77A00EE8FAF /* BYBCheckTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A5F1F78A77A00EE8FAF /* BYBCheckTools.m */; };
+		F3C04A631F78A8ED00EE8FAF /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A621F78A8ED00EE8FAF /* UIViewController+HUD.m */; };
+		F3C04A661F78B01700EE8FAF /* BYBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A651F78B01700EE8FAF /* BYBWebViewController.m */; };
+		F3C04A691F78B25D00EE8FAF /* BYBNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A681F78B25D00EE8FAF /* BYBNavigationBar.m */; };
+		F3C04A6B1F78B26700EE8FAF /* BYBNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C04A6A1F78B26700EE8FAF /* BYBNavigationBar.xib */; };
+		F3C04A6E1F78E6C600EE8FAF /* UITableView+placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A6D1F78E6C600EE8FAF /* UITableView+placeholder.m */; };
+		F3C04A711F78E7B500EE8FAF /* BYBNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A701F78E7B500EE8FAF /* BYBNoDataView.m */; };
+		F3C04A731F78E7C100EE8FAF /* BYBNoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C04A721F78E7C100EE8FAF /* BYBNoDataView.xib */; };
+		F3C04A761F78EA2A00EE8FAF /* BYBBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A751F78EA2A00EE8FAF /* BYBBaseTableViewController.m */; };
+		F3C04A791F78F41600EE8FAF /* BYBRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A781F78F41600EE8FAF /* BYBRefreshHeader.m */; };
+		F3C04A7C1F78F5B400EE8FAF /* BYBRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A7B1F78F5B400EE8FAF /* BYBRefreshFooter.m */; };
+		F3C04A881F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A871F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m */; };
+		F3C04A8B1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A8A1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m */; };
+		F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A8D1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +109,32 @@
 		F38F50721F7661AF00848619 /* BYBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBRegisterViewController.h; sourceTree = "<group>"; };
 		F38F50731F7661AF00848619 /* BYBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBRegisterViewController.m; sourceTree = "<group>"; };
 		F38F50771F7661DD00848619 /* BYBRegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BYBRegisterViewController.storyboard; sourceTree = "<group>"; };
+		F3C04A5E1F78A77A00EE8FAF /* BYBCheckTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBCheckTools.h; sourceTree = "<group>"; };
+		F3C04A5F1F78A77A00EE8FAF /* BYBCheckTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBCheckTools.m; sourceTree = "<group>"; };
+		F3C04A611F78A8ED00EE8FAF /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		F3C04A621F78A8ED00EE8FAF /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		F3C04A641F78B01700EE8FAF /* BYBWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBWebViewController.h; sourceTree = "<group>"; };
+		F3C04A651F78B01700EE8FAF /* BYBWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBWebViewController.m; sourceTree = "<group>"; };
+		F3C04A671F78B25D00EE8FAF /* BYBNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBNavigationBar.h; sourceTree = "<group>"; };
+		F3C04A681F78B25D00EE8FAF /* BYBNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBNavigationBar.m; sourceTree = "<group>"; };
+		F3C04A6A1F78B26700EE8FAF /* BYBNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYBNavigationBar.xib; sourceTree = "<group>"; };
+		F3C04A6C1F78E6C600EE8FAF /* UITableView+placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+placeholder.h"; sourceTree = "<group>"; };
+		F3C04A6D1F78E6C600EE8FAF /* UITableView+placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+placeholder.m"; sourceTree = "<group>"; };
+		F3C04A6F1F78E7B500EE8FAF /* BYBNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBNoDataView.h; sourceTree = "<group>"; };
+		F3C04A701F78E7B500EE8FAF /* BYBNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBNoDataView.m; sourceTree = "<group>"; };
+		F3C04A721F78E7C100EE8FAF /* BYBNoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYBNoDataView.xib; sourceTree = "<group>"; };
+		F3C04A741F78EA2A00EE8FAF /* BYBBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBBaseTableViewController.h; sourceTree = "<group>"; };
+		F3C04A751F78EA2A00EE8FAF /* BYBBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBBaseTableViewController.m; sourceTree = "<group>"; };
+		F3C04A771F78F41600EE8FAF /* BYBRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBRefreshHeader.h; sourceTree = "<group>"; };
+		F3C04A781F78F41600EE8FAF /* BYBRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBRefreshHeader.m; sourceTree = "<group>"; };
+		F3C04A7A1F78F5B400EE8FAF /* BYBRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBRefreshFooter.h; sourceTree = "<group>"; };
+		F3C04A7B1F78F5B400EE8FAF /* BYBRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBRefreshFooter.m; sourceTree = "<group>"; };
+		F3C04A861F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBShareOrderOfFeaturedController.h; sourceTree = "<group>"; };
+		F3C04A871F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBShareOrderOfFeaturedController.m; sourceTree = "<group>"; };
+		F3C04A891F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBShareOrderOfNewestController.h; sourceTree = "<group>"; };
+		F3C04A8A1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBShareOrderOfNewestController.m; sourceTree = "<group>"; };
+		F3C04A8C1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBShareOrderOfMineController.h; sourceTree = "<group>"; };
+		F3C04A8D1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBShareOrderOfMineController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +269,8 @@
 				F38F50291F761C8F00848619 /* Define.h */,
 				F38F50401F76373600848619 /* BYBBaseViewController.h */,
 				F38F50411F76373600848619 /* BYBBaseViewController.m */,
+				F3C04A741F78EA2A00EE8FAF /* BYBBaseTableViewController.h */,
+				F3C04A751F78EA2A00EE8FAF /* BYBBaseTableViewController.m */,
 				F38F50431F76376300848619 /* BYBBaseTableViewCell.h */,
 				F38F50441F76376300848619 /* BYBBaseTableViewCell.m */,
 				F38F506A1F764E4200848619 /* BYBBaseView.h */,
@@ -240,6 +282,10 @@
 		F38F50131F761A9100848619 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F3C04A6C1F78E6C600EE8FAF /* UITableView+placeholder.h */,
+				F3C04A6D1F78E6C600EE8FAF /* UITableView+placeholder.m */,
+				F3C04A611F78A8ED00EE8FAF /* UIViewController+HUD.h */,
+				F3C04A621F78A8ED00EE8FAF /* UIViewController+HUD.m */,
 				F38F505F1F76453000848619 /* UIView+Extension.h */,
 				F38F50601F76453000848619 /* UIView+Extension.m */,
 				F38F50301F761D1000848619 /* UIColor+Extension.h */,
@@ -255,6 +301,8 @@
 			children = (
 				F38F50381F76209B00848619 /* BYBControllerManger.h */,
 				F38F50391F76209B00848619 /* BYBControllerManger.m */,
+				F3C04A5E1F78A77A00EE8FAF /* BYBCheckTools.h */,
+				F3C04A5F1F78A77A00EE8FAF /* BYBCheckTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -379,6 +427,12 @@
 			children = (
 				F38F504F1F76398F00848619 /* BYBShareOrderViewController.h */,
 				F38F50501F76398F00848619 /* BYBShareOrderViewController.m */,
+				F3C04A861F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.h */,
+				F3C04A871F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m */,
+				F3C04A891F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.h */,
+				F3C04A8A1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m */,
+				F3C04A8C1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.h */,
+				F3C04A8D1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -479,6 +533,18 @@
 			children = (
 				F38F505C1F76412E00848619 /* JXRelayoutButton.h */,
 				F38F505D1F76412E00848619 /* JXRelayoutButton.m */,
+				F3C04A641F78B01700EE8FAF /* BYBWebViewController.h */,
+				F3C04A651F78B01700EE8FAF /* BYBWebViewController.m */,
+				F3C04A671F78B25D00EE8FAF /* BYBNavigationBar.h */,
+				F3C04A681F78B25D00EE8FAF /* BYBNavigationBar.m */,
+				F3C04A6A1F78B26700EE8FAF /* BYBNavigationBar.xib */,
+				F3C04A6F1F78E7B500EE8FAF /* BYBNoDataView.h */,
+				F3C04A701F78E7B500EE8FAF /* BYBNoDataView.m */,
+				F3C04A721F78E7C100EE8FAF /* BYBNoDataView.xib */,
+				F3C04A771F78F41600EE8FAF /* BYBRefreshHeader.h */,
+				F3C04A781F78F41600EE8FAF /* BYBRefreshHeader.m */,
+				F3C04A7A1F78F5B400EE8FAF /* BYBRefreshFooter.h */,
+				F3C04A7B1F78F5B400EE8FAF /* BYBRefreshFooter.m */,
 			);
 			path = SubClass;
 			sourceTree = "<group>";
@@ -546,8 +612,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F38F503C1F76252300848619 /* Images.xcassets in Resources */,
+				F3C04A731F78E7C100EE8FAF /* BYBNoDataView.xib in Resources */,
 				F38F50691F764C3200848619 /* BYBPhoneLoginView.xib in Resources */,
 				F38F50711F764F7800848619 /* BYBAccountLoginView.xib in Resources */,
+				F3C04A6B1F78B26700EE8FAF /* BYBNavigationBar.xib in Resources */,
 				F38F50051F76178A00848619 /* LaunchScreen.storyboard in Resources */,
 				F38F50781F7661DD00848619 /* BYBRegisterViewController.storyboard in Resources */,
 				F38F50021F76178A00848619 /* Assets.xcassets in Resources */,
@@ -617,26 +685,38 @@
 			files = (
 				F38F506F1F764F6E00848619 /* BYBAccountLoginView.m in Sources */,
 				F38F50751F7661AF00848619 /* BYBRegisterViewController.m in Sources */,
+				F3C04A881F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m in Sources */,
 				F38F50611F76453000848619 /* UIView+Extension.m in Sources */,
 				F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */,
+				F3C04A6E1F78E6C600EE8FAF /* UITableView+placeholder.m in Sources */,
+				F3C04A661F78B01700EE8FAF /* BYBWebViewController.m in Sources */,
 				F38F50571F7639DA00848619 /* BYBCategoryViewController.m in Sources */,
 				F38F506C1F764E4200848619 /* BYBBaseView.m in Sources */,
 				F38F50541F76399B00848619 /* BYBShopCarViewController.m in Sources */,
+				F3C04A7C1F78F5B400EE8FAF /* BYBRefreshFooter.m in Sources */,
+				F3C04A711F78E7B500EE8FAF /* BYBNoDataView.m in Sources */,
 				F38F50421F76373600848619 /* BYBBaseViewController.m in Sources */,
 				F38F50451F76376300848619 /* BYBBaseTableViewCell.m in Sources */,
 				F38F504E1F76398000848619 /* BYBMineViewController.m in Sources */,
 				F38F502E1F761CCC00848619 /* BYBNavigationController.m in Sources */,
 				F38F50481F7637BF00848619 /* BYBLoginViewController.m in Sources */,
 				F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */,
+				F3C04A8B1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m in Sources */,
+				F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */,
 				F38F50341F761D1000848619 /* UIColor+Extension.m in Sources */,
 				F38F505E1F76412E00848619 /* JXRelayoutButton.m in Sources */,
 				F38F50671F764C2A00848619 /* BYBPhoneLoginView.m in Sources */,
 				F38F504B1F76397500848619 /* BYBHomeViewController.m in Sources */,
 				F38F505A1F76400900848619 /* BYBLoginSegmentBtnView.m in Sources */,
+				F3C04A631F78A8ED00EE8FAF /* UIViewController+HUD.m in Sources */,
 				F38F50351F761D1000848619 /* UIImage+Image.m in Sources */,
 				F38F502F1F761CCC00848619 /* BYBTabBarController.m in Sources */,
+				F3C04A761F78EA2A00EE8FAF /* BYBBaseTableViewController.m in Sources */,
 				F38F50511F76398F00848619 /* BYBShareOrderViewController.m in Sources */,
+				F3C04A791F78F41600EE8FAF /* BYBRefreshHeader.m in Sources */,
+				F3C04A601F78A77A00EE8FAF /* BYBCheckTools.m in Sources */,
 				F38F4FF71F76178A00848619 /* main.m in Sources */,
+				F3C04A691F78B25D00EE8FAF /* BYBNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

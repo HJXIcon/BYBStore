@@ -38,4 +38,52 @@
     [topRootViewController presentViewController:vc animated:YES completion:nil];
     
 }
+
+
+
+
+/**
+ 拿到当前正在显示的控制器，不管是push进去的，还是present进去的都能拿到
+ */
++ (UIViewController *)getVisibleViewControllerFrom:(UIViewController*)vc {
+    
+    if ([vc isKindOfClass:[UINavigationController class]]) {
+        
+        return [self getVisibleViewControllerFrom:[((UINavigationController*) vc) visibleViewController]];
+        
+    }else if ([vc isKindOfClass:[UITabBarController class]]){
+        
+        return [self getVisibleViewControllerFrom:[((UITabBarController*) vc) selectedViewController]];
+        
+    } else {
+        
+        if (vc.presentedViewController) {
+            
+            return [self getVisibleViewControllerFrom:vc.presentedViewController];
+            
+        } else {
+            
+            return vc;
+            
+        }
+        
+    }
+    
+}
+
+
+
+/**
+ 怎么通过view找到拥有这个View的Controller
+ */
++ (UIViewController *)getControllerFormView:(UIView *)view {
+    for (UIView* next = [view superview]; next; next = next.superview) {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
+
 @end

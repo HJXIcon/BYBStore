@@ -61,10 +61,14 @@ static CGFloat const Scroll_Height = 350;
         _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, Segment_Height + BG_Height, kScreenW, Scroll_Height)];
         _mainScrollView.contentSize = CGSizeMake(kScreenW * 2, kScreenH);
         
-        
+        JXWeakSelf;
         BYBPhoneLoginView *phoneView = [BYBPhoneLoginView viewForXib];
         phoneView.frame = CGRectMake(0, 0, kScreenW, Scroll_Height);
         [_mainScrollView addSubview:phoneView];
+        
+        phoneView.loginBlock = ^{
+            [weakSelf loginAction];
+        };
         
         BYBAccountLoginView *phoneView2 = [BYBAccountLoginView viewForXib];
         phoneView2.frame = CGRectMake(kScreenW, 0, kScreenW, Scroll_Height);
@@ -94,6 +98,10 @@ static CGFloat const Scroll_Height = 350;
 
 
 #pragma makr - Actions
+- (void)loginAction{
+    
+}
+
 - (void)tapAction{
     [self.view endEditing:YES];
 }

@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *getCodeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *regitserBtn;
+@property(strong,nonatomic) NSTimer *timer;
+/** 时间 */
+@property (nonatomic, assign) int time;
 
 @end
 @implementation BYBPhoneLoginView
@@ -50,7 +53,9 @@
 
 #pragma mark - Actions
 - (IBAction)loginAction:(UIButton *)sender {
-    
+    if (self.loginBlock) {
+        self.loginBlock();
+    }
 }
 
 - (IBAction)regitsterAction:(UIButton *)sender {
@@ -60,6 +65,40 @@
 }
 - (IBAction)getCodeAction:(id)sender {
     
+    if (![BYBCheckTools isMobile:self.phoneTextF.text]) {
+        UIViewController *vc = [BYBControllerManger getControllerFormView:self];
+        [vc showHint:@"请输入正确手机号!"];
+        
+        return;
+    }
+    /// 添加定时器
+    _time = 60;
+    self.getCodeBtn.titleLabel.text = [NSString stringWithFormat:@"已发送60s"];
+    [self.getCodeBtn setTitle:[NSString stringWithFormat:@"已发送%ds",_time] forState:UIControlStateNormal];
+    self.getCodeBtn.enabled = NO;
+    [self dealGetCodeBtn];
+    _timer = [NSTimer scheduledTimerWithTimeInterval: 1
+                                              target: self
+                                            selector: @selector(timerAction:)
+                                            userInfo: nil
+                                             repeats: YES];
+    [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:UITrackingRunLoopMode];
+}
+
+- (void)timerAction:(NSTimer *)theTimer{
+    
+    _time --;
+    if (_time > 0) {
+        self.getCodeBtn.titleLabel.text = [NSString stringWithFormat:@"已发送%ds",_time];
+        [self.getCodeBtn setTitle:[NSString stringWithFormat:@"已发送%ds",_time] forState:UIControlStateNormal];
+        self.getCodeBtn.enabled = NO;
+        [self dealGetCodeBtn];
+    }else {
+        [_timer invalidate];
+        self.getCodeBtn.enabled = YES;
+        [self dealGetCodeBtn];
+        [self.getCodeBtn setTitle:@"重新发送" forState:UIControlStateNormal];
+    }
 }
 
 

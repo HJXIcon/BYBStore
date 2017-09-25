@@ -6,8 +6,8 @@
 //  Copyright © 2017年 BYBStore. All rights reserved.
 //
 
-#import "BYBBaseViewController.h"
+#import "BYBBaseTableViewController.h"
 
-@interface BYBShopCarViewController : BYBBaseViewController
+@interface BYBShopCarViewController : BYBBaseTableViewController
 
 @end

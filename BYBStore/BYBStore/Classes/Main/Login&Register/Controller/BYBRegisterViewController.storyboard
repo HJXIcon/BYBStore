@@ -55,8 +55,9 @@
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIs-di-fgI">
-                                <rect key="frame" x="245" y="143" width="100" height="32"/>
+                                <rect key="frame" x="245" y="143" width="100" height="44"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mAH-Qi-XM8"/>
                                     <constraint firstAttribute="width" constant="100" id="y0F-8e-BLQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
