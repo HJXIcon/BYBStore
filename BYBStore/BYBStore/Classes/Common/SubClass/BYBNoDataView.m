@@ -10,7 +10,6 @@
 
 @interface BYBNoDataView ()
 @property (weak, nonatomic) IBOutlet UILabel *desLabel;
-@property (weak, nonatomic) IBOutlet UIButton *refreshBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 
 @property (nonatomic, copy) void(^refreshBlock)();

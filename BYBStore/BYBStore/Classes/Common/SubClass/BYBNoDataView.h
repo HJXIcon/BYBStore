@@ -9,6 +9,7 @@
 #import "BYBBaseView.h"
 
 @interface BYBNoDataView : BYBBaseView
+@property (weak, nonatomic) IBOutlet UIButton *refreshBtn;
 - (void)setImageName:(NSString *)imageName  desText:(NSString *)desText refreshBtnTitle:(NSString *)refreshBtnTitle refreshBlock:(void(^)())refreshBlock;
 
 @end

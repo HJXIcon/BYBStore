@@ -31,7 +31,7 @@
          ];
         [_backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
         _backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        _backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0);
+        _backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -15, 0, 0);
         _backBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         CGFloat  ScreenW = [UIScreen mainScreen].bounds.size.width;
         CGFloat btnW =  ScreenW > 375.0 ? 70 : 60;

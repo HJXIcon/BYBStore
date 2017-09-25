@@ -50,6 +50,8 @@
 		F3C04A881F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A871F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m */; };
 		F3C04A8B1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A8A1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m */; };
 		F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A8D1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m */; };
+		F3C04A911F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A901F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m */; };
+		F3C04A931F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C04A921F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +137,9 @@
 		F3C04A8A1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBShareOrderOfNewestController.m; sourceTree = "<group>"; };
 		F3C04A8C1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBShareOrderOfMineController.h; sourceTree = "<group>"; };
 		F3C04A8D1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBShareOrderOfMineController.m; sourceTree = "<group>"; };
+		F3C04A8F1F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBShareOrderOfMineHeaderView.h; sourceTree = "<group>"; };
+		F3C04A901F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBShareOrderOfMineHeaderView.m; sourceTree = "<group>"; };
+		F3C04A921F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYBShareOrderOfMineHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,6 +452,9 @@
 		F38F50241F761A9100848619 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F3C04A8F1F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.h */,
+				F3C04A901F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m */,
+				F3C04A921F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -616,6 +624,7 @@
 				F38F50691F764C3200848619 /* BYBPhoneLoginView.xib in Resources */,
 				F38F50711F764F7800848619 /* BYBAccountLoginView.xib in Resources */,
 				F3C04A6B1F78B26700EE8FAF /* BYBNavigationBar.xib in Resources */,
+				F3C04A931F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib in Resources */,
 				F38F50051F76178A00848619 /* LaunchScreen.storyboard in Resources */,
 				F38F50781F7661DD00848619 /* BYBRegisterViewController.storyboard in Resources */,
 				F38F50021F76178A00848619 /* Assets.xcassets in Resources */,
@@ -686,6 +695,7 @@
 				F38F506F1F764F6E00848619 /* BYBAccountLoginView.m in Sources */,
 				F38F50751F7661AF00848619 /* BYBRegisterViewController.m in Sources */,
 				F3C04A881F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m in Sources */,
+				F3C04A911F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m in Sources */,
 				F38F50611F76453000848619 /* UIView+Extension.m in Sources */,
 				F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */,
 				F3C04A6E1F78E6C600EE8FAF /* UITableView+placeholder.m in Sources */,
@@ -835,7 +845,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BYBStore/Classes/Main/Others/BYBStore.pch";
 				INFOPLIST_FILE = BYBStore/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BYBStore.BYBStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -851,7 +861,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BYBStore/Classes/Main/Others/BYBStore.pch";
 				INFOPLIST_FILE = BYBStore/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BYBStore.BYBStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";

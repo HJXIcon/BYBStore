@@ -7,6 +7,7 @@
 //
 
 #import "BYBShareOrderOfMineController.h"
+#import "BYBShareOrderOfMineHeaderView.h"
 
 @interface BYBShareOrderOfMineController ()
 
@@ -17,10 +18,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self showNotLoginView];
+    [self setupTableHeaderView];
+    
+    self.tableView.mj_footer.hidden = YES;
+    self.tableView.mj_header.hidden = YES;
+    
+    BYBNoDataView *noDataView = [BYBNoDataView viewForXib];
+    noDataView.frame = CGRectMake(0, 160, kScreenW, kScreenH - 50);
+    noDataView.backgroundColor = [UIColor colorWithHexString:@"0xf0eff5"];
+    noDataView.refreshBtn.hidden = YES;
+    [noDataView setImageName:@"tips_no_shaidan_100x100_" desText:@"还木有晒单哦，\n是谁阻止了您的秀晒炫!" refreshBtnTitle:@"" refreshBlock:^{
+        [BYBControllerManger presentLoginController];
+    }];
+    
+    self.tableView.placeHolderView = noDataView;
+    
+//    [self showNotLoginView];
+    
 }
 
 #pragma mark - Private Method
+- (void)setupTableHeaderView{
+    BYBShareOrderOfMineHeaderView *headerView = [BYBShareOrderOfMineHeaderView viewForXib];
+    headerView.frame = CGRectMake(0, 0, kScreenW, 150);
+    self.tableView.tableHeaderView = headerView;
+}
+
 - (void)showNotLoginView{
     BYBNoDataView *noDataView = [BYBNoDataView viewForXib];
     noDataView.frame = self.view.bounds;
@@ -30,4 +53,33 @@
     
     [self.view addSubview:noDataView];
 }
+
+
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *const cellID = @"cellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"section == %ld,row == %ld",indexPath.section,indexPath.row];
+    
+    return cell;
+    
+    
+}
+
+
+
 @end
