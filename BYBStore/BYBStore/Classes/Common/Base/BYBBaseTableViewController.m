@@ -14,9 +14,11 @@
 
 @implementation BYBBaseTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.frame = self.view.bounds;
     self.tableView.tableFooterView = [[UIView alloc]init];
     
     BYBNoDataView *noDataView = [BYBNoDataView viewForXib];

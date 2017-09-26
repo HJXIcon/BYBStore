@@ -10,6 +10,14 @@
 		7AF949742EF8AAD8993E9411 /* libPods-BYBStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */; };
 		F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEADB1F79F987000E650A /* UIView+Placeholder.m */; };
 		F34AEAE61F7A34AF000E650A /* BYBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAE51F7A34AF000E650A /* BYBLoadingView.m */; };
+		F34AEAEC1F7A4AF5000E650A /* BYBSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAEB1F7A4AF5000E650A /* BYBSearchTextField.m */; };
+		F34AEAEF1F7A4FC2000E650A /* BYBSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAEE1F7A4FC2000E650A /* BYBSearchBarView.m */; };
+		F34AEAFC1F7A5CD0000E650A /* JXPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAF21F7A5CD0000E650A /* JXPageContentView.m */; };
+		F34AEAFD1F7A5CD0000E650A /* JXPageStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAF41F7A5CD0000E650A /* JXPageStyle.m */; };
+		F34AEAFE1F7A5CD0000E650A /* JXPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAF61F7A5CD0000E650A /* JXPageView.m */; };
+		F34AEAFF1F7A5CD0000E650A /* JXTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAF91F7A5CD0000E650A /* JXTitleView.m */; };
+		F34AEB001F7A5CD0000E650A /* UIColor+pageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAFB1F7A5CD0000E650A /* UIColor+pageExtension.m */; };
+		F34AEB031F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB021F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m */; };
 		F38F4FF71F76178A00848619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF61F76178A00848619 /* main.m */; };
 		F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF91F76178A00848619 /* AppDelegate.m */; };
 		F38F50021F76178A00848619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38F50011F76178A00848619 /* Assets.xcassets */; };
@@ -64,6 +72,23 @@
 		F34AEADB1F79F987000E650A /* UIView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Placeholder.m"; sourceTree = "<group>"; };
 		F34AEAE41F7A34AF000E650A /* BYBLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBLoadingView.h; sourceTree = "<group>"; };
 		F34AEAE51F7A34AF000E650A /* BYBLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBLoadingView.m; sourceTree = "<group>"; };
+		F34AEAEA1F7A4AF5000E650A /* BYBSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSearchTextField.h; sourceTree = "<group>"; };
+		F34AEAEB1F7A4AF5000E650A /* BYBSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchTextField.m; sourceTree = "<group>"; };
+		F34AEAED1F7A4FC2000E650A /* BYBSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSearchBarView.h; sourceTree = "<group>"; };
+		F34AEAEE1F7A4FC2000E650A /* BYBSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchBarView.m; sourceTree = "<group>"; };
+		F34AEAF11F7A5CD0000E650A /* JXPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPageContentView.h; sourceTree = "<group>"; };
+		F34AEAF21F7A5CD0000E650A /* JXPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPageContentView.m; sourceTree = "<group>"; };
+		F34AEAF31F7A5CD0000E650A /* JXPageStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPageStyle.h; sourceTree = "<group>"; };
+		F34AEAF41F7A5CD0000E650A /* JXPageStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPageStyle.m; sourceTree = "<group>"; };
+		F34AEAF51F7A5CD0000E650A /* JXPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPageView.h; sourceTree = "<group>"; };
+		F34AEAF61F7A5CD0000E650A /* JXPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPageView.m; sourceTree = "<group>"; };
+		F34AEAF71F7A5CD0000E650A /* JXPageViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPageViewProtocol.h; sourceTree = "<group>"; };
+		F34AEAF81F7A5CD0000E650A /* JXTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTitleView.h; sourceTree = "<group>"; };
+		F34AEAF91F7A5CD0000E650A /* JXTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTitleView.m; sourceTree = "<group>"; };
+		F34AEAFA1F7A5CD0000E650A /* UIColor+pageExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+pageExtension.h"; sourceTree = "<group>"; };
+		F34AEAFB1F7A5CD0000E650A /* UIColor+pageExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+pageExtension.m"; sourceTree = "<group>"; };
+		F34AEB011F7A60C3000E650A /* BYBHomeSpecialTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeSpecialTopicViewController.h; sourceTree = "<group>"; };
+		F34AEB021F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeSpecialTopicViewController.m; sourceTree = "<group>"; };
 		F38F4FF21F76178A00848619 /* BYBStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BYBStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38F4FF61F76178A00848619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F38F4FF81F76178A00848619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -186,6 +211,24 @@
 			path = HUD;
 			sourceTree = "<group>";
 		};
+		F34AEAF01F7A5CD0000E650A /* JXPageCotentView */ = {
+			isa = PBXGroup;
+			children = (
+				F34AEAF11F7A5CD0000E650A /* JXPageContentView.h */,
+				F34AEAF21F7A5CD0000E650A /* JXPageContentView.m */,
+				F34AEAF31F7A5CD0000E650A /* JXPageStyle.h */,
+				F34AEAF41F7A5CD0000E650A /* JXPageStyle.m */,
+				F34AEAF51F7A5CD0000E650A /* JXPageView.h */,
+				F34AEAF61F7A5CD0000E650A /* JXPageView.m */,
+				F34AEAF71F7A5CD0000E650A /* JXPageViewProtocol.h */,
+				F34AEAF81F7A5CD0000E650A /* JXTitleView.h */,
+				F34AEAF91F7A5CD0000E650A /* JXTitleView.m */,
+				F34AEAFA1F7A5CD0000E650A /* UIColor+pageExtension.h */,
+				F34AEAFB1F7A5CD0000E650A /* UIColor+pageExtension.m */,
+			);
+			path = JXPageCotentView;
+			sourceTree = "<group>";
+		};
 		F38F4FE91F76178A00848619 = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +318,7 @@
 		F38F50111F761A9100848619 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F34AEAF01F7A5CD0000E650A /* JXPageCotentView */,
 				F34AEAE01F7A3464000E650A /* HUD */,
 				F38F505B1F7640AA00848619 /* SubClass */,
 				F38F50121F761A9100848619 /* Base */,
@@ -345,6 +389,8 @@
 			children = (
 				F38F50491F76397500848619 /* BYBHomeViewController.h */,
 				F38F504A1F76397500848619 /* BYBHomeViewController.m */,
+				F34AEB011F7A60C3000E650A /* BYBHomeSpecialTopicViewController.h */,
+				F34AEB021F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,6 +405,10 @@
 		F38F50181F761A9100848619 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F34AEAEA1F7A4AF5000E650A /* BYBSearchTextField.h */,
+				F34AEAEB1F7A4AF5000E650A /* BYBSearchTextField.m */,
+				F34AEAED1F7A4FC2000E650A /* BYBSearchBarView.h */,
+				F34AEAEE1F7A4FC2000E650A /* BYBSearchBarView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -712,7 +762,11 @@
 			files = (
 				F38F506F1F764F6E00848619 /* BYBAccountLoginView.m in Sources */,
 				F38F50751F7661AF00848619 /* BYBRegisterViewController.m in Sources */,
+				F34AEAFD1F7A5CD0000E650A /* JXPageStyle.m in Sources */,
+				F34AEAFE1F7A5CD0000E650A /* JXPageView.m in Sources */,
+				F34AEB001F7A5CD0000E650A /* UIColor+pageExtension.m in Sources */,
 				F3C04A881F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m in Sources */,
+				F34AEAFC1F7A5CD0000E650A /* JXPageContentView.m in Sources */,
 				F3C04A911F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m in Sources */,
 				F38F50611F76453000848619 /* UIView+Extension.m in Sources */,
 				F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */,
@@ -725,12 +779,15 @@
 				F3C04A7C1F78F5B400EE8FAF /* BYBRefreshFooter.m in Sources */,
 				F3C04A711F78E7B500EE8FAF /* BYBNoDataView.m in Sources */,
 				F38F50421F76373600848619 /* BYBBaseViewController.m in Sources */,
+				F34AEAEC1F7A4AF5000E650A /* BYBSearchTextField.m in Sources */,
 				F38F50451F76376300848619 /* BYBBaseTableViewCell.m in Sources */,
 				F38F504E1F76398000848619 /* BYBMineViewController.m in Sources */,
 				F38F502E1F761CCC00848619 /* BYBNavigationController.m in Sources */,
 				F38F50481F7637BF00848619 /* BYBLoginViewController.m in Sources */,
 				F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */,
 				F3C04A8B1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m in Sources */,
+				F34AEAEF1F7A4FC2000E650A /* BYBSearchBarView.m in Sources */,
+				F34AEB031F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m in Sources */,
 				F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */,
 				F38F50341F761D1000848619 /* UIColor+Extension.m in Sources */,
 				F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */,
@@ -740,6 +797,7 @@
 				F38F505A1F76400900848619 /* BYBLoginSegmentBtnView.m in Sources */,
 				F3C04A631F78A8ED00EE8FAF /* UIViewController+HUD.m in Sources */,
 				F38F50351F761D1000848619 /* UIImage+Image.m in Sources */,
+				F34AEAFF1F7A5CD0000E650A /* JXTitleView.m in Sources */,
 				F38F502F1F761CCC00848619 /* BYBTabBarController.m in Sources */,
 				F3C04A761F78EA2A00EE8FAF /* BYBBaseTableViewController.m in Sources */,
 				F38F50511F76398F00848619 /* BYBShareOrderViewController.m in Sources */,

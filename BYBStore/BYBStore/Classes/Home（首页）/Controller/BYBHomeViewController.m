@@ -7,8 +7,12 @@
 //
 
 #import "BYBHomeViewController.h"
+#import "BYBSearchBarView.h"
+#import "JXPageView.h"
+#import "BYBHomeSpecialTopicViewController.h"
 
 @interface BYBHomeViewController ()
+
 
 @end
 
@@ -16,16 +20,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupNav];
+    
+    [self setupAllChilderVc];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupAllChilderVc{
+    
+    
+    self.automaticallyAdjustsScrollViewInsets = false;
+    
+    NSArray *titles = @[@"专题",@"服饰",@"美妆",@"母婴",@"轻奢",@"百货",@"美食",@"运动",@"日淘",@"畅销榜"];
+    JXPageStyle *style = [[JXPageStyle alloc]init];
+    style.isNeedScale = NO;
+    style.isScrollEnable = YES;
+    style.isShowBottomLine = YES;
+    style.bottomLineColor = BYBThemeColor;
+    style.normalColor = [UIColor blackColor];
+    style.selectColor = BYBThemeColor;
+    style.titleFont = [UIFont boldSystemFontOfSize:17];
+    style.titleHeight = 50;
+    
+    NSMutableArray *childVcs = [NSMutableArray array];
+    
+    for (int i = 0; i < titles.count; i++){
+        UITableViewController *vc;
+        if (i == 0 ) {
+            vc = [[BYBHomeSpecialTopicViewController alloc]init];
+        }else{
+             vc= [[UITableViewController alloc]init];
+        }
+
+        vc.view.backgroundColor = [UIColor randomColor];
+        
+        [childVcs addObject:vc];
+    }
+    
+    CGRect pageViewFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64);
+    
+    JXPageView *pageView = [[JXPageView alloc]initWithFrame:pageViewFrame titles:titles style:style childVcs:childVcs parentVc:self];
+    
+    [self.view addSubview:pageView];
+    
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [BYBControllerManger presentLoginController];
+- (void)setupNav{
+    BYBSearchBarView *barView = [[BYBSearchBarView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 35)];
+    MJWeakSelf;
+    barView.msgBlock = ^{
+        weakSelf;
+        JXLog(@"msgAction --- ");
+    };
+    self.navigationItem.titleView = barView;
 }
+
+
 
 @end
