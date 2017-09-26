@@ -20,8 +20,7 @@
     
     [self setupTableHeaderView];
     
-    self.tableView.mj_footer.hidden = YES;
-    self.tableView.mj_header.hidden = YES;
+    self.isRefresh = YES;
     
     BYBNoDataView *noDataView = [BYBNoDataView viewForXib];
     noDataView.frame = CGRectMake(0, 160, kScreenW, kScreenH - 50);
@@ -34,6 +33,12 @@
     self.tableView.placeHolderView = noDataView;
     
 //    [self showNotLoginView];
+//    [BYBLoadingView showInView:self.view];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
     
 }
 
@@ -58,7 +63,7 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

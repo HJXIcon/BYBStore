@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7AF949742EF8AAD8993E9411 /* libPods-BYBStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */; };
+		F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEADB1F79F987000E650A /* UIView+Placeholder.m */; };
+		F34AEAE61F7A34AF000E650A /* BYBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAE51F7A34AF000E650A /* BYBLoadingView.m */; };
 		F38F4FF71F76178A00848619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF61F76178A00848619 /* main.m */; };
 		F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF91F76178A00848619 /* AppDelegate.m */; };
 		F38F50021F76178A00848619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38F50011F76178A00848619 /* Assets.xcassets */; };
@@ -58,6 +60,10 @@
 		B238622EB5D08EC3F32AAB9E /* Pods-BYBStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.debug.xcconfig"; sourceTree = "<group>"; };
 		CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BYBStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F331BA313C508C63468B4D7F /* Pods-BYBStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.release.xcconfig"; sourceTree = "<group>"; };
+		F34AEADA1F79F987000E650A /* UIView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Placeholder.h"; sourceTree = "<group>"; };
+		F34AEADB1F79F987000E650A /* UIView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Placeholder.m"; sourceTree = "<group>"; };
+		F34AEAE41F7A34AF000E650A /* BYBLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBLoadingView.h; sourceTree = "<group>"; };
+		F34AEAE51F7A34AF000E650A /* BYBLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBLoadingView.m; sourceTree = "<group>"; };
 		F38F4FF21F76178A00848619 /* BYBStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BYBStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38F4FF61F76178A00848619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F38F4FF81F76178A00848619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +177,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F34AEAE01F7A3464000E650A /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				F34AEAE41F7A34AF000E650A /* BYBLoadingView.h */,
+				F34AEAE51F7A34AF000E650A /* BYBLoadingView.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
 		F38F4FE91F76178A00848619 = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +275,7 @@
 		F38F50111F761A9100848619 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F34AEAE01F7A3464000E650A /* HUD */,
 				F38F505B1F7640AA00848619 /* SubClass */,
 				F38F50121F761A9100848619 /* Base */,
 				F38F50131F761A9100848619 /* Category */,
@@ -287,6 +303,8 @@
 		F38F50131F761A9100848619 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F34AEADA1F79F987000E650A /* UIView+Placeholder.h */,
+				F34AEADB1F79F987000E650A /* UIView+Placeholder.m */,
 				F3C04A6C1F78E6C600EE8FAF /* UITableView+placeholder.h */,
 				F3C04A6D1F78E6C600EE8FAF /* UITableView+placeholder.m */,
 				F3C04A611F78A8ED00EE8FAF /* UIViewController+HUD.h */,
@@ -701,6 +719,7 @@
 				F3C04A6E1F78E6C600EE8FAF /* UITableView+placeholder.m in Sources */,
 				F3C04A661F78B01700EE8FAF /* BYBWebViewController.m in Sources */,
 				F38F50571F7639DA00848619 /* BYBCategoryViewController.m in Sources */,
+				F34AEAE61F7A34AF000E650A /* BYBLoadingView.m in Sources */,
 				F38F506C1F764E4200848619 /* BYBBaseView.m in Sources */,
 				F38F50541F76399B00848619 /* BYBShopCarViewController.m in Sources */,
 				F3C04A7C1F78F5B400EE8FAF /* BYBRefreshFooter.m in Sources */,
@@ -714,6 +733,7 @@
 				F3C04A8B1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m in Sources */,
 				F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */,
 				F38F50341F761D1000848619 /* UIColor+Extension.m in Sources */,
+				F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */,
 				F38F505E1F76412E00848619 /* JXRelayoutButton.m in Sources */,
 				F38F50671F764C2A00848619 /* BYBPhoneLoginView.m in Sources */,
 				F38F504B1F76397500848619 /* BYBHomeViewController.m in Sources */,

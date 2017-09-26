@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,18 +24,6 @@
                                 <constraint firstAttribute="width" constant="66" id="qY9-lr-73Y"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4D-Jx-t5b" customClass="JXRelayoutButton">
-                            <rect key="frame" x="275" y="10" width="30" height="60"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="30" id="6xv-Jd-k0w"/>
-                                <constraint firstAttribute="height" constant="60" id="NvJ-Mp-aEI"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <state key="normal" title="圈子"/>
-                            <connections>
-                                <action selector="circleAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="LNV-v4-DKl"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="获赞:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5C-ce-Cqk">
                             <rect key="frame" x="70" y="7" width="28.5" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -49,18 +36,37 @@
                             <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="圈子" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug7-yf-UUl">
+                            <rect key="frame" x="278" y="7" width="27" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4D-Jx-t5b">
+                            <rect key="frame" x="281.5" y="28" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="G0E-CI-1tO"/>
+                                <constraint firstAttribute="height" constant="20" id="lFb-9e-XVu"/>
+                            </constraints>
+                            <state key="normal" title="圈子" image="sdCricle_20x20_"/>
+                            <connections>
+                                <action selector="circleAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="xVo-ff-9xb"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="E5C-ce-Cqk" firstAttribute="top" secondItem="OC9-7p-ZuT" secondAttribute="top" id="5iC-0h-gpr"/>
-                        <constraint firstItem="S4D-Jx-t5b" firstAttribute="centerY" secondItem="OC9-7p-ZuT" secondAttribute="centerY" id="FwS-Tm-2rm"/>
+                        <constraint firstItem="S4D-Jx-t5b" firstAttribute="top" secondItem="Ug7-yf-UUl" secondAttribute="bottom" constant="5" id="DrI-uA-vaz"/>
+                        <constraint firstAttribute="trailing" secondItem="Ug7-yf-UUl" secondAttribute="trailing" constant="70" id="HyJ-6z-h1K"/>
                         <constraint firstItem="WnD-Ax-yM7" firstAttribute="centerX" secondItem="E5C-ce-Cqk" secondAttribute="centerX" id="W03-4m-3cM"/>
+                        <constraint firstItem="Ug7-yf-UUl" firstAttribute="top" secondItem="OC9-7p-ZuT" secondAttribute="top" id="YPi-JT-KbC"/>
                         <constraint firstAttribute="height" constant="80" id="Yfn-4V-mTp"/>
                         <constraint firstItem="E5C-ce-Cqk" firstAttribute="leading" secondItem="52O-W1-yj4" secondAttribute="leading" constant="70" id="eot-k9-mpM"/>
                         <constraint firstItem="WnD-Ax-yM7" firstAttribute="top" secondItem="E5C-ce-Cqk" secondAttribute="bottom" constant="10" id="gd9-Wd-MEt"/>
                         <constraint firstItem="OC9-7p-ZuT" firstAttribute="centerX" secondItem="52O-W1-yj4" secondAttribute="centerX" id="h6T-1f-6sQ"/>
                         <constraint firstItem="OC9-7p-ZuT" firstAttribute="centerY" secondItem="52O-W1-yj4" secondAttribute="centerY" id="jNp-zJ-hkV"/>
-                        <constraint firstAttribute="trailing" secondItem="S4D-Jx-t5b" secondAttribute="trailing" constant="70" id="yMM-j2-vSY"/>
+                        <constraint firstItem="S4D-Jx-t5b" firstAttribute="centerX" secondItem="Ug7-yf-UUl" secondAttribute="centerX" id="zco-Nn-46i"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiT-4O-VfQ" userLabel="BottomView">
@@ -119,7 +125,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="circleBtn" destination="S4D-Jx-t5b" id="R9B-0k-k7O"/>
+                <outlet property="circleLabel" destination="Ug7-yf-UUl" id="wQ8-hT-xft"/>
                 <outlet property="fansLabel" destination="aiF-Ja-asA" id="emb-ga-gQZ"/>
                 <outlet property="followLabel" destination="Uat-6T-BQ1" id="LYQ-h8-SPA"/>
                 <outlet property="iconImageView" destination="OC9-7p-ZuT" id="d0b-lz-4me"/>
@@ -131,5 +137,6 @@
     </objects>
     <resources>
         <image name="defaultheadimage_132x132_@1x" width="66" height="66"/>
+        <image name="sdCricle_20x20_" width="20" height="20"/>
     </resources>
 </document>

@@ -174,6 +174,24 @@
     return newImage;
 }
 
+/**
+ 根据view生成图片
+ 
+ @param view view
+ @return image
+ */
++ (UIImage *) createImageFromView:(UIView *)view{
+    
+    UIGraphicsBeginImageContext(view.bounds.size);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+
 
 
 

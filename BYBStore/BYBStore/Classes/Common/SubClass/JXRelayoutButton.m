@@ -94,7 +94,7 @@
             
         case JXRelayoutButtonTypeTop:
         {
-            return CGRectMake(0,  0 , contentRect.size.width , contentRect.size.height - self.offset - self.imageSize.height );
+            return CGRectMake(0,  0 , contentRect.size.width , contentRect.size.height - self.offset - self.imageSize.height);
         }
             break;
             

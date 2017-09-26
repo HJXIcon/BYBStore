@@ -47,4 +47,14 @@
 +(UIImage *)IMGCompressed:(UIImage *)sourceImg targetWidth:(CGFloat)defineWidth;
 
 
+/**
+ 根据view生成图片
+ 
+ @param view view
+ @return image
+ */
++ (UIImage *) createImageFromView:(UIView *)view;
+
+
+
 @end

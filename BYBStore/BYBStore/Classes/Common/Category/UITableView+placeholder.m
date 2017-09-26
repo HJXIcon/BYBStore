@@ -8,6 +8,7 @@
 
 #import "UITableView+placeholder.h"
 #import <objc/runtime.h>
+#import "UIView+Placeholder.h"
 
 
 @implementation NSObject (swizzle)
@@ -71,6 +72,7 @@
     if (isEmpty) {
         [self.placeHolderView removeFromSuperview];
         [self addSubview:self.placeHolderView];
+        
     }else{
         [self.placeHolderView removeFromSuperview];
     }

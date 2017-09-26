@@ -78,12 +78,18 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #import "UIViewController+HUD.h"
 #import "UITableView+placeholder.h"
 #import "BYBNoDataView.h"
+#import "UIView+Placeholder.h"
 #import "BYBRefreshHeader.h"
 #import "BYBRefreshFooter.h"
+#import "BYBLoadingView.h"
+
 
 // 主题颜色
 #define BYBThemeColor [UIColor colorWithHexString:@"0xfb1951"]
 // 背景颜色
 #define BYBBGColor [UIColor colorWithHexString:@"0xdddddd"]
+// 比例
+#define BYBSCREEN_SCALE ((double)[ UIScreen mainScreen ].bounds.size.width/320)
+
 
 #endif /* Define_h */
