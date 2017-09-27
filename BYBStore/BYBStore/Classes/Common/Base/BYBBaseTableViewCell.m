@@ -38,6 +38,16 @@
 }
 
 
++ (instancetype)cellForTableView:(UITableView *)tableView{
+    Class cellClass = NSClassFromString(NSStringFromClass(self));
+    id cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self)];
+    if (cell == nil) {
+        cell = [[cellClass alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:NSStringFromClass(self)];
+    }
+    return cell;
+}
+
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
     

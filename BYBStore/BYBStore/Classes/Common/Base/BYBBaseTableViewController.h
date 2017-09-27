@@ -6,9 +6,11 @@
 //  Copyright © 2017年 BYBStore. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BYBBaseViewController.h"
 
-@interface BYBBaseTableViewController : UITableViewController
+@interface BYBBaseTableViewController : BYBBaseViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
 
 /** 是否第一次进入界面 */
 @property (nonatomic, assign) BOOL isRefresh;

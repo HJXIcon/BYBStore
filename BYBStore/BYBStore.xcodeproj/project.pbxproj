@@ -18,6 +18,24 @@
 		F34AEAFF1F7A5CD0000E650A /* JXTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAF91F7A5CD0000E650A /* JXTitleView.m */; };
 		F34AEB001F7A5CD0000E650A /* UIColor+pageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAFB1F7A5CD0000E650A /* UIColor+pageExtension.m */; };
 		F34AEB031F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB021F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m */; };
+		F34AEB0F1F7A7D63000E650A /* 热门专场 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB051F7A7D63000E650A /* 热门专场 */; };
+		F34AEB101F7A7D63000E650A /* 品牌专场 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB061F7A7D63000E650A /* 品牌专场 */; };
+		F34AEB111F7A7D63000E650A /* Details in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB071F7A7D63000E650A /* Details */; };
+		F34AEB121F7A7D63000E650A /* events in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB081F7A7D63000E650A /* events */; };
+		F34AEB131F7A7D63000E650A /* Experience in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB091F7A7D63000E650A /* Experience */; };
+		F34AEB141F7A7D63000E650A /* More in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0A1F7A7D63000E650A /* More */; };
+		F34AEB151F7A7D63000E650A /* Nears in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0B1F7A7D63000E650A /* Nears */; };
+		F34AEB161F7A7D63000E650A /* themes in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0C1F7A7D63000E650A /* themes */; };
+		F34AEB171F7A7D63000E650A /* 三里屯 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0D1F7A7D63000E650A /* 三里屯 */; };
+		F34AEB181F7A7D63000E650A /* 南锣鼓巷 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0E1F7A7D63000E650A /* 南锣鼓巷 */; };
+		F34AEB1B1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB1A1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m */; };
+		F34AEB1E1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB1D1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m */; };
+		F34AEB211F7B47E1000E650A /* JXFactoryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB201F7B47E1000E650A /* JXFactoryTool.m */; };
+		F34AEB271F7B5258000E650A /* UIView+masonry.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB261F7B5258000E650A /* UIView+masonry.m */; };
+		F34AEB2A1F7B8477000E650A /* BYBHomeSpecialTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB291F7B8477000E650A /* BYBHomeSpecialTopicModel.m */; };
+		F34AEB2D1F7B9494000E650A /* BYBHomeBranViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB2C1F7B9494000E650A /* BYBHomeBranViewController.m */; };
+		F34AEB301F7B9D6F000E650A /* BYBHomeBrandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB2F1F7B9D6F000E650A /* BYBHomeBrandCell.m */; };
+		F34AEB331F7BA715000E650A /* BYBHomeBrandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB321F7BA715000E650A /* BYBHomeBrandModel.m */; };
 		F38F4FF71F76178A00848619 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF61F76178A00848619 /* main.m */; };
 		F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F4FF91F76178A00848619 /* AppDelegate.m */; };
 		F38F50021F76178A00848619 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38F50011F76178A00848619 /* Assets.xcassets */; };
@@ -89,6 +107,32 @@
 		F34AEAFB1F7A5CD0000E650A /* UIColor+pageExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+pageExtension.m"; sourceTree = "<group>"; };
 		F34AEB011F7A60C3000E650A /* BYBHomeSpecialTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeSpecialTopicViewController.h; sourceTree = "<group>"; };
 		F34AEB021F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeSpecialTopicViewController.m; sourceTree = "<group>"; };
+		F34AEB051F7A7D63000E650A /* 热门专场 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热门专场"; sourceTree = "<group>"; };
+		F34AEB061F7A7D63000E650A /* 品牌专场 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "品牌专场"; sourceTree = "<group>"; };
+		F34AEB071F7A7D63000E650A /* Details */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Details; sourceTree = "<group>"; };
+		F34AEB081F7A7D63000E650A /* events */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = events; sourceTree = "<group>"; };
+		F34AEB091F7A7D63000E650A /* Experience */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Experience; sourceTree = "<group>"; };
+		F34AEB0A1F7A7D63000E650A /* More */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = More; sourceTree = "<group>"; };
+		F34AEB0B1F7A7D63000E650A /* Nears */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Nears; sourceTree = "<group>"; };
+		F34AEB0C1F7A7D63000E650A /* themes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = themes; sourceTree = "<group>"; };
+		F34AEB0D1F7A7D63000E650A /* 三里屯 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "三里屯"; sourceTree = "<group>"; };
+		F34AEB0E1F7A7D63000E650A /* 南锣鼓巷 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "南锣鼓巷"; sourceTree = "<group>"; };
+		F34AEB191F7B38BE000E650A /* BYBHomeSpecialTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeSpecialTopicCell.h; sourceTree = "<group>"; };
+		F34AEB1A1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeSpecialTopicCell.m; sourceTree = "<group>"; };
+		F34AEB1C1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeSpecialTopicHeaderView.h; sourceTree = "<group>"; };
+		F34AEB1D1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeSpecialTopicHeaderView.m; sourceTree = "<group>"; };
+		F34AEB1F1F7B47E1000E650A /* JXFactoryTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFactoryTool.h; sourceTree = "<group>"; };
+		F34AEB201F7B47E1000E650A /* JXFactoryTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFactoryTool.m; sourceTree = "<group>"; };
+		F34AEB251F7B5258000E650A /* UIView+masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+masonry.h"; sourceTree = "<group>"; };
+		F34AEB261F7B5258000E650A /* UIView+masonry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+masonry.m"; sourceTree = "<group>"; };
+		F34AEB281F7B8477000E650A /* BYBHomeSpecialTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeSpecialTopicModel.h; sourceTree = "<group>"; };
+		F34AEB291F7B8477000E650A /* BYBHomeSpecialTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeSpecialTopicModel.m; sourceTree = "<group>"; };
+		F34AEB2B1F7B9494000E650A /* BYBHomeBranViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeBranViewController.h; sourceTree = "<group>"; };
+		F34AEB2C1F7B9494000E650A /* BYBHomeBranViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeBranViewController.m; sourceTree = "<group>"; };
+		F34AEB2E1F7B9D6F000E650A /* BYBHomeBrandCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeBrandCell.h; sourceTree = "<group>"; };
+		F34AEB2F1F7B9D6F000E650A /* BYBHomeBrandCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeBrandCell.m; sourceTree = "<group>"; };
+		F34AEB311F7BA715000E650A /* BYBHomeBrandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeBrandModel.h; sourceTree = "<group>"; };
+		F34AEB321F7BA715000E650A /* BYBHomeBrandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeBrandModel.m; sourceTree = "<group>"; };
 		F38F4FF21F76178A00848619 /* BYBStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BYBStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38F4FF61F76178A00848619 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F38F4FF81F76178A00848619 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../../AppDelegate.h; sourceTree = "<group>"; };
@@ -229,6 +273,23 @@
 			path = JXPageCotentView;
 			sourceTree = "<group>";
 		};
+		F34AEB041F7A7D63000E650A /* CustomData */ = {
+			isa = PBXGroup;
+			children = (
+				F34AEB051F7A7D63000E650A /* 热门专场 */,
+				F34AEB061F7A7D63000E650A /* 品牌专场 */,
+				F34AEB071F7A7D63000E650A /* Details */,
+				F34AEB081F7A7D63000E650A /* events */,
+				F34AEB091F7A7D63000E650A /* Experience */,
+				F34AEB0A1F7A7D63000E650A /* More */,
+				F34AEB0B1F7A7D63000E650A /* Nears */,
+				F34AEB0C1F7A7D63000E650A /* themes */,
+				F34AEB0D1F7A7D63000E650A /* 三里屯 */,
+				F34AEB0E1F7A7D63000E650A /* 南锣鼓巷 */,
+			);
+			path = CustomData;
+			sourceTree = "<group>";
+		};
 		F38F4FE91F76178A00848619 = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +332,7 @@
 		F38F500C1F761A9100848619 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F34AEB041F7A7D63000E650A /* CustomData */,
 				F38F50111F761A9100848619 /* Common */,
 				F38F50191F761A9100848619 /* Main */,
 				F38F500D1F761A9100848619 /* Category（分类） */,
@@ -359,6 +421,8 @@
 				F38F50311F761D1000848619 /* UIColor+Extension.m */,
 				F38F50321F761D1000848619 /* UIImage+Image.h */,
 				F38F50331F761D1000848619 /* UIImage+Image.m */,
+				F34AEB251F7B5258000E650A /* UIView+masonry.h */,
+				F34AEB261F7B5258000E650A /* UIView+masonry.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -370,6 +434,8 @@
 				F38F50391F76209B00848619 /* BYBControllerManger.m */,
 				F3C04A5E1F78A77A00EE8FAF /* BYBCheckTools.h */,
 				F3C04A5F1F78A77A00EE8FAF /* BYBCheckTools.m */,
+				F34AEB1F1F7B47E1000E650A /* JXFactoryTool.h */,
+				F34AEB201F7B47E1000E650A /* JXFactoryTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -391,6 +457,8 @@
 				F38F504A1F76397500848619 /* BYBHomeViewController.m */,
 				F34AEB011F7A60C3000E650A /* BYBHomeSpecialTopicViewController.h */,
 				F34AEB021F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m */,
+				F34AEB2B1F7B9494000E650A /* BYBHomeBranViewController.h */,
+				F34AEB2C1F7B9494000E650A /* BYBHomeBranViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -398,6 +466,10 @@
 		F38F50171F761A9100848619 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F34AEB281F7B8477000E650A /* BYBHomeSpecialTopicModel.h */,
+				F34AEB291F7B8477000E650A /* BYBHomeSpecialTopicModel.m */,
+				F34AEB311F7BA715000E650A /* BYBHomeBrandModel.h */,
+				F34AEB321F7BA715000E650A /* BYBHomeBrandModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -409,6 +481,12 @@
 				F34AEAEB1F7A4AF5000E650A /* BYBSearchTextField.m */,
 				F34AEAED1F7A4FC2000E650A /* BYBSearchBarView.h */,
 				F34AEAEE1F7A4FC2000E650A /* BYBSearchBarView.m */,
+				F34AEB191F7B38BE000E650A /* BYBHomeSpecialTopicCell.h */,
+				F34AEB1A1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m */,
+				F34AEB1C1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.h */,
+				F34AEB1D1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m */,
+				F34AEB2E1F7B9D6F000E650A /* BYBHomeBrandCell.h */,
+				F34AEB2F1F7B9D6F000E650A /* BYBHomeBrandCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -687,15 +765,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F34AEB121F7A7D63000E650A /* events in Resources */,
 				F38F503C1F76252300848619 /* Images.xcassets in Resources */,
+				F34AEB131F7A7D63000E650A /* Experience in Resources */,
+				F34AEB141F7A7D63000E650A /* More in Resources */,
+				F34AEB0F1F7A7D63000E650A /* 热门专场 in Resources */,
+				F34AEB161F7A7D63000E650A /* themes in Resources */,
 				F3C04A731F78E7C100EE8FAF /* BYBNoDataView.xib in Resources */,
 				F38F50691F764C3200848619 /* BYBPhoneLoginView.xib in Resources */,
 				F38F50711F764F7800848619 /* BYBAccountLoginView.xib in Resources */,
+				F34AEB171F7A7D63000E650A /* 三里屯 in Resources */,
 				F3C04A6B1F78B26700EE8FAF /* BYBNavigationBar.xib in Resources */,
+				F34AEB101F7A7D63000E650A /* 品牌专场 in Resources */,
 				F3C04A931F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib in Resources */,
 				F38F50051F76178A00848619 /* LaunchScreen.storyboard in Resources */,
+				F34AEB111F7A7D63000E650A /* Details in Resources */,
 				F38F50781F7661DD00848619 /* BYBRegisterViewController.storyboard in Resources */,
+				F34AEB151F7A7D63000E650A /* Nears in Resources */,
 				F38F50021F76178A00848619 /* Assets.xcassets in Resources */,
+				F34AEB181F7A7D63000E650A /* 南锣鼓巷 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,9 +850,12 @@
 			files = (
 				F38F506F1F764F6E00848619 /* BYBAccountLoginView.m in Sources */,
 				F38F50751F7661AF00848619 /* BYBRegisterViewController.m in Sources */,
+				F34AEB211F7B47E1000E650A /* JXFactoryTool.m in Sources */,
+				F34AEB1B1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m in Sources */,
 				F34AEAFD1F7A5CD0000E650A /* JXPageStyle.m in Sources */,
 				F34AEAFE1F7A5CD0000E650A /* JXPageView.m in Sources */,
 				F34AEB001F7A5CD0000E650A /* UIColor+pageExtension.m in Sources */,
+				F34AEB271F7B5258000E650A /* UIView+masonry.m in Sources */,
 				F3C04A881F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m in Sources */,
 				F34AEAFC1F7A5CD0000E650A /* JXPageContentView.m in Sources */,
 				F3C04A911F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m in Sources */,
@@ -777,9 +868,11 @@
 				F38F506C1F764E4200848619 /* BYBBaseView.m in Sources */,
 				F38F50541F76399B00848619 /* BYBShopCarViewController.m in Sources */,
 				F3C04A7C1F78F5B400EE8FAF /* BYBRefreshFooter.m in Sources */,
+				F34AEB1E1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m in Sources */,
 				F3C04A711F78E7B500EE8FAF /* BYBNoDataView.m in Sources */,
 				F38F50421F76373600848619 /* BYBBaseViewController.m in Sources */,
 				F34AEAEC1F7A4AF5000E650A /* BYBSearchTextField.m in Sources */,
+				F34AEB331F7BA715000E650A /* BYBHomeBrandModel.m in Sources */,
 				F38F50451F76376300848619 /* BYBBaseTableViewCell.m in Sources */,
 				F38F504E1F76398000848619 /* BYBMineViewController.m in Sources */,
 				F38F502E1F761CCC00848619 /* BYBNavigationController.m in Sources */,
@@ -791,11 +884,14 @@
 				F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */,
 				F38F50341F761D1000848619 /* UIColor+Extension.m in Sources */,
 				F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */,
+				F34AEB2D1F7B9494000E650A /* BYBHomeBranViewController.m in Sources */,
 				F38F505E1F76412E00848619 /* JXRelayoutButton.m in Sources */,
 				F38F50671F764C2A00848619 /* BYBPhoneLoginView.m in Sources */,
 				F38F504B1F76397500848619 /* BYBHomeViewController.m in Sources */,
 				F38F505A1F76400900848619 /* BYBLoginSegmentBtnView.m in Sources */,
 				F3C04A631F78A8ED00EE8FAF /* UIViewController+HUD.m in Sources */,
+				F34AEB2A1F7B8477000E650A /* BYBHomeSpecialTopicModel.m in Sources */,
+				F34AEB301F7B9D6F000E650A /* BYBHomeBrandCell.m in Sources */,
 				F38F50351F761D1000848619 /* UIImage+Image.m in Sources */,
 				F34AEAFF1F7A5CD0000E650A /* JXTitleView.m in Sources */,
 				F38F502F1F761CCC00848619 /* BYBTabBarController.m in Sources */,

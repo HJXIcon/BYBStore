@@ -44,7 +44,7 @@
     NSMutableArray *childVcs = [NSMutableArray array];
     
     for (int i = 0; i < titles.count; i++){
-        UITableViewController *vc;
+        UIViewController *vc;
         if (i == 0 ) {
             vc = [[BYBHomeSpecialTopicViewController alloc]init];
         }else{

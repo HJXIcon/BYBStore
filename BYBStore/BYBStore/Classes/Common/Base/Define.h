@@ -82,6 +82,8 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #import "BYBRefreshHeader.h"
 #import "BYBRefreshFooter.h"
 #import "BYBLoadingView.h"
+#import "JXFactoryTool.h"
+#import "UIView+masonry.h"
 
 
 // 主题颜色
@@ -90,6 +92,8 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #define BYBBGColor [UIColor colorWithHexString:@"0xdddddd"]
 // 比例
 #define BYBSCREEN_SCALE ((double)[ UIScreen mainScreen ].bounds.size.width/320)
+// 占位视图
+#define BYB_PlaceholderImage [UIImage imageNamed:@"netError"]
 
 
 #endif /* Define_h */

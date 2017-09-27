@@ -14,39 +14,58 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - ARSegmentPager (1.1.3)
   - DOPDropDownMenu-Enhanced (1.0.0)
   - JPFPSStatus (0.1)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
+  - PPNetworkHelper (0.8.0):
+    - AFNetworking (~> 3.1.0)
+    - YYCache (~> 1.0.4)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
   - UITableView+FDTemplateLayoutCell (1.6)
+  - YYCache (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - ARSegmentPager (from `https://github.com/AugustRush/ARSegmentPager.git`)
   - DOPDropDownMenu-Enhanced (~> 1.0.0)
   - JPFPSStatus (~> 0.1)
   - Masonry (~> 1.0.2)
   - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.13)
   - MJRefresh (~> 3.1.12)
+  - PPNetworkHelper (~> 0.8.0)
   - SDWebImage (~> 4.1.0)
   - UITableView+FDTemplateLayoutCell (~> 1.6)
 
+EXTERNAL SOURCES:
+  ARSegmentPager:
+    :git: https://github.com/AugustRush/ARSegmentPager.git
+
+CHECKOUT OPTIONS:
+  ARSegmentPager:
+    :commit: 50f90234c2347406724d51490a3935aac1b3cf58
+    :git: https://github.com/AugustRush/ARSegmentPager.git
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ARSegmentPager: 10d9ded8105c6d78841f625a1a71db35e14b1c10
   DOPDropDownMenu-Enhanced: 9ec473b16351b5b0b2d6ef87e7f666fe5ff54ad5
   JPFPSStatus: 4467a17488382e4c1700bd9d18c92ae581fd6305
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  PPNetworkHelper: 900d1af5cb9f2932b3f955ebf72148b7ec403d44
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: d705d491cfd3a1d97cd134083183a4a6a21246bd
+PODFILE CHECKSUM: 238eed7e937d477d4cc029b3002c0dbe869d5123
 
 COCOAPODS: 1.3.1

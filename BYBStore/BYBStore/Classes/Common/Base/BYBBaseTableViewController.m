@@ -14,11 +14,23 @@
 
 @implementation BYBBaseTableViewController
 
+- (UITableView *)tableView{
+    if (_tableView == nil) {
+        
+        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+    }
+    return _tableView;
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.frame = self.view.bounds;
+    
+    [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [[UIView alloc]init];
     
     BYBNoDataView *noDataView = [BYBNoDataView viewForXib];
@@ -92,5 +104,30 @@
 - (void)loadHeaderData{
     
 }
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    static NSString *const cellID = @"cellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"section == %ld,row == %ld",indexPath.section,indexPath.row];
+    
+    return cell;
+    
+    
+}
+
 
 @end

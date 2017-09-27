@@ -16,5 +16,6 @@ pod 'JPFPSStatus', '~> 0.1' #FPS
 pod 'DOPDropDownMenu-Enhanced', '~> 1.0.0'#下拉选择菜单
 pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
 pod 'MBProgressHUD', '~> 1.0.0'
-
+pod 'PPNetworkHelper', '~> 0.8.0'
+pod 'ARSegmentPager', :git => 'https://github.com/AugustRush/ARSegmentPager.git'#视觉差
 end

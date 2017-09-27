@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BYBBaseTableViewCell : UITableViewCell
-
++ (instancetype)cellForTableView:(UITableView *)tableView;
 @end
