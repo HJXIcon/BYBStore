@@ -84,12 +84,21 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #import "BYBLoadingView.h"
 #import "JXFactoryTool.h"
 #import "UIView+masonry.h"
-
+#import "UILabel+MarginText.h"
+#import "NSString+JXExtension.h"
+#import "UIBarButtonItem+Item.h"
 
 // 主题颜色
 #define BYBThemeColor [UIColor colorWithHexString:@"0xfb1951"]
 // 背景颜色
-#define BYBBGColor [UIColor colorWithHexString:@"0xdddddd"]
+#define BYBBGColor [UIColor colorWithHexString:@"0xf0eff5"]
+// 字体颜色0
+#define BYBTEXTColor0 [UIColor colorWithHexString:@"0xc0c0c0"]
+// 字体颜色1
+#define BYBTEXTColor1 [UIColor colorWithHexString:@"0x808080"]
+// 字体颜色2
+#define BYBTEXTColor2 [UIColor colorWithHexString:@"0x707070"]
+
 // 比例
 #define BYBSCREEN_SCALE ((double)[ UIScreen mainScreen ].bounds.size.width/320)
 // 占位视图

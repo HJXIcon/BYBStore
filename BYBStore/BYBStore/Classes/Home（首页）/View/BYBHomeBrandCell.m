@@ -7,7 +7,10 @@
 //
 
 #import "BYBHomeBrandCell.h"
-
+#import "BYBHomeBrandModel.h"
+#import "BYBHomeBrandlistRecommendCell.h"
+#import "BYBHomeBranDetailController.h"
+#import "BYBGoodDetailViewController.h"
 
 @interface BYBHomeBrandCell ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic, strong) UIImageView *iconImageView;
@@ -18,13 +21,31 @@
 
 @end
 @implementation BYBHomeBrandCell
+- (void)setFrame:(CGRect)frame{
+    frame.size.height -= 15;
+    [super setFrame:frame];
+}
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self setupUI];
+        
     }
     return self;
+}
+
+
+- (void)setModel:(BYBHomeBrandModel *)model{
+    _model = model;
+    BYBHomeBrandListRecommendModel *listInfoModel = model.listRecommendInfo.firstObject;
+    [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:listInfoModel.BrandLogo] placeholderImage:BYB_PlaceholderImage];
+    
+    self.titleLabel.text = model.strBrandName;
+    self.subTitleLabel.text = model.strBrandExclusiveTitle;
+    [self.desLabel setMarginText:model.strBrandContent LineSpacing:5];
+    
+    [self.collectionView reloadData];
 }
 
 - (void)setupUI{
@@ -44,21 +65,15 @@
     }];
     
     
-    self.subTitleLabel = [JXFactoryTool creatLabel:CGRectZero font:[UIFont systemFontOfSize:12] textColor:BYBBGColor text:@"还好四次黑hi安倍hi哦啊我和讴歌奥和哦我啊回复得会" textAlignment:0];
+    self.subTitleLabel = [JXFactoryTool creatLabel:CGRectZero font:[UIFont systemFontOfSize:12 weight:1] textColor:BYBTEXTColor0 text:@"还好四次黑hi安倍hi哦啊我和讴歌奥和哦我啊回复得会" textAlignment:0];
     [self.contentView addSubview:self.subTitleLabel];
     [self.subTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.titleLabel.mas_left);
         make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(5);
     }];
     
-    self.desLabel = [JXFactoryTool creatLabel:CGRectZero font:[UIFont systemFontOfSize:12 weight:.5] textColor:[UIColor grayColor] text:@"十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵" textAlignment:0];
+    self.desLabel = [JXFactoryTool creatLabel:CGRectZero font:[UIFont systemFontOfSize:12 weight:.5] textColor:BYBTEXTColor2 text:@"十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵十大黑海和多喝哦啊呵呵" textAlignment:0];
     self.desLabel.numberOfLines = 2;
-    /// 行间距
-    NSMutableAttributedString *attri = [[NSMutableAttributedString alloc]initWithString:self.desLabel.text];
-    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];
-    [style setLineSpacing:5];
-    [attri addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, self.desLabel.text.length)];
-    [self.desLabel setAttributedText:attri];
     
     [self.contentView addSubview:self.desLabel];
     [self.desLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -69,13 +84,17 @@
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     layout.itemSize = CGSizeMake(180, 250);
-    layout.minimumLineSpacing = 0;
-    layout.minimumInteritemSpacing = 0;
+    layout.minimumLineSpacing = 10;
+    layout.minimumInteritemSpacing = 10;
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    self.collectionView.showsVerticalScrollIndicator = NO;
+    self.collectionView.showsHorizontalScrollIndicator = NO;
+    [self.collectionView registerClass:[BYBHomeBrandlistRecommendCell class] forCellWithReuseIdentifier:@"cell"];
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell2"];
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -90,17 +109,56 @@
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    return 10;
+    return self.model.listRecommendInfo.count + 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    if (indexPath.row < self.model.listRecommendInfo.count) {
+        
+        BYBHomeBrandlistRecommendCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        
+        cell.model = self.model.listRecommendInfo[indexPath.row];
+        return cell;
+    }
     
-    cell.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell2" forIndexPath:indexPath];
+    
+    UIImageView *imageView = [JXFactoryTool creatImageView:CGRectZero image:[UIImage imageNamed:@"chakangengduo_83x83_"]];
+    [cell.contentView addSubview:imageView];
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(cell.contentView);
+        make.width.height.mas_equalTo(42);
+    }];
+    
+    UILabel *label = [JXFactoryTool creatLabel:CGRectZero font:[UIFont systemFontOfSize:12] textColor:[UIColor grayColor] text:@"查看更多" textAlignment:NSTextAlignmentCenter];
+    [cell.contentView addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(imageView);
+        make.top.mas_equalTo(imageView.mas_bottom).offset(10);
+    }];
+    
+    
     return cell;
+    
 }
 
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController *vc = [BYBControllerManger getControllerFormView:self];
+    
+    if (indexPath.row < self.model.listRecommendInfo.count) {
+        BYBGoodDetailViewController *goodVc = [[BYBGoodDetailViewController alloc]init];
+        goodVc.iInfoID = self.model.listRecommendInfo[indexPath.row].iInfoID;
+        [vc.navigationController pushViewController:goodVc animated:YES];
+    }else{
+        
+        BYBHomeBranDetailController *branDetailVc = [[BYBHomeBranDetailController alloc]init];
+        branDetailVc.iBrandExclusiveID = self.model.iBrandExclusiveID;
+        branDetailVc.title = self.model.strBrandName;
+        [vc.navigationController pushViewController:branDetailVc animated:YES];
+    }
+}
 
 
 @end

@@ -10,9 +10,10 @@
 
 @implementation BYBHomeBrandModel
 
-+ (NSDictionary *)mj_replacedKeyFromPropertyName{
++ (NSDictionary *)mj_objectClassInArray
+{
     return @{
-             @"listRecommendInfo":[BYBHomeBrandListRecommendModel class]
+             @"listRecommendInfo":@"BYBHomeBrandListRecommendModel"
              };
 }
 @end

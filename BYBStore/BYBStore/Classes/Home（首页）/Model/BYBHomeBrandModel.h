@@ -49,6 +49,7 @@
 @property (nonatomic, strong) NSString *iBrandExclusiveID;
 @property (nonatomic, strong) NSString *strBrandExclusiveTitle;
 @property (nonatomic, strong) NSString *strBandUrl;
+@property (nonatomic, strong) NSString *strBrandName;
 @property (nonatomic, strong) NSString *strBrandImage;
 @property (nonatomic, strong) NSString *strBrandContent;
 @property (nonatomic, strong) NSArray<BYBHomeBrandListRecommendModel *> *listRecommendInfo;

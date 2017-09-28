@@ -7,8 +7,9 @@
 //
 
 #import "BYBHomeBranViewController.h"
-#import "BYBHomeSpecialTopicModel.h"
+#import "BYBHomeBrandModel.h"
 #import "BYBHomeBrandCell.h"
+#import "BYBHomeBranDetailController.h"
 
 @interface BYBHomeBranViewController ()
 /** data*/
@@ -32,10 +33,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.rowHeight = 150 * BYBSCREEN_SCALE;
     
-    self.tableView.rowHeight = 400;
+    self.tableView.rowHeight = 400 + 15;
+    self.tableView.backgroundColor = BYBBGColor;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
+
 
 
 
@@ -61,8 +64,7 @@
     } success:^(id responseObject) {
         _isLoadData = NO;
         self.isRefresh = YES;
-//        [self.dataArray addObjectsFromArray:[BYBHomeSpecialTopicModel mj_objectArrayWithKeyValuesArray:responseObject]];
-        
+        [self.dataArray addObjectsFromArray:[BYBHomeBrandModel mj_objectArrayWithKeyValuesArray:responseObject]];
         
         [self.tableView reloadData];
         [self endRefreshing];
@@ -81,15 +83,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 10;
     return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     BYBHomeBrandCell *cell = [BYBHomeBrandCell cellForTableView:tableView];
+    cell.model = self.dataArray[indexPath.row];
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    BYBHomeBrandModel *model = self.dataArray[indexPath.row];
+    BYBHomeBranDetailController *detailVc = [[BYBHomeBranDetailController alloc]init];
+    detailVc.title = model.strBrandName;
+    detailVc.iBrandExclusiveID = model.iBrandExclusiveID;
+    [self.navigationController pushViewController:detailVc animated:YES];
+}
+
+
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     if (scrollView == self.tableView  && !_isLoadData && self.isRefresh) {
@@ -103,12 +116,13 @@
         
         if (offsetY - self.lastOffsetY > 0 && fabs(offsetY - self.lastOffsetY) > 40) {
             
+            self.lastOffsetY = offsetY;
             if (self.scrollBlock) {
                 self.scrollBlock(YES);
             }
             
         }else if(offsetY - self.lastOffsetY < 0 && fabs(offsetY - self.lastOffsetY) > 40){
-            
+            self.lastOffsetY = offsetY;
             if (self.scrollBlock) {
                 self.scrollBlock(NO);
             }

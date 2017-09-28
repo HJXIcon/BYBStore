@@ -7,7 +7,9 @@
 //
 
 #import "BYBBaseTableViewCell.h"
-
+@class BYBHomeBrandModel;
 @interface BYBHomeBrandCell : BYBBaseTableViewCell
 
+/** model*/
+@property (nonatomic, strong) BYBHomeBrandModel *model;
 @end
