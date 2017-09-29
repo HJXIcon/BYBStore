@@ -11,6 +11,9 @@
 @implementation UILabel (MarginText)
 
 - (void)setMarginText:(NSString *)text LineSpacing:(CGFloat)lineSpacing{
+    if (text.length == 0) {
+         NSAssert(text.length, @"text must not nil");
+    }
     
     NSMutableAttributedString *attri = [[NSMutableAttributedString alloc]initWithString:text];
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc]init];

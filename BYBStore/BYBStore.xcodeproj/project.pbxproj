@@ -80,6 +80,11 @@
 		F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A8D1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m */; };
 		F3C04A911F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A901F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m */; };
 		F3C04A931F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C04A921F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib */; };
+		F3D2D1C31F7DDA780021D062 /* BYBGoodDetailsCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2D1C21F7DDA780021D062 /* BYBGoodDetailsCell2.m */; };
+		F3D2D1C61F7DEAA60021D062 /* BYBGoodDetailsCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2D1C51F7DEAA60021D062 /* BYBGoodDetailsCell3.m */; };
+		F3D2D1C91F7DF1DD0021D062 /* BYBGoodDetailsCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2D1C81F7DF1DD0021D062 /* BYBGoodDetailsCell4.m */; };
+		F3D2D1CD1F7DF7B30021D062 /* GoodDetail.css in Resources */ = {isa = PBXBuildFile; fileRef = F3D2D1CB1F7DF7B30021D062 /* GoodDetail.css */; };
+		F3D2D1D41F7E36350021D062 /* JXConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2D1D31F7E36350021D062 /* JXConst.m */; };
 		F3F1A20B1F7C910800BFC2E3 /* BYBHomeBrandlistRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1A20A1F7C910800BFC2E3 /* BYBHomeBrandlistRecommendCell.m */; };
 		F3F1A20E1F7CA0C700BFC2E3 /* BYBHomeBranDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1A20D1F7CA0C700BFC2E3 /* BYBHomeBranDetailController.m */; };
 		F3F1A2111F7CA75700BFC2E3 /* BYBBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1A2101F7CA75700BFC2E3 /* BYBBaseCollectionViewController.m */; };
@@ -230,6 +235,15 @@
 		F3C04A8F1F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBShareOrderOfMineHeaderView.h; sourceTree = "<group>"; };
 		F3C04A901F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBShareOrderOfMineHeaderView.m; sourceTree = "<group>"; };
 		F3C04A921F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BYBShareOrderOfMineHeaderView.xib; sourceTree = "<group>"; };
+		F3D2D1C11F7DDA780021D062 /* BYBGoodDetailsCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBGoodDetailsCell2.h; sourceTree = "<group>"; };
+		F3D2D1C21F7DDA780021D062 /* BYBGoodDetailsCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBGoodDetailsCell2.m; sourceTree = "<group>"; };
+		F3D2D1C41F7DEAA60021D062 /* BYBGoodDetailsCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBGoodDetailsCell3.h; sourceTree = "<group>"; };
+		F3D2D1C51F7DEAA60021D062 /* BYBGoodDetailsCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBGoodDetailsCell3.m; sourceTree = "<group>"; };
+		F3D2D1C71F7DF1DD0021D062 /* BYBGoodDetailsCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBGoodDetailsCell4.h; sourceTree = "<group>"; };
+		F3D2D1C81F7DF1DD0021D062 /* BYBGoodDetailsCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBGoodDetailsCell4.m; sourceTree = "<group>"; };
+		F3D2D1CB1F7DF7B30021D062 /* GoodDetail.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = GoodDetail.css; sourceTree = "<group>"; };
+		F3D2D1D21F7E36350021D062 /* JXConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXConst.h; sourceTree = "<group>"; };
+		F3D2D1D31F7E36350021D062 /* JXConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXConst.m; sourceTree = "<group>"; };
 		F3F1A2091F7C910800BFC2E3 /* BYBHomeBrandlistRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeBrandlistRecommendCell.h; sourceTree = "<group>"; };
 		F3F1A20A1F7C910800BFC2E3 /* BYBHomeBrandlistRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeBrandlistRecommendCell.m; sourceTree = "<group>"; };
 		F3F1A20C1F7CA0C700BFC2E3 /* BYBHomeBranDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeBranDetailController.h; sourceTree = "<group>"; };
@@ -425,6 +439,7 @@
 		F38F50111F761A9100848619 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F3D2D1CA1F7DF7B30021D062 /* Source */,
 				F34AEAF01F7A5CD0000E650A /* JXPageCotentView */,
 				F34AEAE01F7A3464000E650A /* HUD */,
 				F38F505B1F7640AA00848619 /* SubClass */,
@@ -439,6 +454,8 @@
 			isa = PBXGroup;
 			children = (
 				F38F50291F761C8F00848619 /* Define.h */,
+				F3D2D1D21F7E36350021D062 /* JXConst.h */,
+				F3D2D1D31F7E36350021D062 /* JXConst.m */,
 				F38F50401F76373600848619 /* BYBBaseViewController.h */,
 				F38F50411F76373600848619 /* BYBBaseViewController.m */,
 				F3C04A741F78EA2A00EE8FAF /* BYBBaseTableViewController.h */,
@@ -777,11 +794,25 @@
 			path = SubClass;
 			sourceTree = "<group>";
 		};
+		F3D2D1CA1F7DF7B30021D062 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F3D2D1CB1F7DF7B30021D062 /* GoodDetail.css */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		F3F1A2331F7CF69D00BFC2E3 /* GoodDetailCells */ = {
 			isa = PBXGroup;
 			children = (
 				F3F1A2341F7CF6C300BFC2E3 /* BYBGoodDetailsCell1.h */,
 				F3F1A2351F7CF6C300BFC2E3 /* BYBGoodDetailsCell1.m */,
+				F3D2D1C11F7DDA780021D062 /* BYBGoodDetailsCell2.h */,
+				F3D2D1C21F7DDA780021D062 /* BYBGoodDetailsCell2.m */,
+				F3D2D1C41F7DEAA60021D062 /* BYBGoodDetailsCell3.h */,
+				F3D2D1C51F7DEAA60021D062 /* BYBGoodDetailsCell3.m */,
+				F3D2D1C71F7DF1DD0021D062 /* BYBGoodDetailsCell4.h */,
+				F3D2D1C81F7DF1DD0021D062 /* BYBGoodDetailsCell4.m */,
 			);
 			path = GoodDetailCells;
 			sourceTree = "<group>";
@@ -821,6 +852,7 @@
 				TargetAttributes = {
 					F38F4FF11F76178A00848619 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 7TM5A6A2L6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -860,6 +892,7 @@
 				F34AEB171F7A7D63000E650A /* 三里屯 in Resources */,
 				F3C04A6B1F78B26700EE8FAF /* BYBNavigationBar.xib in Resources */,
 				F34AEB101F7A7D63000E650A /* 品牌专场 in Resources */,
+				F3D2D1CD1F7DF7B30021D062 /* GoodDetail.css in Resources */,
 				F3C04A931F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib in Resources */,
 				F38F50051F76178A00848619 /* LaunchScreen.storyboard in Resources */,
 				F34AEB111F7A7D63000E650A /* Details in Resources */,
@@ -954,11 +987,14 @@
 				F3C04A661F78B01700EE8FAF /* BYBWebViewController.m in Sources */,
 				F38F50571F7639DA00848619 /* BYBCategoryViewController.m in Sources */,
 				F34AEAE61F7A34AF000E650A /* BYBLoadingView.m in Sources */,
+				F3D2D1C91F7DF1DD0021D062 /* BYBGoodDetailsCell4.m in Sources */,
 				F38F506C1F764E4200848619 /* BYBBaseView.m in Sources */,
 				F38F50541F76399B00848619 /* BYBShopCarViewController.m in Sources */,
 				F3C04A7C1F78F5B400EE8FAF /* BYBRefreshFooter.m in Sources */,
 				F3F1A2251F7CE24200BFC2E3 /* NSArray+log.m in Sources */,
 				F34AEB1E1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m in Sources */,
+				F3D2D1D41F7E36350021D062 /* JXConst.m in Sources */,
+				F3D2D1C31F7DDA780021D062 /* BYBGoodDetailsCell2.m in Sources */,
 				F3C04A711F78E7B500EE8FAF /* BYBNoDataView.m in Sources */,
 				F3F1A2261F7CE24200BFC2E3 /* NSDictionary+log.m in Sources */,
 				F38F50421F76373600848619 /* BYBBaseViewController.m in Sources */,
@@ -993,6 +1029,7 @@
 				F34AEAFF1F7A5CD0000E650A /* JXTitleView.m in Sources */,
 				F3F1A21D1F7CD34800BFC2E3 /* BYBHomeBranDetailModel.m in Sources */,
 				F38F502F1F761CCC00848619 /* BYBTabBarController.m in Sources */,
+				F3D2D1C61F7DEAA60021D062 /* BYBGoodDetailsCell3.m in Sources */,
 				F3C04A761F78EA2A00EE8FAF /* BYBBaseTableViewController.m in Sources */,
 				F38F50511F76398F00848619 /* BYBShareOrderViewController.m in Sources */,
 				F3C04A791F78F41600EE8FAF /* BYBRefreshHeader.m in Sources */,
@@ -1114,12 +1151,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 7TM5A6A2L6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BYBStore/Classes/Main/Others/BYBStore.pch";
 				INFOPLIST_FILE = BYBStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BYBStore.BYBStore;
+				PRODUCT_BUNDLE_IDENTIFIER = BYBStore.BYBStoredf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1130,12 +1168,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 7TM5A6A2L6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BYBStore/Classes/Main/Others/BYBStore.pch";
 				INFOPLIST_FILE = BYBStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BYBStore.BYBStore;
+				PRODUCT_BUNDLE_IDENTIFIER = BYBStore.BYBStoredf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -97,7 +97,7 @@
     UIView *bottomView = [[UIView alloc]init];
     [self.contentView addSubview:bottomView];
     [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.priceLabel.mas_bottom).offset(10);
+        make.top.mas_equalTo(self.priceLabel.mas_bottom).offset(0);
         make.left.right.bottom.mas_equalTo(self.contentView);
     }];
     
@@ -121,7 +121,7 @@
         [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(view);
             make.width.height.mas_equalTo(30);
-            make.top.mas_equalTo(view).offset(5);
+            make.top.mas_equalTo(view).offset(0);
         }];
         
         UILabel *label = [JXFactoryTool creatLabel:CGRectZero font:[UIFont systemFontOfSize:13 weight:.1] textColor:BYBTEXTColor1 text:titles[i] textAlignment:NSTextAlignmentCenter];

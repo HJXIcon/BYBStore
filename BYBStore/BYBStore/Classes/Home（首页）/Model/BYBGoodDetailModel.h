@@ -78,6 +78,9 @@
 @property (nonatomic, strong) NSString *strCountryName;
 @property (nonatomic, strong) NSString *strBrandDes;
 @property (nonatomic, strong) NSString *strBrandLogo;
+
+//// ----- 新增
+@property (nonatomic, assign) CGFloat cellHeight;
 @end
 
 //// ----GetShareShoppingInfoListByInfoID ----- ////

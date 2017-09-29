@@ -87,6 +87,7 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #import "UILabel+MarginText.h"
 #import "NSString+JXExtension.h"
 #import "UIBarButtonItem+Item.h"
+#import "JXConst.h"
 
 // 主题颜色
 #define BYBThemeColor [UIColor colorWithHexString:@"0xfb1951"]
@@ -104,5 +105,7 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 // 占位视图
 #define BYB_PlaceholderImage [UIImage imageNamed:@"netError"]
 
+// 箭头图片
+#define BYB_ArrowImage [UIImage imageNamed:@"common_icon_arrow"]
 
 #endif /* Define_h */

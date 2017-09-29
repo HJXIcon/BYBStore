@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <JPFPSStatus.h>
 
 @interface AppDelegate ()
 
@@ -22,6 +23,10 @@
     self.window.rootViewController = [BYBControllerManger chooseRootController];
 
     [self.window makeKeyAndVisible];
+#if defined(DEBUG)||defined(_DEBUG)
+    [[JPFPSStatus sharedInstance] open];
+    
+#endif
     
     return YES;
 }

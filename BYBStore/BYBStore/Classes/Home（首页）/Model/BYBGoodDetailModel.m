@@ -15,6 +15,12 @@
 //// ----- BYBGoodDetailGetInfoBrandDataModel ------ ////
 @implementation BYBGoodDetailGetInfoBrandDataModel
 
+- (void)setStrBrandDes:(NSString *)strBrandDes{
+    _strBrandDes = strBrandDes;
+    
+    self.cellHeight = [strBrandDes sizeWithFont:[UIFont systemFontOfSize:13 weight:.2] andMaxSize:CGSizeMake(kScreenH - 25, MAXFLOAT) lineSpacing:8].height + 80 + 20;
+}
+
 @end
 //// ----- BYBGoodDetailGetShareShoppingInfoListByInfoIDModel ------ ////
 @implementation BYBGoodDetailGetShareShoppingInfoListByInfoIDModel

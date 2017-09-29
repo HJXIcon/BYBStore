@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+    font-weight:600;
+    font-size:16px;
+/*    行高*/
+    line-height:35px;
+/*    letter-spacing:20px;*/ /*字间距*/
+/*    font-family:"Heiti SC";*/
+    font-family:"Iowan Old Style Roman";
+    color:#4c4c4c;
+    margin-left:20px;
+    margin-right:20px;
+    word-spacing:0px; /*属性增加或减少单词间的空白(即字间隔)*/
+/*    background:#f7f7f7*/
+}
+
+/*p{*/
+/*    display:block;*/
+/*    color:#333333;*/
+/*}*/
+
+br{
+    display:none
+}
+
+
+/*table*/
+/*{*/
+/*    border-collapse:collapse;*/
+/*    border-spacing:0;*/
+/*    width:100%*/
+/*}*/
+/**/
+/*table th,table td*/
+/*{*/
+/*    border:1px #cccccc*/
+/*    solid;font-weight:normal;*/
+/*    font-size:13px;*/
+/*    line-height:20px;*/
+/*    font-family:"Heiti SC";*/
+/*    color:#555555;*/
+/*    padding:5px 3px;*/
+/*}*/
+
+/*a*/
+/*{*/
+/*    color:#328fde;*/
+/*    text-decoration:none;*/
+/*}*/
+
+img
+{
+    max-width:100%;
+    margin:10px auto:
+}

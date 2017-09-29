@@ -9,11 +9,16 @@
 #import "BYBGoodDetailViewController.h"
 #import "BYBGoodDetailModel.h"
 #import "BYBGoodDetailsCell1.h"
+#import "BYBGoodDetailsCell2.h"
+#import "BYBGoodDetailsCell3.h"
+#import "BYBGoodDetailsCell4.h"
 
 
 @interface BYBGoodDetailViewController ()
 /** goodDetailModel*/
 @property (nonatomic, strong) BYBGoodDetailModel *goodDetailModel;
+/** cell4高度 */
+@property (nonatomic, assign) CGFloat cell4Height;
 @end
 
 @implementation BYBGoodDetailViewController
@@ -24,6 +29,27 @@
     self.navigationItem.title = @"商品详情";
     [self loadData];
     self.tableView.backgroundColor = BYBBGColor;
+    
+    [self.tableView registerClass:[BYBGoodDetailsCell4 class] forCellReuseIdentifier:NSStringFromClass([BYBGoodDetailsCell4 class])];
+    // 注册加载完成高度的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noti:) name:UpdateGoodDetailCell4Height object:nil];
+    
+    self.hidesBottomBarWhenPushed = YES;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+}
+
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:UpdateGoodDetailCell4Height object:nil];
+}
+
+- (void)noti:(NSNotification *)sender
+{
+    
+    NSNumber *num = [sender object];
+    self.cell4Height = [num floatValue];
+    [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:3]] withRowAnimation:UITableViewRowAnimationNone];
+    
 }
 
 
@@ -67,6 +93,34 @@
         }
             break;
             
+        case 1:
+        {
+            BYBGoodDetailsCell2 *cell = [BYBGoodDetailsCell2 cellForTableView:tableView];
+            [cell.countryImageView sd_setImageWithURL:[NSURL URLWithString:self.goodDetailModel.GetInfoData.countrySmallIcon] placeholderImage:BYB_PlaceholderImage];
+            cell.branLabel.text = self.goodDetailModel.GetInfoData.result.mall[@"strMallName"];
+            return cell;
+        }
+            break;
+            
+        case 2:
+        {
+            BYBGoodDetailsCell3 *cell = [BYBGoodDetailsCell3 cellForTableView:tableView];
+            cell.model = self.goodDetailModel.GetInfoBrandData;
+            return cell;
+        }
+            break;
+            
+        case 3:
+        {
+            BYBGoodDetailsCell4 *cell = [BYBGoodDetailsCell4 cellForTableView:tableView];
+            cell.strInfoContent = self.goodDetailModel.GetInfoData.result.strInfoContent;
+           
+            return cell;
+        }
+            break;
+            
+            
+            
         default:
             break;
     }
@@ -88,7 +142,32 @@
     
     switch (indexPath.section) {
         case 0:
-            return  580;
+            return  520;
+            break;
+            
+        case 1:
+            return  120;
+            break;
+            
+        case 2:
+            return  self.goodDetailModel.GetInfoBrandData.cellHeight;
+            break;
+            
+        case 3:
+        {
+            if (self.cell4Height == 0) {
+                
+                return [self.tableView fd_heightForCellWithIdentifier:NSStringFromClass([BYBGoodDetailsCell4 class]) configuration:^(id cell) {
+                    
+                }];
+            }else{
+                return self.cell4Height;
+            }
+    
+            
+            
+        }
+            
             break;
             
         default:
