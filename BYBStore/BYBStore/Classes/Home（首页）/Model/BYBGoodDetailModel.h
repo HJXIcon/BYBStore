@@ -127,7 +127,8 @@
 @property(nonatomic, strong) NSArray<BYBGoodDetailGetShareShoppingInfoListByInfoIDModel *> *GetShareShoppingInfoListByInfoID;
 @property(nonatomic, strong) NSArray<BYBGoodDetailGetInfoReviewModel *>*GetInfoReview;
 @property(nonatomic, strong) NSString *ImageaCount;
+/// 到手评价数量
 @property(nonatomic, strong) NSString *GetOrdersCommodityReviewCountByInfoID;
-
-
+/// 比友跟帖数量
+@property(nonatomic, strong) NSString *rowscount;
 @end

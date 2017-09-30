@@ -43,7 +43,8 @@
              @"GetShareShoppingInfoListByInfoID":@"GetShareShoppingInfoListByInfoID.result",
              @"GetInfoReview":@"GetInfoReview.result",
              @"GetOrdersCommodityReviewCountByInfoID":@"GetOrdersCommodityReviewCountByInfoID.result",
-             @"ImageaCount":@"ImageaCount.ImageaCountResult"
+             @"ImageaCount":@"ImageaCount.ImageaCountResult",
+             @"rowscount":@"GetInfoReview.rowscount"
              };
 }
 
@@ -51,7 +52,7 @@
 {
     return @{
              @"GetShareShoppingInfoListByInfoID":@"BYBGoodDetailGetShareShoppingInfoListByInfoIDModel",
-             @"GetInfoReviewModel" : @"BYBGoodDetailGetInfoReviewModel"
+             @"GetInfoReview" : @"BYBGoodDetailGetInfoReviewModel"
              };
 }
 

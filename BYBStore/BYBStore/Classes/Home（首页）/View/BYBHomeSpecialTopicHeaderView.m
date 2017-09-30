@@ -77,6 +77,9 @@
 
 - (void)hotAction:(UIButton *)button{
     self.branBtn.selected = NO;
+    if (button.selected) {
+        return;
+    }
     button.selected = !button.selected;
     
     if (self.selectBlock) {
@@ -86,6 +89,9 @@
 
 - (void)branAction:(UIButton *)button{
     self.hotBtn.selected = NO;
+    if (button.selected) {
+        return;
+    }
     button.selected = !button.selected;
     
     if (self.selectBlock) {

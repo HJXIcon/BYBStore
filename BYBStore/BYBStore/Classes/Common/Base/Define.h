@@ -93,6 +93,9 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #define BYBThemeColor [UIColor colorWithHexString:@"0xfb1951"]
 // 背景颜色
 #define BYBBGColor [UIColor colorWithHexString:@"0xf0eff5"]
+// borderColor
+#define BYBBorderColor [UIColor colorWithHexString:@"0xf0f0f0"]
+
 // 字体颜色0
 #define BYBTEXTColor0 [UIColor colorWithHexString:@"0xc0c0c0"]
 // 字体颜色1
