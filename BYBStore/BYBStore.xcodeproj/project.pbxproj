@@ -70,6 +70,10 @@
 		F38F50711F764F7800848619 /* BYBAccountLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38F50701F764F7800848619 /* BYBAccountLoginView.xib */; };
 		F38F50751F7661AF00848619 /* BYBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38F50731F7661AF00848619 /* BYBRegisterViewController.m */; };
 		F38F50781F7661DD00848619 /* BYBRegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38F50771F7661DD00848619 /* BYBRegisterViewController.storyboard */; };
+		F3BBBF081F8CCC2D00B4D8AA /* JXPopoverAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBF031F8CCC2D00B4D8AA /* JXPopoverAction.m */; };
+		F3BBBF091F8CCC2D00B4D8AA /* JXPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBF051F8CCC2D00B4D8AA /* JXPopoverView.m */; };
+		F3BBBF0A1F8CCC2D00B4D8AA /* JXPopoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBF071F8CCC2D00B4D8AA /* JXPopoverViewCell.m */; };
+		F3BBBF0D1F8CD99E00B4D8AA /* JXEmitterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F3BBBF0C1F8CD99E00B4D8AA /* JXEmitterButton.m */; };
 		F3C04A601F78A77A00EE8FAF /* BYBCheckTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A5F1F78A77A00EE8FAF /* BYBCheckTools.m */; };
 		F3C04A631F78A8ED00EE8FAF /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A621F78A8ED00EE8FAF /* UIViewController+HUD.m */; };
 		F3C04A661F78B01700EE8FAF /* BYBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C04A651F78B01700EE8FAF /* BYBWebViewController.m */; };
@@ -225,6 +229,14 @@
 		F38F50721F7661AF00848619 /* BYBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBRegisterViewController.h; sourceTree = "<group>"; };
 		F38F50731F7661AF00848619 /* BYBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBRegisterViewController.m; sourceTree = "<group>"; };
 		F38F50771F7661DD00848619 /* BYBRegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BYBRegisterViewController.storyboard; sourceTree = "<group>"; };
+		F3BBBF021F8CCC2D00B4D8AA /* JXPopoverAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPopoverAction.h; sourceTree = "<group>"; };
+		F3BBBF031F8CCC2D00B4D8AA /* JXPopoverAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPopoverAction.m; sourceTree = "<group>"; };
+		F3BBBF041F8CCC2D00B4D8AA /* JXPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPopoverView.h; sourceTree = "<group>"; };
+		F3BBBF051F8CCC2D00B4D8AA /* JXPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPopoverView.m; sourceTree = "<group>"; };
+		F3BBBF061F8CCC2D00B4D8AA /* JXPopoverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXPopoverViewCell.h; sourceTree = "<group>"; };
+		F3BBBF071F8CCC2D00B4D8AA /* JXPopoverViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXPopoverViewCell.m; sourceTree = "<group>"; };
+		F3BBBF0B1F8CD99E00B4D8AA /* JXEmitterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXEmitterButton.h; sourceTree = "<group>"; };
+		F3BBBF0C1F8CD99E00B4D8AA /* JXEmitterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXEmitterButton.m; sourceTree = "<group>"; };
 		F3C04A5E1F78A77A00EE8FAF /* BYBCheckTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBCheckTools.h; sourceTree = "<group>"; };
 		F3C04A5F1F78A77A00EE8FAF /* BYBCheckTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBCheckTools.m; sourceTree = "<group>"; };
 		F3C04A611F78A8ED00EE8FAF /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
@@ -350,7 +362,8 @@
 				F34AEAFA1F7A5CD0000E650A /* UIColor+pageExtension.h */,
 				F34AEAFB1F7A5CD0000E650A /* UIColor+pageExtension.m */,
 			);
-			path = JXPageCotentView;
+			name = JXPageCotentView;
+			path = ../JXPageCotentView;
 			sourceTree = "<group>";
 		};
 		F34AEB041F7A7D63000E650A /* CustomData */ = {
@@ -469,8 +482,8 @@
 		F38F50111F761A9100848619 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F3BBBF001F8CCBFE00B4D8AA /* Instrument */,
 				F3D2D1CA1F7DF7B30021D062 /* Source */,
-				F34AEAF01F7A5CD0000E650A /* JXPageCotentView */,
 				F34AEAE01F7A3464000E650A /* HUD */,
 				F38F505B1F7640AA00848619 /* SubClass */,
 				F38F50121F761A9100848619 /* Base */,
@@ -811,6 +824,8 @@
 		F38F505B1F7640AA00848619 /* SubClass */ = {
 			isa = PBXGroup;
 			children = (
+				F3BBBF0B1F8CD99E00B4D8AA /* JXEmitterButton.h */,
+				F3BBBF0C1F8CD99E00B4D8AA /* JXEmitterButton.m */,
 				F38F505C1F76412E00848619 /* JXRelayoutButton.h */,
 				F38F505D1F76412E00848619 /* JXRelayoutButton.m */,
 				F3C04A641F78B01700EE8FAF /* BYBWebViewController.h */,
@@ -827,6 +842,28 @@
 				F3C04A7B1F78F5B400EE8FAF /* BYBRefreshFooter.m */,
 			);
 			path = SubClass;
+			sourceTree = "<group>";
+		};
+		F3BBBF001F8CCBFE00B4D8AA /* Instrument */ = {
+			isa = PBXGroup;
+			children = (
+				F3BBBF011F8CCC2D00B4D8AA /* JXPopoverView */,
+				F34AEAF01F7A5CD0000E650A /* JXPageCotentView */,
+			);
+			path = Instrument;
+			sourceTree = "<group>";
+		};
+		F3BBBF011F8CCC2D00B4D8AA /* JXPopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				F3BBBF021F8CCC2D00B4D8AA /* JXPopoverAction.h */,
+				F3BBBF031F8CCC2D00B4D8AA /* JXPopoverAction.m */,
+				F3BBBF041F8CCC2D00B4D8AA /* JXPopoverView.h */,
+				F3BBBF051F8CCC2D00B4D8AA /* JXPopoverView.m */,
+				F3BBBF061F8CCC2D00B4D8AA /* JXPopoverViewCell.h */,
+				F3BBBF071F8CCC2D00B4D8AA /* JXPopoverViewCell.m */,
+			);
+			path = JXPopoverView;
 			sourceTree = "<group>";
 		};
 		F3D2D1CA1F7DF7B30021D062 /* Source */ = {
@@ -1014,6 +1051,7 @@
 				F34AEB1B1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m in Sources */,
 				F34AEAFD1F7A5CD0000E650A /* JXPageStyle.m in Sources */,
 				F34AEAFE1F7A5CD0000E650A /* JXPageView.m in Sources */,
+				F3BBBF081F8CCC2D00B4D8AA /* JXPopoverAction.m in Sources */,
 				F34AEB001F7A5CD0000E650A /* UIColor+pageExtension.m in Sources */,
 				F34AEB271F7B5258000E650A /* UIView+masonry.m in Sources */,
 				F36475261F7F86C7001EB478 /* BYBGoodDetailsMayLikeCell.m in Sources */,
@@ -1026,6 +1064,7 @@
 				F3F1A21A1F7CCC9E00BFC2E3 /* BYBHomeBranDetailRecommendCell.m in Sources */,
 				F36475231F7F5D19001EB478 /* BYBGoodDetailsReviewHeaderFooterCell.m in Sources */,
 				F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */,
+				F3BBBF0D1F8CD99E00B4D8AA /* JXEmitterButton.m in Sources */,
 				F3F1A22F1F7CE7E500BFC2E3 /* BYBGoodDetailModel.m in Sources */,
 				F3F1A2321F7CF15500BFC2E3 /* BYBUserModel.m in Sources */,
 				F3C04A6E1F78E6C600EE8FAF /* UITableView+placeholder.m in Sources */,
@@ -1054,6 +1093,7 @@
 				F38F50481F7637BF00848619 /* BYBLoginViewController.m in Sources */,
 				F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */,
 				F3C04A8B1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m in Sources */,
+				F3BBBF0A1F8CCC2D00B4D8AA /* JXPopoverViewCell.m in Sources */,
 				F34AEAEF1F7A4FC2000E650A /* BYBSearchBarView.m in Sources */,
 				F34AEB031F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m in Sources */,
 				F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */,
@@ -1079,6 +1119,7 @@
 				F38F502F1F761CCC00848619 /* BYBTabBarController.m in Sources */,
 				F3D2D1C61F7DEAA60021D062 /* BYBGoodDetailsCell3.m in Sources */,
 				F3FA59A71F7E523D0079CB65 /* BYBGoodDetailsCell5.m in Sources */,
+				F3BBBF091F8CCC2D00B4D8AA /* JXPopoverView.m in Sources */,
 				F3C04A761F78EA2A00EE8FAF /* BYBBaseTableViewController.m in Sources */,
 				F38F50511F76398F00848619 /* BYBShareOrderViewController.m in Sources */,
 				F3C04A791F78F41600EE8FAF /* BYBRefreshHeader.m in Sources */,

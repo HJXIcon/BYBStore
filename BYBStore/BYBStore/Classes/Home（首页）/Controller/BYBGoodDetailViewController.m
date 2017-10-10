@@ -18,6 +18,8 @@
 #import "BYBGoodDetailMayLikeModel.h"
 #import "BYBGoodDetailMayLikeViewModel.h"
 #import "BYBGoodDetailBottomView.h"
+#import "JXPopoverView.h"
+#import "BYBTabBarController.h"
 
 @interface BYBGoodDetailViewController ()
 /** goodDetailModel*/
@@ -55,10 +57,12 @@
     return _mayLikeData;
 }
 
-
+#pragma mark - life cylce
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"商品详情";
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem item:[UIImage imageNamed:@"更多_19x19_"] highImage:[UIImage imageNamed:@"更多_19x19_"] target:self action:@selector(moreAction)];
+    
     [self loadData];
     self.tableView.backgroundColor = BYBBGColor;
     
@@ -115,6 +119,33 @@
 }
 
 #pragma mark - Actions
+- (void)moreAction{
+    
+    JXWeakSelf;
+    JXPopoverView *popView = [JXPopoverView popoverView];
+    JXPopoverAction *action1 = [JXPopoverAction actionWithImage:[UIImage imageNamed:@"fenxiang_detail_20x20_"] title:@"分享" handler:^(JXPopoverAction *action) {
+        
+    }];
+    
+    JXPopoverAction *action2 = [JXPopoverAction actionWithImage:[UIImage imageNamed:@"shouye_detail_20x20_"] title:@"首页" handler:^(JXPopoverAction *action) {
+        BYBTabBarController *tabBarVc = (BYBTabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.navigationController popToRootViewControllerAnimated:NO];
+            [tabBarVc setSelectedIndex:0];
+        });
+    }];
+    
+    JXPopoverAction *action3 = [JXPopoverAction actionWithImage:[UIImage imageNamed:@"zixun_detail_20x20_"] title:@"咨询" handler:^(JXPopoverAction *action) {
+        
+    }];
+    
+    JXPopoverAction *action4 = [JXPopoverAction actionWithImage:[UIImage imageNamed:@"bangzhu_detail_20x20_"] title:@"帮助" handler:^(JXPopoverAction *action) {
+        
+    }];
+    [popView showToPoint:CGPointMake(kScreenW - 60, 64) withActions:@[action1,action2,action3,action4]];
+}
+
 - (void)loadFooterData{
     self.mayLikePage ++;
     if (self.mayLikePage > self.mayLikeMaxPage) {
