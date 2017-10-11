@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-@class BYBHomeBranDetailModel;
+@class BYBHomeBranDetailModel,BYBHomeHotDetailModel;
 @interface BYBHomeBranDetailTopCell : UICollectionViewCell
 /** model*/
 @property (nonatomic, strong) BYBHomeBranDetailModel *model;
+
+/**
+ 热门专题详情model
+ */
+@property (nonatomic, strong) BYBHomeHotDetailModel *hotModel;
 @end

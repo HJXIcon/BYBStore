@@ -10,6 +10,7 @@
 #import "BYBSearchBarView.h"
 #import "JXPageView.h"
 #import "BYBHomeSpecialTopicViewController.h"
+#import "BYBHomeOtherSpecialController.h"
 
 @interface BYBHomeViewController ()
 
@@ -48,7 +49,55 @@
         if (i == 0 ) {
             vc = [[BYBHomeSpecialTopicViewController alloc]init];
         }else{
-             vc= [[UITableViewController alloc]init];
+             BYBHomeOtherSpecialController *specialVc = [[BYBHomeOtherSpecialController alloc]init];
+            switch (i) {
+                    
+                case 1:
+                    specialVc.special = BYBHomeSpecialFuShi;
+                    break;
+                    
+                case 2:
+                    specialVc.special = BYBHomeSpecialMeiZhuang;
+                    break;
+                    
+                case 3:
+                    specialVc.special = BYBHomeSpecialMuYing;
+                    break;
+                    
+                case 4:
+                    specialVc.special = BYBHomeSpecialQingShe;
+                    break;
+                    
+                case 5:
+                    specialVc.special = BYBHomeSpecialBaiHuo;
+                    break;
+                    
+                case 6:
+                    specialVc.special = BYBHomeSpecialMeiShi;
+                    break;
+                    
+                case 7:
+                    specialVc.special = BYBHomeSpecialYunDong;
+                    break;
+                    
+                    
+                case 8:
+                    specialVc.special = BYBHomeSpecialRiTao;
+                    break;
+                    
+                case 9:
+                    specialVc.special = BYBHomeSpecialMeiTao;
+                    break;
+                    
+                case 10:
+                    specialVc.special = BYBHomeSpecialChangXiaoBang;
+                    break;
+                    
+                default:
+                    break;
+            }
+            
+            vc = specialVc;
         }
 
         vc.view.backgroundColor = [UIColor randomColor];

@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class BYBHomeBrandListRecommendModel;
+@class BYBHomeBrandListRecommendModel,BYBHomeOtherSpecialModel;
 @interface BYBHomeBranDetailRecommendCell : UICollectionViewCell
 
 /** model*/
 @property (nonatomic, strong) BYBHomeBrandListRecommendModel *model;
+
+/** otherSpecialModel*/
+@property (nonatomic, strong) BYBHomeOtherSpecialModel *otherSpecialModel;
 @end

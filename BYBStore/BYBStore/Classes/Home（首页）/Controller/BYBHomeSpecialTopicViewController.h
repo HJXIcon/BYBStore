@@ -8,6 +8,9 @@
 
 #import "BYBBaseTableViewController.h"
 
+/**
+ 专题
+ */
 @interface BYBHomeSpecialTopicViewController : BYBBaseTableViewController
 
 @end

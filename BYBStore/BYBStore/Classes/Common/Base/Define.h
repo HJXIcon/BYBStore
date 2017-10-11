@@ -110,5 +110,9 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 
 // 箭头图片
 #define BYB_ArrowImage [UIImage imageNamed:@"common_icon_arrow"]
+// 美工标出的字体大小 28px = 28 / 2 * 96 / 72 = 18.666
+#define PSFont(I) I * 0.5 * 96 / 72
+#define FontRadio(I)  I*[UIScreen mainScreen].bounds.size.width/375.0f
+#define PSFontRadio(I) FontRadio(PSFont(I))
 
 #endif /* Define_h */

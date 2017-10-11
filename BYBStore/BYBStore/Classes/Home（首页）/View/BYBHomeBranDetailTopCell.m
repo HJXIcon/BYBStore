@@ -8,6 +8,7 @@
 
 #import "BYBHomeBranDetailTopCell.h"
 #import "BYBHomeBranDetailModel.h"
+#import "BYBHomeHotDetailModel.h"
 
 @interface BYBHomeBranDetailTopCell ()
 @property(nonatomic, strong) UIImageView *imageView;
@@ -24,6 +25,12 @@
     return self;
 }
 
+#pragma mark - setter
+- (void)setHotModel:(BYBHomeHotDetailModel *)hotModel{
+    _hotModel = hotModel;
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:hotModel.strSpecialImage] placeholderImage:BYB_PlaceholderImage];
+    [self.desLabel setMarginText:hotModel.strSpecialContent LineSpacing:10];
+}
 - (void)setModel:(BYBHomeBranDetailModel *)model{
     _model = model;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.strBrandImage] placeholderImage:BYB_PlaceholderImage];

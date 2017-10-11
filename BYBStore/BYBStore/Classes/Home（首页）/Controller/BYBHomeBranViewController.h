@@ -8,6 +8,9 @@
 
 #import "BYBBaseTableViewController.h"
 
+/**
+ 品牌专场
+ */
 @interface BYBHomeBranViewController : BYBBaseTableViewController
 @property (nonatomic, copy) void(^scrollBlock)(BOOL);
 @end

@@ -8,6 +8,7 @@
 
 #import "BYBHomeBranDetailRecommendCell.h"
 #import "BYBHomeBrandModel.h"
+#import "BYBHomeOtherSpecialModel.h"
 
 @interface BYBHomeBranDetailRecommendCell ()
 @property (nonatomic, strong) UIImageView *imageView;
@@ -26,6 +27,21 @@
     return self;
 }
 
+#pragma mark - setter
+
+- (void)setOtherSpecialModel:(BYBHomeOtherSpecialModel *)otherSpecialModel{
+    _otherSpecialModel = otherSpecialModel;
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:otherSpecialModel.MainImage] placeholderImage:BYB_PlaceholderImage completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        JXLog(@"imageSize == %@",NSStringFromCGSize(image.size));
+      
+        self.imageView.image = [UIImage IMGCompressed:image targetWidth:CGRectGetHeight(self.imageView.frame)];
+            
+    }];
+    [self.titleLabel setMarginText:otherSpecialModel.InfoTitle LineSpacing:3];
+    self.priceLabel.text = [NSString stringWithFormat:@"¥ %@",otherSpecialModel.MinPriceRMB];
+    [self.countryImageView sd_setImageWithURL:[NSURL URLWithString:otherSpecialModel.countrySmallIcon] placeholderImage:BYB_PlaceholderImage];
+    self.countryLabel.text = [NSString stringWithFormat:@"%@供货",otherSpecialModel.MallName];
+}
 - (void)setModel:(BYBHomeBrandListRecommendModel *)model{
     _model = model;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:model.strMainImage] placeholderImage:BYB_PlaceholderImage];

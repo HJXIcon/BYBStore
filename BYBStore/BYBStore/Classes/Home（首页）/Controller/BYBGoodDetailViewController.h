@@ -8,6 +8,9 @@
 
 #import "BYBBaseTableViewController.h"
 
+/**
+ 商品详情
+ */
 @interface BYBGoodDetailViewController : UITableViewController
 /** iInfoID*/
 @property (nonatomic, strong) NSString *iInfoID;

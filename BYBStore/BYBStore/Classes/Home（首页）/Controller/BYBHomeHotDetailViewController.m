@@ -1,21 +1,20 @@
 //
-//  BYBHomeBranDetailController.m
+//  BYBHomeHotDetailViewController.m
 //  BYBStore
 //
-//  Created by 晓梦影 on 2017/9/28.
+//  Created by 晓梦影 on 2017/10/11.
 //  Copyright © 2017年 BYBStore. All rights reserved.
 //
 
-#import "BYBHomeBranDetailController.h"
+#import "BYBHomeHotDetailViewController.h"
 #import "BYBHomeBranDetailTopCell.h"
 #import "BYBHomeBranDetailRecommendCell.h"
-#import "BYBHomeBranDetailModel.h"
+#import "BYBHomeHotDetailModel.h"
 #import "BYBGoodDetailViewController.h"
 #import "BYBHomeBrandModel.h"
-
-@interface BYBHomeBranDetailController ()
+@interface BYBHomeHotDetailViewController ()
 /** data*/
-@property (nonatomic, strong) BYBHomeBranDetailModel *detailModel;
+@property (nonatomic, strong) BYBHomeHotDetailModel *detailModel;
 /** 当前页数 */
 @property (nonatomic, assign) int page;
 
@@ -23,7 +22,7 @@
 @property (nonatomic, strong) NSMutableArray *listRecommendInfoArray;
 @end
 
-@implementation BYBHomeBranDetailController
+@implementation BYBHomeHotDetailViewController
 
 #pragma mark - lazy load
 - (NSMutableArray *)listRecommendInfoArray{
@@ -64,13 +63,13 @@
 #pragma mark - load Data
 - (void)loadData{
     
-    NSString *URLStr = [NSString stringWithFormat:@"http://openapi.biyabi.com/webservice.asmx/BrandExclusiveInfoByBrandExclusiveID?iBrandExclusiveID=%@&pageIndex=%d",self.iBrandExclusiveID,self.page];
+    NSString *URLStr = [NSString stringWithFormat:@"http://openapi.biyabi.com/webservice.asmx/SpecialInfoBySpecialID?p_iSpecialID=%@&pageIndex=%d",self.p_iSpecialID,self.page];
     [PPNetworkHelper GET:URLStr parameters:nil responseCache:^(id responseCache) {
         
     } success:^(id responseObject) {
         
         self.isRefresh = YES;
-        self.detailModel = [BYBHomeBranDetailModel mj_objectWithKeyValues:responseObject[@"result"]];
+        self.detailModel = [BYBHomeHotDetailModel mj_objectWithKeyValues:responseObject];
         [self.listRecommendInfoArray addObjectsFromArray:self.detailModel.listRecommendInfo];
         [self.collectionView reloadData];
         [self endRefreshing];
@@ -78,7 +77,7 @@
     } failure:^(NSError *error) {
         [self showHint:@"请求失败"];
     }];
-
+    
 }
 
 #pragma mark - Actions
@@ -103,7 +102,7 @@
     
     if (indexPath.section == 0) {
         BYBHomeBranDetailTopCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"topCell" forIndexPath:indexPath];
-        cell.model = self.detailModel;
+        cell.hotModel = self.detailModel;
         return cell;
     }
     
@@ -149,6 +148,8 @@
 {
     return section == 0 ? UIEdgeInsetsZero : UIEdgeInsetsMake(10, 10, 30, 10);
 }
+
+
 
 
 

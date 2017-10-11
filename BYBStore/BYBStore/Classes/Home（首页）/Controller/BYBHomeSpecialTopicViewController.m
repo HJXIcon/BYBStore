@@ -11,6 +11,7 @@
 #import "BYBHomeSpecialTopicHeaderView.h"
 #import "BYBHomeSpecialTopicModel.h"
 #import "BYBHomeBranViewController.h"
+#import "BYBHomeHotDetailViewController.h"
 
 @interface BYBHomeSpecialTopicViewController ()
 @property(nonatomic, strong) BYBHomeSpecialTopicHeaderView *header;
@@ -151,6 +152,18 @@
     return cell;
     
 }
+
+#pragma mark - 代理
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    BYBHomeSpecialTopicModel *model = self.dataArray[indexPath.row];
+    BYBHomeHotDetailViewController *vc = [[BYBHomeHotDetailViewController alloc]init];
+    vc.p_iSpecialID = model.iSpecialID;
+    vc.title = model.strSpecialName;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{

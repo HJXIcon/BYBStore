@@ -19,4 +19,5 @@ pod 'MBProgressHUD', '~> 1.0.0'
 pod 'PPNetworkHelper', '~> 0.8.0'
 pod 'ARSegmentPager', :git => 'https://github.com/AugustRush/ARSegmentPager.git'#视觉差
 pod 'JTSImageViewController', '~> 1.5.1'
+
 end

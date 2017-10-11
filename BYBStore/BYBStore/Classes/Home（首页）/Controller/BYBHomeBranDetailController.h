@@ -8,6 +8,9 @@
 
 #import "BYBBaseCollectionViewController.h"
 
+/**
+ 品牌详情
+ */
 @interface BYBHomeBranDetailController : BYBBaseCollectionViewController
 
 @property(nonatomic, strong) NSString *iBrandExclusiveID;

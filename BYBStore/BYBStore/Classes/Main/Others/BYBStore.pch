@@ -16,5 +16,5 @@
 #import <PPNetworkHelper.h>
 #import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 #import <JTSImageViewController/JTSImageViewController.h>
-
+#import <XHWebImageAutoSize.h>
 #endif /* BYBStore_pch */

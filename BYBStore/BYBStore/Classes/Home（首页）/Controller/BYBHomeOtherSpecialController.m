@@ -1,132 +1,153 @@
 //
-//  BYBHomeBranDetailController.m
+//  BYBHomeOtherSpecialController.m
 //  BYBStore
 //
-//  Created by 晓梦影 on 2017/9/28.
+//  Created by 晓梦影 on 2017/10/11.
 //  Copyright © 2017年 BYBStore. All rights reserved.
 //
 
-#import "BYBHomeBranDetailController.h"
-#import "BYBHomeBranDetailTopCell.h"
+#import "BYBHomeOtherSpecialController.h"
 #import "BYBHomeBranDetailRecommendCell.h"
-#import "BYBHomeBranDetailModel.h"
+#import "BYBHomeOtherSpecialModel.h"
 #import "BYBGoodDetailViewController.h"
-#import "BYBHomeBrandModel.h"
 
-@interface BYBHomeBranDetailController ()
-/** data*/
-@property (nonatomic, strong) BYBHomeBranDetailModel *detailModel;
-/** 当前页数 */
+@interface BYBHomeOtherSpecialController ()
+
+@property (nonatomic, strong) NSMutableArray <BYBHomeOtherSpecialModel *>*dataArray;
+/** 当前页 */
 @property (nonatomic, assign) int page;
-
-/** listRecommendInfo*/
-@property (nonatomic, strong) NSMutableArray *listRecommendInfoArray;
 @end
 
-@implementation BYBHomeBranDetailController
+@implementation BYBHomeOtherSpecialController
 
 #pragma mark - lazy load
-- (NSMutableArray *)listRecommendInfoArray{
-    if (_listRecommendInfoArray == nil) {
-        _listRecommendInfoArray = [NSMutableArray array];
+- (NSMutableArray<BYBHomeOtherSpecialModel *> *)dataArray{
+    if (_dataArray == nil) {
+        _dataArray = [NSMutableArray array];
     }
-    return _listRecommendInfoArray;
+    return _dataArray;
 }
 
+#pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationItem.rightBarButtonItem = [UIBarButtonItem item:[UIImage imageNamed:@"newfenxiang_20x20_"] selImage:[UIImage imageNamed:@"newfenxiang_20x20_"] target:self action:@selector(shareAction)];
-    
     self.collectionView.backgroundColor = BYBBGColor;
-    [self.collectionView registerClass:[BYBHomeBranDetailTopCell class] forCellWithReuseIdentifier:@"topCell"];
-    
     [self.collectionView registerClass:[BYBHomeBranDetailRecommendCell class] forCellWithReuseIdentifier:@"recommendCell"];
 }
 
+#pragma mark - load Data
 - (void)loadHeaderData{
-    [self.listRecommendInfoArray removeAllObjects];
+    [self.dataArray removeAllObjects];
     self.page = 1;
     [self loadData];
 }
 
 - (void)loadFooterData{
     self.page ++;
-    if (self.page > [self.detailModel.maxPage intValue]) {
-        self.page --;
-        [self showHint:@"没有更多呦~"];
-        [self endRefreshing];
-        return;
-    }
     [self loadData];
 }
 
 #pragma mark - load Data
 - (void)loadData{
     
-    NSString *URLStr = [NSString stringWithFormat:@"http://openapi.biyabi.com/webservice.asmx/BrandExclusiveInfoByBrandExclusiveID?iBrandExclusiveID=%@&pageIndex=%d",self.iBrandExclusiveID,self.page];
+    NSString *specail = [self getSpecailString];
+    
+    NSString *URLStr = [NSString stringWithFormat:@"http://openapi.biyabi.com/webservice.asmx/GetInfoListWithHomeshowAndIstop_exceptMallUrlJson?bigPrice=0&brandUrl=&brightUrl=&btCountry=0&catUrl=%@&exceptMallUrl=&homeShow=1&infoNation=0&infoType=0&isPurchasing=0&isTop=1&keyWord=&mallUrl=&orderBy=0&pageIndex=%d&pageSize=20&smallPrice=0&tagUrl=",specail,self.page];
     [PPNetworkHelper GET:URLStr parameters:nil responseCache:^(id responseCache) {
         
     } success:^(id responseObject) {
         
+        NSArray *jsonArray = (NSArray *)responseObject;
+        if (jsonArray.count == 0) {
+            [self showHint:@"没有更多了呦~"];
+            self.page --;
+            return ;
+        }
+        
         self.isRefresh = YES;
-        self.detailModel = [BYBHomeBranDetailModel mj_objectWithKeyValues:responseObject[@"result"]];
-        [self.listRecommendInfoArray addObjectsFromArray:self.detailModel.listRecommendInfo];
+        [self.dataArray addObjectsFromArray: [BYBHomeOtherSpecialModel mj_objectArrayWithKeyValuesArray:responseObject]];
         [self.collectionView reloadData];
         [self endRefreshing];
         
     } failure:^(NSError *error) {
         [self showHint:@"请求失败"];
     }];
-
-}
-
-#pragma mark - Actions
-- (void)shareAction{
     
 }
 
+
+/// 获取除了日淘，美淘之后的类别
+- (NSString *)getSpecailString{
+    
+    NSString *string;
+    switch (self.special) {
+        case BYBHomeSpecialFuShi:
+            string = @"fushixiebao";
+            break;
+            
+        case BYBHomeSpecialMeiZhuang:
+            string = @"gehumeizhuang";
+            break;
+            
+        case BYBHomeSpecialMuYing:
+            string = @"muyingyongpin";
+            break;
+            
+        case BYBHomeSpecialQingShe:
+            string = @"zhongbiaoshoushi";
+            break;
+            
+        case BYBHomeSpecialBaiHuo:
+            string = @"riyongbaihuo";
+            break;
+            
+        case BYBHomeSpecialMeiShi:
+            string = @"shipinbaojian";
+            break;
+            
+        case BYBHomeSpecialYunDong:
+            string = @"yundonghuwai";
+            break;
+            
+        default:
+            break;
+    }
+    
+    return string;
+}
+
+
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    if (section == 0) {
-        return 1;
-    }
-    return self.listRecommendInfoArray.count;
+    
+    return self.dataArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.section == 0) {
-        BYBHomeBranDetailTopCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"topCell" forIndexPath:indexPath];
-        cell.model = self.detailModel;
-        return cell;
-    }
-    
+
     BYBHomeBranDetailRecommendCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"recommendCell" forIndexPath:indexPath];
     
-    cell.model = self.listRecommendInfoArray[indexPath.row];
+    cell.otherSpecialModel = self.dataArray[indexPath.row];
     return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    BYBHomeBrandListRecommendModel *model = self.listRecommendInfoArray[indexPath.row];
+    BYBHomeOtherSpecialModel *model = self.dataArray[indexPath.row];
     BYBGoodDetailViewController *vc = [[BYBGoodDetailViewController alloc]init];
-    vc.iInfoID = model.iInfoID;
+    vc.iInfoID = model.InfoID;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
-        return CGSizeMake(kScreenW, [self.detailModel cellHeight]);
-    }
     return CGSizeMake((kScreenW - 30)/2, 305);
     
 }
@@ -147,7 +168,7 @@
 // 四周的边距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return section == 0 ? UIEdgeInsetsZero : UIEdgeInsetsMake(10, 10, 30, 10);
+    return  UIEdgeInsetsMake(10, 10, 30 + 50 + 49, 10);
 }
 
 
