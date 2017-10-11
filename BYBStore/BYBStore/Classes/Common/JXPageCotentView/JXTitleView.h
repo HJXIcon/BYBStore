@@ -11,6 +11,7 @@
 #import "JXPageViewProtocol.h"
 
 
+UIKIT_EXTERN NSString * const ClickOneLabelNotiName;
 @interface JXTitleView : UIView<JXPageContentViewDelegate>
 
 @property(nonatomic, strong) NSArray <NSString *>*titles;

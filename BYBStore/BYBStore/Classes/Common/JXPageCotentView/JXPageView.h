@@ -12,6 +12,19 @@
 #import "UIColor+pageExtension.h"
 #import "JXTitleView.h"
 
+
+@class JXPageView;
+@protocol JXPageViewDelegate <NSObject>
+
+@optional
+
+/**
+ 当滚动结束到indx或者点击indx的时候调用
+ */
+- (void)pageViewDidEndScroll:(JXPageView *)pageView indx:(NSInteger)indx;
+
+@end
+
 @interface JXPageView : UIView
 
 @property(nonatomic, strong) NSArray <NSString *>*titles;
@@ -25,4 +38,15 @@
                         style:(JXPageStyle *)style
                      childVcs:(NSArray <UIViewController *>*)childVcs
                      parentVc:(UIViewController *)parentVc;
+
+
+#pragma mark - *** 新增:
+/**
+ 主动点击某一个label
+ @param indx label的indx
+ */
+- (void)titleLabelClick:(NSInteger)indx;
+
+/** delegate*/
+@property (nonatomic, weak) id delegate;
 @end

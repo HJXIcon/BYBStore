@@ -18,6 +18,13 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
+        
+        [[NSNotificationCenter defaultCenter]addObserverForName:DidScrollEndNotiName object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(pageViewDidEndScroll:indx:)]) {
+                [self.delegate pageViewDidEndScroll:self indx:[note.object integerValue]];
+            }
+        }];
     }
     return self;
 }
@@ -25,6 +32,12 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super initWithCoder:aDecoder]) {
         [self setupUI];
+        [[NSNotificationCenter defaultCenter]addObserverForName:DidScrollEndNotiName object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(pageViewDidEndScroll:indx:)]) {
+                [self.delegate pageViewDidEndScroll:self indx:[note.object integerValue]];
+            }
+        }];
     }
     return self;
 }
@@ -44,6 +57,10 @@
 }
 
 
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DidScrollEndNotiName object:nil];
+}
+
 - (void)setupUI{
     // 1.创建titleView
     CGRect titleFrame = CGRectMake(0, 0, self.bounds.size.width, self.style.titleHeight);
@@ -61,7 +78,16 @@
     contentView.delegate = titleView;
     
     
-    
-    
 }
+
+#pragma mark - Public Method
+/**
+ 新增:主动点击某一个label
+ @param indx label的indx
+ */
+- (void)titleLabelClick:(NSInteger)indx{
+    [[NSNotificationCenter defaultCenter]postNotificationName:ClickOneLabelNotiName object:@(indx)];
+}
+
+
 @end

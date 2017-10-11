@@ -11,8 +11,10 @@
 #import "JXPageView.h"
 #import "BYBHomeSpecialTopicViewController.h"
 #import "BYBHomeOtherSpecialController.h"
+#import "BYBHomeSellingListController.h"
+#import "BYBSellingListViewController.h"
 
-@interface BYBHomeViewController ()
+@interface BYBHomeViewController ()<JXPageViewDelegate>
 
 
 @end
@@ -31,7 +33,7 @@
     
     self.automaticallyAdjustsScrollViewInsets = false;
     
-    NSArray *titles = @[@"专题",@"服饰",@"美妆",@"母婴",@"轻奢",@"百货",@"美食",@"运动",@"日淘",@"畅销榜"];
+    NSArray *titles = @[@"专题",@"服饰",@"美妆",@"母婴",@"轻奢",@"百货",@"美食",@"运动",@"日淘",@"美淘",@"畅销榜"];
     JXPageStyle *style = [[JXPageStyle alloc]init];
     style.isNeedScale = NO;
     style.isScrollEnable = YES;
@@ -48,6 +50,9 @@
         UIViewController *vc;
         if (i == 0 ) {
             vc = [[BYBHomeSpecialTopicViewController alloc]init];
+        }else if (i == titles.count - 1) {
+            vc = [[BYBHomeSellingListController alloc]init];
+            
         }else{
              BYBHomeOtherSpecialController *specialVc = [[BYBHomeOtherSpecialController alloc]init];
             switch (i) {
@@ -89,9 +94,6 @@
                     specialVc.special = BYBHomeSpecialMeiTao;
                     break;
                     
-                case 10:
-                    specialVc.special = BYBHomeSpecialChangXiaoBang;
-                    break;
                     
                 default:
                     break;
@@ -100,7 +102,7 @@
             vc = specialVc;
         }
 
-        vc.view.backgroundColor = [UIColor randomColor];
+
         
         [childVcs addObject:vc];
     }
@@ -108,9 +110,18 @@
     CGRect pageViewFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64);
     
     JXPageView *pageView = [[JXPageView alloc]initWithFrame:pageViewFrame titles:titles style:style childVcs:childVcs parentVc:self];
-    
+    pageView.delegate = self;
     [self.view addSubview:pageView];
     
+    __weak typeof (pageView) weakPage = pageView;
+    [[NSNotificationCenter defaultCenter]addObserverForName:CXBPopNotiName object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        [weakPage titleLabelClick:titles.count - 2];
+        
+    }];
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:CXBPopNotiName object:nil];
 }
 
 - (void)setupNav{
@@ -124,5 +135,13 @@
 }
 
 
+#pragma mark - JXPageViewDelegate
+- (void)pageViewDidEndScroll:(JXPageView *)pageView indx:(NSInteger)indx{
+    
+    if (indx == 10) {
+        
+        [self.navigationController pushViewController:[[BYBSellingListViewController alloc]init] animated:YES];
+    }
+}
 
 @end

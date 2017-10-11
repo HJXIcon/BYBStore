@@ -11,6 +11,7 @@
 #import "BYBHomeOtherSpecialModel.h"
 #import "BYBGoodDetailViewController.h"
 
+
 @interface BYBHomeOtherSpecialController ()
 
 @property (nonatomic, strong) NSMutableArray <BYBHomeOtherSpecialModel *>*dataArray;
@@ -33,16 +34,21 @@
     [super viewDidLoad];
     self.collectionView.backgroundColor = BYBBGColor;
     [self.collectionView registerClass:[BYBHomeBranDetailRecommendCell class] forCellWithReuseIdentifier:@"recommendCell"];
+    
 }
+
+
 
 #pragma mark - load Data
 - (void)loadHeaderData{
+    
     [self.dataArray removeAllObjects];
     self.page = 1;
     [self loadData];
 }
 
 - (void)loadFooterData{
+   
     self.page ++;
     [self loadData];
 }
@@ -50,13 +56,17 @@
 #pragma mark - load Data
 - (void)loadData{
     
-    NSString *specail = [self getSpecailString];
     
-    NSString *URLStr = [NSString stringWithFormat:@"http://openapi.biyabi.com/webservice.asmx/GetInfoListWithHomeshowAndIstop_exceptMallUrlJson?bigPrice=0&brandUrl=&brightUrl=&btCountry=0&catUrl=%@&exceptMallUrl=&homeShow=1&infoNation=0&infoType=0&isPurchasing=0&isTop=1&keyWord=&mallUrl=&orderBy=0&pageIndex=%d&pageSize=20&smallPrice=0&tagUrl=",specail,self.page];
+    NSString *catUrl = [self getCatUrlString];
+    NSString *mallUrl = [self getmallUrlString];
+    
+    NSString *URLStr = [NSString stringWithFormat:@"http://openapi.biyabi.com/webservice.asmx/GetInfoListWithHomeshowAndIstop_exceptMallUrlJson?bigPrice=0&brandUrl=&brightUrl=&btCountry=0&catUrl=%@&exceptMallUrl=&homeShow=1&infoNation=0&infoType=0&isPurchasing=0&isTop=1&keyWord=&mallUrl=%@&orderBy=0&pageIndex=%d&pageSize=20&smallPrice=0&tagUrl=",catUrl,mallUrl,self.page];
+    
+    //http://openapi.biyabi.com/webservice.asmx/GetInfoListWithHomeshowAndIstop_exceptMallUrlJson?bigPrice=0&brandUrl=&brightUrl=&btCountry=0&catUrl=&exceptMallUrl=&homeShow=1&infoNation=0&infoType=0&isPurchasing=0&isTop=1&keyWord=&mallUrl=amazon&orderBy=0&pageIndex=1&pageSize=20&smallPrice=0&tagUrl=
     [PPNetworkHelper GET:URLStr parameters:nil responseCache:^(id responseCache) {
         
     } success:^(id responseObject) {
-        
+        [self endRefreshing];
         NSArray *jsonArray = (NSArray *)responseObject;
         if (jsonArray.count == 0) {
             [self showHint:@"没有更多了呦~"];
@@ -67,7 +77,6 @@
         self.isRefresh = YES;
         [self.dataArray addObjectsFromArray: [BYBHomeOtherSpecialModel mj_objectArrayWithKeyValuesArray:responseObject]];
         [self.collectionView reloadData];
-        [self endRefreshing];
         
     } failure:^(NSError *error) {
         [self showHint:@"请求失败"];
@@ -77,7 +86,7 @@
 
 
 /// 获取除了日淘，美淘之后的类别
-- (NSString *)getSpecailString{
+- (NSString *)getCatUrlString{
     
     NSString *string;
     switch (self.special) {
@@ -110,11 +119,35 @@
             break;
             
         default:
+            string = @"";
             break;
     }
     
     return string;
 }
+
+/// 获取日淘，美淘的类别
+- (NSString *)getmallUrlString{
+    
+    NSString *string;
+    switch (self.special) {
+            
+        case BYBHomeSpecialRiTao:
+            string = @"amazon_co_jp";
+            break;
+            
+        case BYBHomeSpecialMeiTao:
+            string = @"amazon";
+            break;
+            
+        default:
+            string = @"";
+            break;
+    }
+    
+    return string;
+}
+
 
 
 #pragma mark - UICollectionViewDataSource

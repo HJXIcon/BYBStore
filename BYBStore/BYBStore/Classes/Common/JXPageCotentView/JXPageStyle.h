@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+/** 点击或者滚动结束通知*/
+UIKIT_EXTERN NSString * const DidScrollEndNotiName;
+
 @interface JXPageStyle : NSObject
 
 

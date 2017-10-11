@@ -99,6 +99,8 @@
 		F3D2D1C91F7DF1DD0021D062 /* BYBGoodDetailsCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2D1C81F7DF1DD0021D062 /* BYBGoodDetailsCell4.m */; };
 		F3D2D1CD1F7DF7B30021D062 /* GoodDetail.css in Resources */ = {isa = PBXBuildFile; fileRef = F3D2D1CB1F7DF7B30021D062 /* GoodDetail.css */; };
 		F3D2D1D41F7E36350021D062 /* JXConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D2D1D31F7E36350021D062 /* JXConst.m */; };
+		F3E681381F8E13740033A153 /* BYBSellingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E681371F8E13740033A153 /* BYBSellingListViewController.m */; };
+		F3E6813B1F8E236C0033A153 /* BYBHomeSellingListController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E6813A1F8E236C0033A153 /* BYBHomeSellingListController.m */; };
 		F3F1A20B1F7C910800BFC2E3 /* BYBHomeBrandlistRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1A20A1F7C910800BFC2E3 /* BYBHomeBrandlistRecommendCell.m */; };
 		F3F1A20E1F7CA0C700BFC2E3 /* BYBHomeBranDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1A20D1F7CA0C700BFC2E3 /* BYBHomeBranDetailController.m */; };
 		F3F1A2111F7CA75700BFC2E3 /* BYBBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F1A2101F7CA75700BFC2E3 /* BYBBaseCollectionViewController.m */; };
@@ -287,6 +289,10 @@
 		F3D2D1CB1F7DF7B30021D062 /* GoodDetail.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = GoodDetail.css; sourceTree = "<group>"; };
 		F3D2D1D21F7E36350021D062 /* JXConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXConst.h; sourceTree = "<group>"; };
 		F3D2D1D31F7E36350021D062 /* JXConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXConst.m; sourceTree = "<group>"; };
+		F3E681361F8E13740033A153 /* BYBSellingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSellingListViewController.h; sourceTree = "<group>"; };
+		F3E681371F8E13740033A153 /* BYBSellingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSellingListViewController.m; sourceTree = "<group>"; };
+		F3E681391F8E236C0033A153 /* BYBHomeSellingListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeSellingListController.h; sourceTree = "<group>"; };
+		F3E6813A1F8E236C0033A153 /* BYBHomeSellingListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeSellingListController.m; sourceTree = "<group>"; };
 		F3F1A2091F7C910800BFC2E3 /* BYBHomeBrandlistRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeBrandlistRecommendCell.h; sourceTree = "<group>"; };
 		F3F1A20A1F7C910800BFC2E3 /* BYBHomeBrandlistRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeBrandlistRecommendCell.m; sourceTree = "<group>"; };
 		F3F1A20C1F7CA0C700BFC2E3 /* BYBHomeBranDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeBranDetailController.h; sourceTree = "<group>"; };
@@ -572,6 +578,7 @@
 		F38F50151F761A9100848619 /* Home（首页） */ = {
 			isa = PBXGroup;
 			children = (
+				F3E681321F8E133E0033A153 /* SellingList(热销榜) */,
 				F38F50161F761A9100848619 /* Controller */,
 				F38F50171F761A9100848619 /* Model */,
 				F38F50181F761A9100848619 /* View */,
@@ -597,6 +604,8 @@
 				F3F1A22B1F7CE53700BFC2E3 /* BYBGoodDetailViewController.m */,
 				F3AE5DE31F8DC23D00B254F3 /* BYBHomeOtherSpecialController.h */,
 				F3AE5DE41F8DC23D00B254F3 /* BYBHomeOtherSpecialController.m */,
+				F3E681391F8E236C0033A153 /* BYBHomeSellingListController.h */,
+				F3E6813A1F8E236C0033A153 /* BYBHomeSellingListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -894,6 +903,39 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		F3E681321F8E133E0033A153 /* SellingList(热销榜) */ = {
+			isa = PBXGroup;
+			children = (
+				F3E681331F8E13570033A153 /* Controller */,
+				F3E681341F8E13570033A153 /* Model */,
+				F3E681351F8E13570033A153 /* View */,
+			);
+			path = "SellingList(热销榜)";
+			sourceTree = "<group>";
+		};
+		F3E681331F8E13570033A153 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F3E681361F8E13740033A153 /* BYBSellingListViewController.h */,
+				F3E681371F8E13740033A153 /* BYBSellingListViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F3E681341F8E13570033A153 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3E681351F8E13570033A153 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F3F1A2331F7CF69D00BFC2E3 /* GoodDetailCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1071,11 +1113,13 @@
 				F3AE5DDF1F8DBCA400B254F3 /* BYBHomeHotDetailViewController.m in Sources */,
 				F34AEB1B1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m in Sources */,
 				F34AEAFD1F7A5CD0000E650A /* JXPageStyle.m in Sources */,
+				F3E681381F8E13740033A153 /* BYBSellingListViewController.m in Sources */,
 				F34AEAFE1F7A5CD0000E650A /* JXPageView.m in Sources */,
 				F3BBBF081F8CCC2D00B4D8AA /* JXPopoverAction.m in Sources */,
 				F34AEB001F7A5CD0000E650A /* UIColor+pageExtension.m in Sources */,
 				F34AEB271F7B5258000E650A /* UIView+masonry.m in Sources */,
 				F36475261F7F86C7001EB478 /* BYBGoodDetailsMayLikeCell.m in Sources */,
+				F3E6813B1F8E236C0033A153 /* BYBHomeSellingListController.m in Sources */,
 				F3C04A881F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m in Sources */,
 				F34AEAFC1F7A5CD0000E650A /* JXPageContentView.m in Sources */,
 				F3C04A911F790A2500EE8FAF /* BYBShareOrderOfMineHeaderView.m in Sources */,

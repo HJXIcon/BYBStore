@@ -217,6 +217,7 @@
     // 2.滚动到正确的位置
     [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
     
+    [[NSNotificationCenter defaultCenter]postNotificationName:DidScrollEndNotiName object:@(targetIndex)];
 }
 
 

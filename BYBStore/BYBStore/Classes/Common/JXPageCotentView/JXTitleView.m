@@ -9,6 +9,7 @@
 #import "JXTitleView.h"
 #import "UIColor+pageExtension.h"
 #import "JXPageContentView.h"
+NSString * const ClickOneLabelNotiName = @"ClickOneLabelNotiName";
 
 @interface JXTitleView ()<JXPageContentViewDelegate>{
     NSInteger currentIndex;
@@ -72,6 +73,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
+        [self addNotiObserver];
     }
     return self;
 }
@@ -79,8 +81,13 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super initWithCoder:aDecoder]) {
         [self setupUI];
+        [self addNotiObserver];
     }
     return self;
+}
+
+- (void)addNotiObserver{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notiAction:) name:ClickOneLabelNotiName object:nil];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles style:(JXPageStyle *)style{
@@ -89,6 +96,18 @@
     self.style = style;
     return [self initWithFrame:frame];
 }
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:ClickOneLabelNotiName object:nil];
+}
+
+#pragma mark - notiAction
+- (void)notiAction:(NSNotification *)noti{
+    
+    UILabel *label = self.titleLabels[[noti.object integerValue]];
+    [self titleLabelClick:label.gestureRecognizers.firstObject];
+}
+
 
 #pragma mark - UI
 - (void)setupUI{
@@ -261,6 +280,8 @@
         ///调整点击label的位置
         [self adjustLabelPosition];
     }
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:DidScrollEndNotiName object:@(inIndex)];
     
     
 }
