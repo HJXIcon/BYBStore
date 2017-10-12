@@ -11,17 +11,22 @@
 #import "JXPageViewProtocol.h"
 
 
-UIKIT_EXTERN NSString * const ClickOneLabelNotiName;
 @interface JXTitleView : UIView<JXPageContentViewDelegate>
 
 @property(nonatomic, strong) NSArray <NSString *>*titles;
 @property(nonatomic, strong) JXPageStyle *style;
-
+#pragma mark - 新增
+@property (nonatomic, copy) void(^didEndScrollBlock)(NSInteger);
 
 /** delegate*/
 @property (nonatomic, weak)id<JXTitleViewDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles style:(JXPageStyle *)style;
 
-
+#pragma mark - *** 新增:
+/**
+ 主动点击某一个label
+ @param indx label的indx
+ */
+- (void)titleClick:(NSInteger)indx;
 @end

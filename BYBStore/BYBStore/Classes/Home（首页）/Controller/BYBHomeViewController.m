@@ -28,6 +28,7 @@
     [self setupAllChilderVc];
 }
 
+
 - (void)setupAllChilderVc{
     
     
@@ -128,11 +129,11 @@
     BYBSearchBarView *barView = [[BYBSearchBarView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 35)];
     MJWeakSelf;
     barView.msgBlock = ^{
-        weakSelf;
-        JXLog(@"msgAction --- ");
+    
     };
     self.navigationItem.titleView = barView;
 }
+
 
 
 #pragma mark - JXPageViewDelegate

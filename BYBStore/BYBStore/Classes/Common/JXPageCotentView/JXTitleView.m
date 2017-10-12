@@ -9,7 +9,7 @@
 #import "JXTitleView.h"
 #import "UIColor+pageExtension.h"
 #import "JXPageContentView.h"
-NSString * const ClickOneLabelNotiName = @"ClickOneLabelNotiName";
+
 
 @interface JXTitleView ()<JXPageContentViewDelegate>{
     NSInteger currentIndex;
@@ -73,7 +73,7 @@ NSString * const ClickOneLabelNotiName = @"ClickOneLabelNotiName";
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self setupUI];
-        [self addNotiObserver];
+        
     }
     return self;
 }
@@ -81,14 +81,11 @@ NSString * const ClickOneLabelNotiName = @"ClickOneLabelNotiName";
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super initWithCoder:aDecoder]) {
         [self setupUI];
-        [self addNotiObserver];
+        
     }
     return self;
 }
 
-- (void)addNotiObserver{
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(notiAction:) name:ClickOneLabelNotiName object:nil];
-}
 
 - (instancetype)initWithFrame:(CGRect)frame titles:(NSArray <NSString *>*)titles style:(JXPageStyle *)style{
     
@@ -98,13 +95,17 @@ NSString * const ClickOneLabelNotiName = @"ClickOneLabelNotiName";
 }
 
 - (void)dealloc{
-    [[NSNotificationCenter defaultCenter]removeObserver:self name:ClickOneLabelNotiName object:nil];
+    JXLog(@"titles --- dealloc");
 }
 
-#pragma mark - notiAction
-- (void)notiAction:(NSNotification *)noti{
+#pragma mark - *** 新增:
+/**
+ 主动点击某一个label
+ @param indx label的indx
+ */
+- (void)titleClick:(NSInteger)indx{
     
-    UILabel *label = self.titleLabels[[noti.object integerValue]];
+    UILabel *label = self.titleLabels[indx];
     [self titleLabelClick:label.gestureRecognizers.firstObject];
 }
 
@@ -281,8 +282,9 @@ NSString * const ClickOneLabelNotiName = @"ClickOneLabelNotiName";
         [self adjustLabelPosition];
     }
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:DidScrollEndNotiName object:@(inIndex)];
-    
+    if (self.didEndScrollBlock) {
+        self.didEndScrollBlock(inIndex);
+    }
     
 }
 

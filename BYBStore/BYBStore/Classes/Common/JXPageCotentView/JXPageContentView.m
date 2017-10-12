@@ -9,6 +9,7 @@
 #import "JXPageContentView.h"
 #import "JXTitleView.h"
 
+
 @interface JXPageContentView ()<UICollectionViewDelegate,UICollectionViewDataSource>{
     
     CGFloat startOffsetX;
@@ -45,6 +46,10 @@
     return [self initWithFrame:frame];
 }
 
+
+- (void)dealloc{
+    JXLog(@"content --- dealloc");
+}
 
 #pragma mark - lazy load
 - (UICollectionView *)collectionView{
@@ -217,7 +222,9 @@
     // 2.滚动到正确的位置
     [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:DidScrollEndNotiName object:@(targetIndex)];
+    if (self.didEndScrollBlock) {
+        self.didEndScrollBlock(targetIndex);
+    }
 }
 
 

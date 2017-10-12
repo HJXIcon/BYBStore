@@ -8,7 +8,6 @@
 
 #import "JXPageStyle.h"
 #import "UIColor+pageExtension.h"
-NSString * const DidScrollEndNotiName = @"DidScrollEndNotiName";
 
 @implementation JXPageStyle
 

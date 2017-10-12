@@ -19,7 +19,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"热销榜";
     
-    NSArray *titles = @[@"专题",@"服饰",@"美妆",@"母婴",@"轻奢",@"百货",@"美食",@"运动",@"日淘",@"美淘",@"             "];
+    NSArray *titles = @[@"百货",@"美食",@"运动",@"日淘",@"美淘",@"             "];
     JXPageStyle *style = [[JXPageStyle alloc]init];
     style.isNeedScale = NO;
     style.isScrollEnable = YES;
@@ -41,10 +41,12 @@
     CGRect pageViewFrame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 64);
     
     JXPageView *pageView = [[JXPageView alloc]initWithFrame:pageViewFrame titles:titles style:style childVcs:childVcs parentVc:self];
-
     [self.view addSubview:pageView];
+
     
 }
+
+
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter]postNotificationName:CXBPopNotiName object:nil];

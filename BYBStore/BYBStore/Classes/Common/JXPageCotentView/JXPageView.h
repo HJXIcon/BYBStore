@@ -30,7 +30,8 @@
 @property(nonatomic, strong) NSArray <NSString *>*titles;
 @property(nonatomic, strong) JXPageStyle *style;
 @property(nonatomic, strong) NSArray <UIViewController *>*childVcs;
-@property(nonatomic, strong) UIViewController *parentVc;
+// 注意使用weak，否则造成循环引用
+@property(nonatomic, weak) UIViewController *parentVc;
 
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -48,5 +49,5 @@
 - (void)titleLabelClick:(NSInteger)indx;
 
 /** delegate*/
-@property (nonatomic, weak) id delegate;
+@property (nonatomic, weak) id<JXPageViewDelegate> delegate;
 @end
