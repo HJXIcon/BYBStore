@@ -36,4 +36,11 @@
 /** 最大缩放程度*/
 @property (nonatomic, assign)CGFloat maxScaleRang;
 
+
+#pragma mark - 新增
+/** 标题右侧是否有自定义View*/
+@property (nonatomic, assign)BOOL isShowRightView;
+///  只需要给定宽度就可以了
+@property (nonatomic, strong)UIView *rightView;
+
 @end

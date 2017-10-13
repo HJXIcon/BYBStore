@@ -17,5 +17,7 @@
 @property(nonatomic,assign)CGFloat centerX;
 @property(nonatomic,assign)CGFloat centerY;
 
-
+@property (nonatomic, assign) CGFloat cornerRadius;
+@property (nonatomic, assign) CGFloat borderWidth;
+@property (nonatomic, assign) CGColorRef borderColor;
 @end

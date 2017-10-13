@@ -125,6 +125,13 @@
         [self setupBottomLine];
     }
     
+    if (self.style.isShowRightView && self.style.rightView) {
+        CGRect tmpFrame = self.style.rightView.frame;
+        tmpFrame.origin.x = CGRectGetWidth(self.frame) - self.style.rightView.width;
+        tmpFrame.size.height = CGRectGetHeight(self.frame);
+        self.style.rightView.frame = tmpFrame;
+        [self addSubview:self.style.rightView];
+    }
 }
 
 - (void)setupBottomLine{
@@ -184,6 +191,12 @@
     // 4.设置contentSize
     if (self.style.isScrollEnable) {
         self.scrollView.contentSize = CGSizeMake(CGRectGetMaxX(self.titleLabels.lastObject.frame) + self.style.titleMargin * 0.5, 0);
+        
+        if (self.style.isShowRightView && self.style.rightView) {
+            NSAssert(self.style.rightView.width, @"rightView's width must be greater than 0");
+            self.scrollView.contentSize = CGSizeMake(CGRectGetMaxX(self.titleLabels.lastObject.frame) + self.style.titleMargin * 0.5 + self.style.rightView.width, 0);
+        }
+        
     }
     
     // 5.设置缩放

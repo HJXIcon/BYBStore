@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7AF949742EF8AAD8993E9411 /* libPods-BYBStore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */; };
+		82116C051F9053A3004D4E4A /* BYBSellingListTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C041F9053A3004D4E4A /* BYBSellingListTagsView.m */; };
+		82116C0F1F905759004D4E4A /* JXTagsAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C081F905759004D4E4A /* JXTagsAttribute.m */; };
+		82116C101F905759004D4E4A /* JXTagsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C0A1F905759004D4E4A /* JXTagsCollectionViewCell.m */; };
+		82116C111F905759004D4E4A /* JXTagsCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C0C1F905759004D4E4A /* JXTagsCollectionViewFlowLayout.m */; };
+		82116C121F905759004D4E4A /* JXTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C0E1F905759004D4E4A /* JXTagsView.m */; };
+		82116C151F9069B3004D4E4A /* BYBSellingListCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C141F9069B3004D4E4A /* BYBSellingListCategoryController.m */; };
+		82116C181F906C69004D4E4A /* BYBSellingListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C171F906C69004D4E4A /* BYBSellingListModel.m */; };
+		82116C1B1F909AE2004D4E4A /* BYBSellingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C1A1F909AE2004D4E4A /* BYBSellingListCell.m */; };
 		F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEADB1F79F987000E650A /* UIView+Placeholder.m */; };
 		F34AEAE61F7A34AF000E650A /* BYBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAE51F7A34AF000E650A /* BYBLoadingView.m */; };
 		F34AEAEC1F7A4AF5000E650A /* BYBSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAEB1F7A4AF5000E650A /* BYBSearchTextField.m */; };
@@ -18,16 +26,16 @@
 		F34AEAFF1F7A5CD0000E650A /* JXTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAF91F7A5CD0000E650A /* JXTitleView.m */; };
 		F34AEB001F7A5CD0000E650A /* UIColor+pageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAFB1F7A5CD0000E650A /* UIColor+pageExtension.m */; };
 		F34AEB031F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB021F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m */; };
-		F34AEB0F1F7A7D63000E650A /* 热门专场 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB051F7A7D63000E650A /* 热门专场 */; };
-		F34AEB101F7A7D63000E650A /* 品牌专场 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB061F7A7D63000E650A /* 品牌专场 */; };
-		F34AEB111F7A7D63000E650A /* Details in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB071F7A7D63000E650A /* Details */; };
-		F34AEB121F7A7D63000E650A /* events in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB081F7A7D63000E650A /* events */; };
-		F34AEB131F7A7D63000E650A /* Experience in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB091F7A7D63000E650A /* Experience */; };
-		F34AEB141F7A7D63000E650A /* More in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0A1F7A7D63000E650A /* More */; };
-		F34AEB151F7A7D63000E650A /* Nears in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0B1F7A7D63000E650A /* Nears */; };
-		F34AEB161F7A7D63000E650A /* themes in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0C1F7A7D63000E650A /* themes */; };
-		F34AEB171F7A7D63000E650A /* 三里屯 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0D1F7A7D63000E650A /* 三里屯 */; };
-		F34AEB181F7A7D63000E650A /* 南锣鼓巷 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0E1F7A7D63000E650A /* 南锣鼓巷 */; };
+		F34AEB0F1F7A7D63000E650A /* 热销榜_钟表 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB051F7A7D63000E650A /* 热销榜_钟表 */; };
+		F34AEB101F7A7D63000E650A /* 热销榜_女包 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB061F7A7D63000E650A /* 热销榜_女包 */; };
+		F34AEB111F7A7D63000E650A /* 热销榜_服饰鞋包 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB071F7A7D63000E650A /* 热销榜_服饰鞋包 */; };
+		F34AEB121F7A7D63000E650A /* 热销榜_个护美妆 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB081F7A7D63000E650A /* 热销榜_个护美妆 */; };
+		F34AEB131F7A7D63000E650A /* 热销榜_母婴用品 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB091F7A7D63000E650A /* 热销榜_母婴用品 */; };
+		F34AEB141F7A7D63000E650A /* 热销榜_食品保健 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0A1F7A7D63000E650A /* 热销榜_食品保健 */; };
+		F34AEB151F7A7D63000E650A /* 热销榜_日用百货 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0B1F7A7D63000E650A /* 热销榜_日用百货 */; };
+		F34AEB161F7A7D63000E650A /* 热销榜_运动户外 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0C1F7A7D63000E650A /* 热销榜_运动户外 */; };
+		F34AEB171F7A7D63000E650A /* 热销榜_钟表首饰 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0D1F7A7D63000E650A /* 热销榜_钟表首饰 */; };
+		F34AEB181F7A7D63000E650A /* 热销榜_家用电器 in Resources */ = {isa = PBXBuildFile; fileRef = F34AEB0E1F7A7D63000E650A /* 热销榜_家用电器 */; };
 		F34AEB1B1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB1A1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m */; };
 		F34AEB1E1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB1D1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m */; };
 		F34AEB211F7B47E1000E650A /* JXFactoryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEB201F7B47E1000E650A /* JXFactoryTool.m */; };
@@ -120,6 +128,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82116C031F9053A3004D4E4A /* BYBSellingListTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSellingListTagsView.h; sourceTree = "<group>"; };
+		82116C041F9053A3004D4E4A /* BYBSellingListTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSellingListTagsView.m; sourceTree = "<group>"; };
+		82116C071F905759004D4E4A /* JXTagsAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTagsAttribute.h; sourceTree = "<group>"; };
+		82116C081F905759004D4E4A /* JXTagsAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTagsAttribute.m; sourceTree = "<group>"; };
+		82116C091F905759004D4E4A /* JXTagsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTagsCollectionViewCell.h; sourceTree = "<group>"; };
+		82116C0A1F905759004D4E4A /* JXTagsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTagsCollectionViewCell.m; sourceTree = "<group>"; };
+		82116C0B1F905759004D4E4A /* JXTagsCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTagsCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		82116C0C1F905759004D4E4A /* JXTagsCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTagsCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		82116C0D1F905759004D4E4A /* JXTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTagsView.h; sourceTree = "<group>"; };
+		82116C0E1F905759004D4E4A /* JXTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTagsView.m; sourceTree = "<group>"; };
+		82116C131F9069B3004D4E4A /* BYBSellingListCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSellingListCategoryController.h; sourceTree = "<group>"; };
+		82116C141F9069B3004D4E4A /* BYBSellingListCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSellingListCategoryController.m; sourceTree = "<group>"; };
+		82116C161F906C69004D4E4A /* BYBSellingListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSellingListModel.h; sourceTree = "<group>"; };
+		82116C171F906C69004D4E4A /* BYBSellingListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSellingListModel.m; sourceTree = "<group>"; };
+		82116C191F909AE2004D4E4A /* BYBSellingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSellingListCell.h; sourceTree = "<group>"; };
+		82116C1A1F909AE2004D4E4A /* BYBSellingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSellingListCell.m; sourceTree = "<group>"; };
 		B238622EB5D08EC3F32AAB9E /* Pods-BYBStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.debug.xcconfig"; sourceTree = "<group>"; };
 		CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BYBStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F331BA313C508C63468B4D7F /* Pods-BYBStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,16 +168,16 @@
 		F34AEAFB1F7A5CD0000E650A /* UIColor+pageExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+pageExtension.m"; sourceTree = "<group>"; };
 		F34AEB011F7A60C3000E650A /* BYBHomeSpecialTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeSpecialTopicViewController.h; sourceTree = "<group>"; };
 		F34AEB021F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeSpecialTopicViewController.m; sourceTree = "<group>"; };
-		F34AEB051F7A7D63000E650A /* 热门专场 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热门专场"; sourceTree = "<group>"; };
-		F34AEB061F7A7D63000E650A /* 品牌专场 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "品牌专场"; sourceTree = "<group>"; };
-		F34AEB071F7A7D63000E650A /* Details */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Details; sourceTree = "<group>"; };
-		F34AEB081F7A7D63000E650A /* events */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = events; sourceTree = "<group>"; };
-		F34AEB091F7A7D63000E650A /* Experience */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Experience; sourceTree = "<group>"; };
-		F34AEB0A1F7A7D63000E650A /* More */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = More; sourceTree = "<group>"; };
-		F34AEB0B1F7A7D63000E650A /* Nears */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Nears; sourceTree = "<group>"; };
-		F34AEB0C1F7A7D63000E650A /* themes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = themes; sourceTree = "<group>"; };
-		F34AEB0D1F7A7D63000E650A /* 三里屯 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "三里屯"; sourceTree = "<group>"; };
-		F34AEB0E1F7A7D63000E650A /* 南锣鼓巷 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "南锣鼓巷"; sourceTree = "<group>"; };
+		F34AEB051F7A7D63000E650A /* 热销榜_钟表 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_钟表"; sourceTree = "<group>"; };
+		F34AEB061F7A7D63000E650A /* 热销榜_女包 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_女包"; sourceTree = "<group>"; };
+		F34AEB071F7A7D63000E650A /* 热销榜_服饰鞋包 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_服饰鞋包"; sourceTree = "<group>"; };
+		F34AEB081F7A7D63000E650A /* 热销榜_个护美妆 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_个护美妆"; sourceTree = "<group>"; };
+		F34AEB091F7A7D63000E650A /* 热销榜_母婴用品 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_母婴用品"; sourceTree = "<group>"; };
+		F34AEB0A1F7A7D63000E650A /* 热销榜_食品保健 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_食品保健"; sourceTree = "<group>"; };
+		F34AEB0B1F7A7D63000E650A /* 热销榜_日用百货 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_日用百货"; sourceTree = "<group>"; };
+		F34AEB0C1F7A7D63000E650A /* 热销榜_运动户外 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_运动户外"; sourceTree = "<group>"; };
+		F34AEB0D1F7A7D63000E650A /* 热销榜_钟表首饰 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_钟表首饰"; sourceTree = "<group>"; };
+		F34AEB0E1F7A7D63000E650A /* 热销榜_家用电器 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "热销榜_家用电器"; sourceTree = "<group>"; };
 		F34AEB191F7B38BE000E650A /* BYBHomeSpecialTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeSpecialTopicCell.h; sourceTree = "<group>"; };
 		F34AEB1A1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBHomeSpecialTopicCell.m; sourceTree = "<group>"; };
 		F34AEB1C1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBHomeSpecialTopicHeaderView.h; sourceTree = "<group>"; };
@@ -356,6 +380,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		82116C011F90538B004D4E4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82116C161F906C69004D4E4A /* BYBSellingListModel.h */,
+				82116C171F906C69004D4E4A /* BYBSellingListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82116C021F90538B004D4E4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82116C031F9053A3004D4E4A /* BYBSellingListTagsView.h */,
+				82116C041F9053A3004D4E4A /* BYBSellingListTagsView.m */,
+				82116C191F909AE2004D4E4A /* BYBSellingListCell.h */,
+				82116C1A1F909AE2004D4E4A /* BYBSellingListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82116C061F905759004D4E4A /* JXTagsView */ = {
+			isa = PBXGroup;
+			children = (
+				82116C071F905759004D4E4A /* JXTagsAttribute.h */,
+				82116C081F905759004D4E4A /* JXTagsAttribute.m */,
+				82116C091F905759004D4E4A /* JXTagsCollectionViewCell.h */,
+				82116C0A1F905759004D4E4A /* JXTagsCollectionViewCell.m */,
+				82116C0B1F905759004D4E4A /* JXTagsCollectionViewFlowLayout.h */,
+				82116C0C1F905759004D4E4A /* JXTagsCollectionViewFlowLayout.m */,
+				82116C0D1F905759004D4E4A /* JXTagsView.h */,
+				82116C0E1F905759004D4E4A /* JXTagsView.m */,
+			);
+			path = JXTagsView;
+			sourceTree = "<group>";
+		};
 		F34AEAE01F7A3464000E650A /* HUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,16 +446,16 @@
 		F34AEB041F7A7D63000E650A /* CustomData */ = {
 			isa = PBXGroup;
 			children = (
-				F34AEB051F7A7D63000E650A /* 热门专场 */,
-				F34AEB061F7A7D63000E650A /* 品牌专场 */,
-				F34AEB071F7A7D63000E650A /* Details */,
-				F34AEB081F7A7D63000E650A /* events */,
-				F34AEB091F7A7D63000E650A /* Experience */,
-				F34AEB0A1F7A7D63000E650A /* More */,
-				F34AEB0B1F7A7D63000E650A /* Nears */,
-				F34AEB0C1F7A7D63000E650A /* themes */,
-				F34AEB0D1F7A7D63000E650A /* 三里屯 */,
-				F34AEB0E1F7A7D63000E650A /* 南锣鼓巷 */,
+				F34AEB051F7A7D63000E650A /* 热销榜_钟表 */,
+				F34AEB061F7A7D63000E650A /* 热销榜_女包 */,
+				F34AEB071F7A7D63000E650A /* 热销榜_服饰鞋包 */,
+				F34AEB081F7A7D63000E650A /* 热销榜_个护美妆 */,
+				F34AEB091F7A7D63000E650A /* 热销榜_母婴用品 */,
+				F34AEB0A1F7A7D63000E650A /* 热销榜_食品保健 */,
+				F34AEB0B1F7A7D63000E650A /* 热销榜_日用百货 */,
+				F34AEB0C1F7A7D63000E650A /* 热销榜_运动户外 */,
+				F34AEB0D1F7A7D63000E650A /* 热销榜_钟表首饰 */,
+				F34AEB0E1F7A7D63000E650A /* 热销榜_家用电器 */,
 			);
 			path = CustomData;
 			sourceTree = "<group>";
@@ -876,6 +935,7 @@
 		F3BBBF001F8CCBFE00B4D8AA /* Instrument */ = {
 			isa = PBXGroup;
 			children = (
+				82116C061F905759004D4E4A /* JXTagsView */,
 				F3BBBF011F8CCC2D00B4D8AA /* JXPopoverView */,
 				F34AEAF01F7A5CD0000E650A /* JXPageCotentView */,
 			);
@@ -907,8 +967,8 @@
 			isa = PBXGroup;
 			children = (
 				F3E681331F8E13570033A153 /* Controller */,
-				F3E681341F8E13570033A153 /* Model */,
-				F3E681351F8E13570033A153 /* View */,
+				82116C011F90538B004D4E4A /* Model */,
+				82116C021F90538B004D4E4A /* View */,
 			);
 			path = "SellingList(热销榜)";
 			sourceTree = "<group>";
@@ -918,22 +978,10 @@
 			children = (
 				F3E681361F8E13740033A153 /* BYBSellingListViewController.h */,
 				F3E681371F8E13740033A153 /* BYBSellingListViewController.m */,
+				82116C131F9069B3004D4E4A /* BYBSellingListCategoryController.h */,
+				82116C141F9069B3004D4E4A /* BYBSellingListCategoryController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		F3E681341F8E13570033A153 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F3E681351F8E13570033A153 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F3F1A2331F7CF69D00BFC2E3 /* GoodDetailCells */ = {
@@ -1022,26 +1070,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F34AEB121F7A7D63000E650A /* events in Resources */,
+				F34AEB121F7A7D63000E650A /* 热销榜_个护美妆 in Resources */,
 				F38F503C1F76252300848619 /* Images.xcassets in Resources */,
-				F34AEB131F7A7D63000E650A /* Experience in Resources */,
-				F34AEB141F7A7D63000E650A /* More in Resources */,
-				F34AEB0F1F7A7D63000E650A /* 热门专场 in Resources */,
-				F34AEB161F7A7D63000E650A /* themes in Resources */,
+				F34AEB131F7A7D63000E650A /* 热销榜_母婴用品 in Resources */,
+				F34AEB141F7A7D63000E650A /* 热销榜_食品保健 in Resources */,
+				F34AEB0F1F7A7D63000E650A /* 热销榜_钟表 in Resources */,
+				F34AEB161F7A7D63000E650A /* 热销榜_运动户外 in Resources */,
 				F3C04A731F78E7C100EE8FAF /* BYBNoDataView.xib in Resources */,
 				F38F50691F764C3200848619 /* BYBPhoneLoginView.xib in Resources */,
 				F38F50711F764F7800848619 /* BYBAccountLoginView.xib in Resources */,
-				F34AEB171F7A7D63000E650A /* 三里屯 in Resources */,
+				F34AEB171F7A7D63000E650A /* 热销榜_钟表首饰 in Resources */,
 				F3C04A6B1F78B26700EE8FAF /* BYBNavigationBar.xib in Resources */,
-				F34AEB101F7A7D63000E650A /* 品牌专场 in Resources */,
+				F34AEB101F7A7D63000E650A /* 热销榜_女包 in Resources */,
 				F3D2D1CD1F7DF7B30021D062 /* GoodDetail.css in Resources */,
 				F3C04A931F790A3500EE8FAF /* BYBShareOrderOfMineHeaderView.xib in Resources */,
 				F38F50051F76178A00848619 /* LaunchScreen.storyboard in Resources */,
-				F34AEB111F7A7D63000E650A /* Details in Resources */,
+				F34AEB111F7A7D63000E650A /* 热销榜_服饰鞋包 in Resources */,
 				F38F50781F7661DD00848619 /* BYBRegisterViewController.storyboard in Resources */,
-				F34AEB151F7A7D63000E650A /* Nears in Resources */,
+				F34AEB151F7A7D63000E650A /* 热销榜_日用百货 in Resources */,
 				F38F50021F76178A00848619 /* Assets.xcassets in Resources */,
-				F34AEB181F7A7D63000E650A /* 南锣鼓巷 in Resources */,
+				F34AEB181F7A7D63000E650A /* 热销榜_家用电器 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1127,6 +1175,7 @@
 				F3F1A20E1F7CA0C700BFC2E3 /* BYBHomeBranDetailController.m in Sources */,
 				F38F50611F76453000848619 /* UIView+Extension.m in Sources */,
 				F3F1A21A1F7CCC9E00BFC2E3 /* BYBHomeBranDetailRecommendCell.m in Sources */,
+				82116C151F9069B3004D4E4A /* BYBSellingListCategoryController.m in Sources */,
 				F36475231F7F5D19001EB478 /* BYBGoodDetailsReviewHeaderFooterCell.m in Sources */,
 				F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */,
 				F3BBBF0D1F8CD99E00B4D8AA /* JXEmitterButton.m in Sources */,
@@ -1145,11 +1194,13 @@
 				F34AEB1E1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m in Sources */,
 				F3D2D1D41F7E36350021D062 /* JXConst.m in Sources */,
 				F3D2D1C31F7DDA780021D062 /* BYBGoodDetailsCell2.m in Sources */,
+				82116C181F906C69004D4E4A /* BYBSellingListModel.m in Sources */,
 				F3C04A711F78E7B500EE8FAF /* BYBNoDataView.m in Sources */,
 				F3F1A2261F7CE24200BFC2E3 /* NSDictionary+log.m in Sources */,
 				F38F50421F76373600848619 /* BYBBaseViewController.m in Sources */,
 				F34AEAEC1F7A4AF5000E650A /* BYBSearchTextField.m in Sources */,
 				F34AEB331F7BA715000E650A /* BYBHomeBrandModel.m in Sources */,
+				82116C051F9053A3004D4E4A /* BYBSellingListTagsView.m in Sources */,
 				F3F1A2361F7CF6C300BFC2E3 /* BYBGoodDetailsCell1.m in Sources */,
 				F38F50451F76376300848619 /* BYBBaseTableViewCell.m in Sources */,
 				F38F504E1F76398000848619 /* BYBMineViewController.m in Sources */,
@@ -1158,10 +1209,12 @@
 				F38F50481F7637BF00848619 /* BYBLoginViewController.m in Sources */,
 				F38F4FFA1F76178A00848619 /* AppDelegate.m in Sources */,
 				F3AE5DE51F8DC23D00B254F3 /* BYBHomeOtherSpecialController.m in Sources */,
+				82116C121F905759004D4E4A /* JXTagsView.m in Sources */,
 				F3C04A8B1F78FDDD00EE8FAF /* BYBShareOrderOfNewestController.m in Sources */,
 				F3BBBF0A1F8CCC2D00B4D8AA /* JXPopoverViewCell.m in Sources */,
 				F34AEAEF1F7A4FC2000E650A /* BYBSearchBarView.m in Sources */,
 				F34AEB031F7A60C3000E650A /* BYBHomeSpecialTopicViewController.m in Sources */,
+				82116C1B1F909AE2004D4E4A /* BYBSellingListCell.m in Sources */,
 				F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */,
 				F38F50341F761D1000848619 /* UIColor+Extension.m in Sources */,
 				F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */,
@@ -1174,6 +1227,7 @@
 				F38F504B1F76397500848619 /* BYBHomeViewController.m in Sources */,
 				F3F1A2141F7CB54D00BFC2E3 /* BYBHomeBranDetailTopCell.m in Sources */,
 				F38F505A1F76400900848619 /* BYBLoginSegmentBtnView.m in Sources */,
+				82116C101F905759004D4E4A /* JXTagsCollectionViewCell.m in Sources */,
 				F3F1A20B1F7C910800BFC2E3 /* BYBHomeBrandlistRecommendCell.m in Sources */,
 				F3C04A631F78A8ED00EE8FAF /* UIViewController+HUD.m in Sources */,
 				F34AEB2A1F7B8477000E650A /* BYBHomeSpecialTopicModel.m in Sources */,
@@ -1191,10 +1245,12 @@
 				F3C04A761F78EA2A00EE8FAF /* BYBBaseTableViewController.m in Sources */,
 				F38F50511F76398F00848619 /* BYBShareOrderViewController.m in Sources */,
 				F3C04A791F78F41600EE8FAF /* BYBRefreshHeader.m in Sources */,
+				82116C111F905759004D4E4A /* JXTagsCollectionViewFlowLayout.m in Sources */,
 				F3C04A601F78A77A00EE8FAF /* BYBCheckTools.m in Sources */,
 				F364752C1F7F8F7F001EB478 /* BYBGoodDetailMayLikeModel.m in Sources */,
 				F38F4FF71F76178A00848619 /* main.m in Sources */,
 				F3C04A691F78B25D00EE8FAF /* BYBNavigationBar.m in Sources */,
+				82116C0F1F905759004D4E4A /* JXTagsAttribute.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

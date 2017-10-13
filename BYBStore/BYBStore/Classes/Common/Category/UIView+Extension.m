@@ -94,4 +94,29 @@
     return self.frame.size;
 }
 
+
+- (void)setCornerRadius:(CGFloat)cornerRadius{
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = YES;
+}
+
+- (CGFloat)cornerRadius{
+    return self.layer.cornerRadius;
+}
+
+- (void)setBorderWidth:(CGFloat)borderWidth{
+    self.layer.borderWidth = borderWidth;
+}
+
+- (CGFloat)borderWidth{
+    return self.layer.borderWidth;
+}
+
+- (void)setBorderColor:(CGColorRef)borderColor{
+    self.layer.borderColor = borderColor;
+}
+- (CGColorRef)borderColor{
+    return self.layer.borderColor;
+}
+
 @end

@@ -25,8 +25,20 @@
         self.bottomLineColor = [UIColor blueColor];
         self.isNeedScale = YES;
         self.maxScaleRang = 1.2;
+        self.isShowRightView = NO;
+        self.rightView = nil;
         
     }
     return self;
+}
+
+
+- (void)setIsShowRightView:(BOOL)isShowRightView{
+    _isShowRightView = isShowRightView;
+    
+    if (isShowRightView) {
+        
+        NSAssert(self.isScrollEnable, @"pageView must must scroll 'isShowRightView' to take effec");
+    }
 }
 @end
