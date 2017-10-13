@@ -28,6 +28,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"热销榜";
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self setupUI];
     self.selectIndex = 0;
     

@@ -17,7 +17,9 @@
 - (UITableView *)tableView{
     if (_tableView == nil) {
         
-        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        
+        CGFloat H = self.navigationController.navigationBar ?  kScreenH - 64 : kScreenH;
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, H) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
     }

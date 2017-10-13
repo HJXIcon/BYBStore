@@ -16,6 +16,12 @@
 		82116C151F9069B3004D4E4A /* BYBSellingListCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C141F9069B3004D4E4A /* BYBSellingListCategoryController.m */; };
 		82116C181F906C69004D4E4A /* BYBSellingListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C171F906C69004D4E4A /* BYBSellingListModel.m */; };
 		82116C1B1F909AE2004D4E4A /* BYBSellingListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C1A1F909AE2004D4E4A /* BYBSellingListCell.m */; };
+		82116C1E1F90B528004D4E4A /* BYBCategoryTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C1D1F90B528004D4E4A /* BYBCategoryTitleView.m */; };
+		82116C211F90BC2A004D4E4A /* BYBCategoryCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C201F90BC2A004D4E4A /* BYBCategoryCategoryController.m */; };
+		82116C241F90BCB5004D4E4A /* BYBCategoryBrandController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C231F90BCB5004D4E4A /* BYBCategoryBrandController.m */; };
+		82116C271F90BFD4004D4E4A /* BYBCategoryHotTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C261F90BFD4004D4E4A /* BYBCategoryHotTagModel.m */; };
+		82116C2A1F90C38D004D4E4A /* BYBCategoryCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C291F90C38D004D4E4A /* BYBCategoryCategoryCell.m */; };
+		82116C2D1F90CA01004D4E4A /* BYBCategoryCategoryMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82116C2C1F90CA01004D4E4A /* BYBCategoryCategoryMoreCell.m */; };
 		F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEADB1F79F987000E650A /* UIView+Placeholder.m */; };
 		F34AEAE61F7A34AF000E650A /* BYBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAE51F7A34AF000E650A /* BYBLoadingView.m */; };
 		F34AEAEC1F7A4AF5000E650A /* BYBSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAEB1F7A4AF5000E650A /* BYBSearchTextField.m */; };
@@ -144,6 +150,18 @@
 		82116C171F906C69004D4E4A /* BYBSellingListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSellingListModel.m; sourceTree = "<group>"; };
 		82116C191F909AE2004D4E4A /* BYBSellingListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSellingListCell.h; sourceTree = "<group>"; };
 		82116C1A1F909AE2004D4E4A /* BYBSellingListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSellingListCell.m; sourceTree = "<group>"; };
+		82116C1C1F90B528004D4E4A /* BYBCategoryTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYBCategoryTitleView.h; path = "BYBStore/Classes/Home（首页）/SellingList(热销榜)/View/BYBCategoryTitleView.h"; sourceTree = SOURCE_ROOT; };
+		82116C1D1F90B528004D4E4A /* BYBCategoryTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYBCategoryTitleView.m; path = "BYBStore/Classes/Home（首页）/SellingList(热销榜)/View/BYBCategoryTitleView.m"; sourceTree = SOURCE_ROOT; };
+		82116C1F1F90BC2A004D4E4A /* BYBCategoryCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBCategoryCategoryController.h; sourceTree = "<group>"; };
+		82116C201F90BC2A004D4E4A /* BYBCategoryCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBCategoryCategoryController.m; sourceTree = "<group>"; };
+		82116C221F90BCB5004D4E4A /* BYBCategoryBrandController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBCategoryBrandController.h; sourceTree = "<group>"; };
+		82116C231F90BCB5004D4E4A /* BYBCategoryBrandController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBCategoryBrandController.m; sourceTree = "<group>"; };
+		82116C251F90BFD4004D4E4A /* BYBCategoryHotTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYBCategoryHotTagModel.h; path = "BYBStore/Classes/Category（分类）/Controller/BYBCategoryHotTagModel.h"; sourceTree = SOURCE_ROOT; };
+		82116C261F90BFD4004D4E4A /* BYBCategoryHotTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYBCategoryHotTagModel.m; path = "BYBStore/Classes/Category（分类）/Controller/BYBCategoryHotTagModel.m"; sourceTree = SOURCE_ROOT; };
+		82116C281F90C38D004D4E4A /* BYBCategoryCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYBCategoryCategoryCell.h; path = "BYBStore/Classes/Category（分类）/Controller/BYBCategoryCategoryCell.h"; sourceTree = SOURCE_ROOT; };
+		82116C291F90C38D004D4E4A /* BYBCategoryCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYBCategoryCategoryCell.m; path = "BYBStore/Classes/Category（分类）/Controller/BYBCategoryCategoryCell.m"; sourceTree = SOURCE_ROOT; };
+		82116C2B1F90CA01004D4E4A /* BYBCategoryCategoryMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYBCategoryCategoryMoreCell.h; path = "BYBStore/Classes/Category（分类）/Controller/BYBCategoryCategoryMoreCell.h"; sourceTree = SOURCE_ROOT; };
+		82116C2C1F90CA01004D4E4A /* BYBCategoryCategoryMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYBCategoryCategoryMoreCell.m; path = "BYBStore/Classes/Category（分类）/Controller/BYBCategoryCategoryMoreCell.m"; sourceTree = SOURCE_ROOT; };
 		B238622EB5D08EC3F32AAB9E /* Pods-BYBStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.debug.xcconfig"; sourceTree = "<group>"; };
 		CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BYBStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F331BA313C508C63468B4D7F /* Pods-BYBStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -538,6 +556,10 @@
 			children = (
 				F38F50551F7639DA00848619 /* BYBCategoryViewController.h */,
 				F38F50561F7639DA00848619 /* BYBCategoryViewController.m */,
+				82116C1F1F90BC2A004D4E4A /* BYBCategoryCategoryController.h */,
+				82116C201F90BC2A004D4E4A /* BYBCategoryCategoryController.m */,
+				82116C221F90BCB5004D4E4A /* BYBCategoryBrandController.h */,
+				82116C231F90BCB5004D4E4A /* BYBCategoryBrandController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -545,6 +567,8 @@
 		F38F500F1F761A9100848619 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				82116C251F90BFD4004D4E4A /* BYBCategoryHotTagModel.h */,
+				82116C261F90BFD4004D4E4A /* BYBCategoryHotTagModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -552,6 +576,12 @@
 		F38F50101F761A9100848619 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				82116C1C1F90B528004D4E4A /* BYBCategoryTitleView.h */,
+				82116C1D1F90B528004D4E4A /* BYBCategoryTitleView.m */,
+				82116C281F90C38D004D4E4A /* BYBCategoryCategoryCell.h */,
+				82116C291F90C38D004D4E4A /* BYBCategoryCategoryCell.m */,
+				82116C2B1F90CA01004D4E4A /* BYBCategoryCategoryMoreCell.h */,
+				82116C2C1F90CA01004D4E4A /* BYBCategoryCategoryMoreCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1163,6 +1193,7 @@
 				F34AEAFD1F7A5CD0000E650A /* JXPageStyle.m in Sources */,
 				F3E681381F8E13740033A153 /* BYBSellingListViewController.m in Sources */,
 				F34AEAFE1F7A5CD0000E650A /* JXPageView.m in Sources */,
+				82116C211F90BC2A004D4E4A /* BYBCategoryCategoryController.m in Sources */,
 				F3BBBF081F8CCC2D00B4D8AA /* JXPopoverAction.m in Sources */,
 				F34AEB001F7A5CD0000E650A /* UIColor+pageExtension.m in Sources */,
 				F34AEB271F7B5258000E650A /* UIView+masonry.m in Sources */,
@@ -1176,6 +1207,7 @@
 				F38F50611F76453000848619 /* UIView+Extension.m in Sources */,
 				F3F1A21A1F7CCC9E00BFC2E3 /* BYBHomeBranDetailRecommendCell.m in Sources */,
 				82116C151F9069B3004D4E4A /* BYBSellingListCategoryController.m in Sources */,
+				82116C271F90BFD4004D4E4A /* BYBCategoryHotTagModel.m in Sources */,
 				F36475231F7F5D19001EB478 /* BYBGoodDetailsReviewHeaderFooterCell.m in Sources */,
 				F38F503A1F76209B00848619 /* BYBControllerManger.m in Sources */,
 				F3BBBF0D1F8CD99E00B4D8AA /* JXEmitterButton.m in Sources */,
@@ -1190,6 +1222,7 @@
 				F38F506C1F764E4200848619 /* BYBBaseView.m in Sources */,
 				F38F50541F76399B00848619 /* BYBShopCarViewController.m in Sources */,
 				F3C04A7C1F78F5B400EE8FAF /* BYBRefreshFooter.m in Sources */,
+				82116C2D1F90CA01004D4E4A /* BYBCategoryCategoryMoreCell.m in Sources */,
 				F3F1A2251F7CE24200BFC2E3 /* NSArray+log.m in Sources */,
 				F34AEB1E1F7B45ED000E650A /* BYBHomeSpecialTopicHeaderView.m in Sources */,
 				F3D2D1D41F7E36350021D062 /* JXConst.m in Sources */,
@@ -1201,6 +1234,7 @@
 				F34AEAEC1F7A4AF5000E650A /* BYBSearchTextField.m in Sources */,
 				F34AEB331F7BA715000E650A /* BYBHomeBrandModel.m in Sources */,
 				82116C051F9053A3004D4E4A /* BYBSellingListTagsView.m in Sources */,
+				82116C2A1F90C38D004D4E4A /* BYBCategoryCategoryCell.m in Sources */,
 				F3F1A2361F7CF6C300BFC2E3 /* BYBGoodDetailsCell1.m in Sources */,
 				F38F50451F76376300848619 /* BYBBaseTableViewCell.m in Sources */,
 				F38F504E1F76398000848619 /* BYBMineViewController.m in Sources */,
@@ -1217,6 +1251,7 @@
 				82116C1B1F909AE2004D4E4A /* BYBSellingListCell.m in Sources */,
 				F3C04A8E1F78FDFB00EE8FAF /* BYBShareOrderOfMineController.m in Sources */,
 				F38F50341F761D1000848619 /* UIColor+Extension.m in Sources */,
+				82116C1E1F90B528004D4E4A /* BYBCategoryTitleView.m in Sources */,
 				F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */,
 				F3F1A2291F7CE2A900BFC2E3 /* UIBarButtonItem+Item.m in Sources */,
 				F36475291F7F8AD3001EB478 /* BYBGoodDetailsMayLikeCollectionViewCell.m in Sources */,
@@ -1249,6 +1284,7 @@
 				F3C04A601F78A77A00EE8FAF /* BYBCheckTools.m in Sources */,
 				F364752C1F7F8F7F001EB478 /* BYBGoodDetailMayLikeModel.m in Sources */,
 				F38F4FF71F76178A00848619 /* main.m in Sources */,
+				82116C241F90BCB5004D4E4A /* BYBCategoryBrandController.m in Sources */,
 				F3C04A691F78B25D00EE8FAF /* BYBNavigationBar.m in Sources */,
 				82116C0F1F905759004D4E4A /* JXTagsAttribute.m in Sources */,
 			);
