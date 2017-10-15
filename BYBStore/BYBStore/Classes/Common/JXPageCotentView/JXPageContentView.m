@@ -123,7 +123,7 @@
     
     // 2.添加view
     UIViewController *vc = self.childVcs[indexPath.row];
-    vc.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+    vc.view.frame = CGRectMake(0, 0, CGRectGetWidth(self.collectionView.frame), CGRectGetHeight(self.collectionView.frame));
     [cell.contentView addSubview:vc.view];
     
     return cell;

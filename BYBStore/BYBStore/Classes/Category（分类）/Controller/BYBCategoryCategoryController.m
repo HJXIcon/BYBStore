@@ -22,6 +22,7 @@
     [self.collectionView registerClass:[BYBCategoryCategoryCell class] forCellWithReuseIdentifier:@"cell"];
     [self.collectionView registerClass:[BYBCategoryCategoryMoreCell class] forCellWithReuseIdentifier:@"moreCell"];
     
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     self.collectionView.backgroundColor = BYBBGColor;
 //    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 64 + 49, 0);
     
@@ -113,6 +114,19 @@
     return cell;
 }
 
+#pragma mark - header/footer
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
+    
+    [header.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    UILabel *label = [JXFactoryTool creatLabel:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>) font:<#(UIFont *)#> textColor:<#(UIColor *)#> text:<#(NSString *)#> textAlignment:<#(NSTextAlignment)#>];
+    
+    return header;
+    
+}
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     
@@ -136,7 +150,7 @@
 // 四周的边距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return UIEdgeInsetsZero;
+    return section == 1 ? UIEdgeInsetsMake(0, 0, 180, 0) : UIEdgeInsetsZero;
 }
 
 
