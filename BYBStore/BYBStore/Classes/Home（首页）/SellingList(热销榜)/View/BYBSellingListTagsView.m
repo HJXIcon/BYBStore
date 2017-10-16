@@ -54,7 +54,8 @@
         }
     }];
     
-    
+    self.tagsView.backgroundColor = [UIColor colorWithWhite:1.f alpha:0.48f];
+
     [self addSubview:self.tagsView];
     
 }

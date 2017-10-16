@@ -26,7 +26,7 @@
         _cornerRadius = 2.0;
         _normalBackgroundColor = normalBackgroundColor;
         _selectedBackgroundColor = selectedBackgroundColor;
-        _titleSize = 14;
+        _titleFont = [UIFont systemFontOfSize:14];
         _normalTextColor = normalColor;
         _selectedTextColor = normalBackgroundColor;
         _keyColor = [UIColor redColor];

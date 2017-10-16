@@ -102,14 +102,11 @@
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    if (section == 0) {
-        return 1;
-    }
     return 10;
 }
 
@@ -123,9 +120,6 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
-        return CGSizeMake(kScreenW, 400);
-    }
     return CGSizeMake((kScreenW - 30)/2, 300);
     
 }
@@ -133,20 +127,20 @@
 //设置垂直间距,默认的垂直和水平间距都是10
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    return  5;
+    return  0;
 }
 
 
 //设置水平间距
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 5;
+    return 0;
 }
 
 // 四周的边距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    return section == 0 ? UIEdgeInsetsZero : UIEdgeInsetsMake(10, 10, 10, 10);
+    return UIEdgeInsetsZero;
 }
 
 

@@ -19,5 +19,6 @@ pod 'MBProgressHUD', '~> 1.0.0'
 pod 'PPNetworkHelper', '~> 0.8.0'
 pod 'ARSegmentPager', :git => 'https://github.com/AugustRush/ARSegmentPager.git'#视觉差
 pod 'JTSImageViewController', '~> 1.5.1'
+pod 'FXBlurView', '~> 1.6.4' #iOS7的背景实时模糊效果一样
 
 end

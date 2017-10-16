@@ -50,7 +50,7 @@ static NSString * const reuseIdentifier = @"JXTagsCollectionViewCellId";
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:_layout];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        _collectionView.backgroundColor = [UIColor colorWithRed:241/255.0 green:241/255.0 blue:241/255.0 alpha:0.5];
+        _collectionView.backgroundColor = [UIColor clearColor];
         [_collectionView registerClass:[JXTagsCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     }
     
@@ -302,7 +302,7 @@ static NSString * const reuseIdentifier = @"JXTagsCollectionViewCellId";
     JXTagsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 
     cell.titleLabel.textColor = _tagAttribute.normalTextColor;
-    cell.titleLabel.font = [UIFont systemFontOfSize:_tagAttribute.titleSize];
+    cell.titleLabel.font = _tagAttribute.titleFont;
     cell.titleLabel.text = self.tagsArray[indexPath.row];
     
     
@@ -370,7 +370,7 @@ static NSString * const reuseIdentifier = @"JXTagsCollectionViewCellId";
     JXTagsCollectionViewFlowLayout *layout = (JXTagsCollectionViewFlowLayout *)collectionView.collectionViewLayout;
     CGSize maxSize = CGSizeMake(collectionView.frame.size.width - layout.sectionInset.left - layout.sectionInset.right, layout.itemSize.height);
     
-    CGRect frame = [_tagsArray[indexPath.item] boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:_tagAttribute.titleSize]} context:nil];
+    CGRect frame = [_tagsArray[indexPath.item] boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: _tagAttribute.titleFont} context:nil];
     
     return CGSizeMake(frame.size.width + _tagAttribute.tagPadding * 2, layout.itemSize.height);
 }
@@ -401,7 +401,7 @@ static NSString * const reuseIdentifier = @"JXTagsCollectionViewCellId";
         layout = [[JXTagsCollectionViewFlowLayout alloc] init];
     }
     
-    if (tagAttribute.titleSize <= 0) {
+    if (tagAttribute == nil) {
         tagAttribute = [[JXTagsAttribute alloc] init];
     }
     
@@ -421,7 +421,7 @@ static NSString * const reuseIdentifier = @"JXTagsCollectionViewCellId";
     for (NSInteger i = 0; i < itemCount; i++) {
         CGSize maxSize = CGSizeMake(maxWidth - layout.sectionInset.left - layout.sectionInset.right, layout.itemSize.height);
         
-        CGRect frame = [tagsArray[i] boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:tagAttribute.titleSize]} context:nil];
+        CGRect frame = [tagsArray[i] boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: tagAttribute.titleFont} context:nil];
         
         CGSize itemSize = CGSizeMake(frame.size.width + tagAttribute.tagPadding * 2, layout.itemSize.height);
         

@@ -15,5 +15,7 @@ typedef enum : NSUInteger {
 
 @interface BYBSearchBarView : UIView
 @property (nonatomic, copy) void(^msgBlock)();
+@property (nonatomic, copy) void(^searchBlock)();
+@property (nonatomic, copy) void(^cacelSearchBlock)();
 @property (nonatomic, assign) BYBSearchBarViewStyle style;
 @end

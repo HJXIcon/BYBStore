@@ -108,6 +108,10 @@
         [self updateConstraints];
     }
     
+    if (self.cacelSearchBlock) {
+        self.cacelSearchBlock();
+    }
+    
 }
 
 
@@ -124,6 +128,10 @@
         
         [self layoutIfNeeded];
         [self updateConstraints];
+    }
+    
+    if (self.searchBlock) {
+        self.searchBlock();
     }
 }
 

@@ -14,8 +14,8 @@
 #import "BYBHomeSellingListController.h"
 #import "BYBSellingListViewController.h"
 
-@interface BYBHomeViewController ()<JXPageViewDelegate>
 
+@interface BYBHomeViewController ()<JXPageViewDelegate>
 
 @end
 
@@ -24,8 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNav];
-    
     [self setupAllChilderVc];
+    
 }
 
 
@@ -130,7 +130,18 @@
     MJWeakSelf;
     barView.msgBlock = ^{
     
+        
     };
+    
+    barView.searchBlock = ^{
+        [BYBControllerManger showSearchController];
+    };
+    
+    barView.cacelSearchBlock = ^{
+        [BYBControllerManger dismissSearchController];
+    };
+    
+    
     self.navigationItem.titleView = barView;
 }
 

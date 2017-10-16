@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - ARSegmentPager (1.1.3)
   - DOPDropDownMenu-Enhanced (1.0.0)
+  - FXBlurView (1.6.4)
   - JPFPSStatus (0.1)
   - JTSImageViewController (1.5.1)
   - Masonry (1.0.2)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - ARSegmentPager (from `https://github.com/AugustRush/ARSegmentPager.git`)
   - DOPDropDownMenu-Enhanced (~> 1.0.0)
+  - FXBlurView (~> 1.6.4)
   - JPFPSStatus (~> 0.1)
   - JTSImageViewController (~> 1.5.1)
   - Masonry (~> 1.0.2)
@@ -58,6 +60,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ARSegmentPager: 10d9ded8105c6d78841f625a1a71db35e14b1c10
   DOPDropDownMenu-Enhanced: 9ec473b16351b5b0b2d6ef87e7f666fe5ff54ad5
+  FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   JPFPSStatus: 4467a17488382e4c1700bd9d18c92ae581fd6305
   JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
@@ -69,6 +72,6 @@ SPEC CHECKSUMS:
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: d1492f0de76b38304a16a1b88015778d2424d651
+PODFILE CHECKSUM: 8c96a7a717668275852d7bb4b840a6feeefd2410
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.2.1

@@ -10,6 +10,7 @@
 #import "BYBTabBarController.h"
 #import "BYBLoginViewController.h"
 #import "BYBRegisterViewController.h"
+#import "BYBSearchHomeViewController.h"
 
 @implementation BYBControllerManger
 
@@ -86,4 +87,21 @@
     return nil;
 }
 
++ (void)showSearchController{
+ 
+    BYBSearchHomeViewController *vc = [[BYBSearchHomeViewController alloc]init];
+    vc.view.frame = CGRectMake(0, 64, kScreenW, kScreenH - 64);
+    UIViewController *rootVc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    [rootVc addChildViewController:vc];
+    [rootVc.view addSubview:vc.view];
+}
+
++ (void)dismissSearchController{
+    for (UIViewController *vc in  [UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers) {
+        if ([vc isKindOfClass:[BYBSearchHomeViewController class]]) {
+            [vc.view removeFromSuperview];
+            [vc removeFromParentViewController];
+        }
+    }
+}
 @end

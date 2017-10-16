@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface BYBControllerManger : NSObject
 
 + (UIViewController *)chooseRootController;
@@ -23,4 +24,7 @@
  怎么通过view找到拥有这个View的Controller
  */
 + (UIViewController *)getControllerFormView:(UIView *)view;
+
++ (void)showSearchController;
++ (void)dismissSearchController;
 @end

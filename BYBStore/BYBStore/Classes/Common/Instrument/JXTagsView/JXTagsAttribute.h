@@ -27,7 +27,7 @@
 
 
 /// =======>>>>>
-@property (nonatomic,assign) CGFloat titleSize;//标签字体大小 默认14
+@property (nonatomic,strong) UIFont *titleFont;//标签字体大小 默认14
 @property (nonatomic,assign) CGFloat tagPadding ;//标签内部左右间距(标题距离边框2边的距离和) 默认是10
 
 
