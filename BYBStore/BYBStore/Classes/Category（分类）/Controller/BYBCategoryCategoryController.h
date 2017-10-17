@@ -6,12 +6,12 @@
 //  Copyright © 2017年 BYBStore. All rights reserved.
 //
 
-#import "BYBBaseCollectionViewController.h"
+#import "BYBBaseViewController.h"
 
 @class BYBCategoryHotTagGroupModel;
 /**
  分类中的分类vc
  */
-@interface BYBCategoryCategoryController : BYBBaseCollectionViewController
+@interface BYBCategoryCategoryController : BYBBaseViewController
 
 @end

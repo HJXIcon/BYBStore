@@ -60,7 +60,7 @@
 
 
 - (void)setTagsArray:(NSArray<NSString *> *)tagsArray{
-    NSAssert(tagsArray.count > 0, @"tagsArray must not nil");
+
     _tagsArray = tagsArray;
     self.tagsView.tagsArray = tagsArray;
     [self.contentView layoutSubviews];
@@ -83,6 +83,8 @@
 
 
 - (void)clearAction{
-    
+    if (self.clearHistoryBlock) {
+        self.clearHistoryBlock();
+    }
 }
 @end

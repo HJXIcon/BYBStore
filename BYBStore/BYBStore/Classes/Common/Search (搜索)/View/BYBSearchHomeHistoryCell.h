@@ -12,4 +12,5 @@
 @property (nonatomic, copy) void(^selectBlock)(NSInteger);
 @property (nonatomic, strong) NSArray <NSString *>*tagsArray;
 @property (nonatomic, copy) void(^updateCellHeightBlock)(CGFloat);
+@property (nonatomic, copy) void(^clearHistoryBlock)();
 @end

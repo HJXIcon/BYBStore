@@ -20,7 +20,7 @@
 @property (nonatomic, weak) JXPageView *pageView;
 @property (nonatomic, strong) BYBCategoryTitleView *titleView;
 @property (nonatomic, strong) NSArray <BYBCategoryHotTagGroupModel *>*dataArray;
-
+@property (nonatomic, weak) BYBSearchBarView *barView;
 @end
 
 @implementation BYBCategoryViewController
@@ -45,6 +45,7 @@
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:CXBPopNotiName object:nil];
+    [_barView cancel];
 }
 
 #pragma mark - load Data
@@ -67,6 +68,7 @@
 #pragma mark - UI
 - (void)setupNav{
     BYBSearchBarView *barView = [[BYBSearchBarView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 35)];
+    _barView = barView;
     barView.style = BYBSearchBarViewStyleCategory;
     self.navigationItem.titleView = barView;
 }

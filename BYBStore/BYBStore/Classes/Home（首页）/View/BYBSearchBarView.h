@@ -18,4 +18,6 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy) void(^searchBlock)();
 @property (nonatomic, copy) void(^cacelSearchBlock)();
 @property (nonatomic, assign) BYBSearchBarViewStyle style;
+// 如需要重新布局
+- (void)cancel;
 @end

@@ -16,7 +16,7 @@
 
 
 @interface BYBHomeViewController ()<JXPageViewDelegate>
-
+@property (nonatomic, weak)BYBSearchBarView *barView;
 @end
 
 @implementation BYBHomeViewController
@@ -121,12 +121,16 @@
     }];
 }
 
-- (void)dealloc{
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:CXBPopNotiName object:nil];
+    
+    [_barView cancel];
 }
 
 - (void)setupNav{
     BYBSearchBarView *barView = [[BYBSearchBarView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 35)];
+    _barView = barView;
     MJWeakSelf;
     barView.msgBlock = ^{
     

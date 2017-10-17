@@ -31,6 +31,8 @@
 		821D133C1F9494D100BB401E /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 821D133A1F9494D100BB401E /* UIImageView+LBBlurredImage.m */; };
 		821D13421F94AFEF00BB401E /* BYBSearchHomeHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 821D13411F94AFEF00BB401E /* BYBSearchHomeHistoryCell.m */; };
 		821D13451F94BB0B00BB401E /* BYBSearchHomeHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 821D13441F94BB0B00BB401E /* BYBSearchHomeHotCell.m */; };
+		829D33371F95AF1500B6C7CA /* BYBSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829D33361F95AF1500B6C7CA /* BYBSearchViewController.m */; };
+		829D333A1F95B0E900B6C7CA /* BYBSearchTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 829D33391F95B0E900B6C7CA /* BYBSearchTool.m */; };
 		F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEADB1F79F987000E650A /* UIView+Placeholder.m */; };
 		F34AEAE61F7A34AF000E650A /* BYBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAE51F7A34AF000E650A /* BYBLoadingView.m */; };
 		F34AEAEC1F7A4AF5000E650A /* BYBSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAEB1F7A4AF5000E650A /* BYBSearchTextField.m */; };
@@ -189,6 +191,10 @@
 		821D13411F94AFEF00BB401E /* BYBSearchHomeHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchHomeHistoryCell.m; sourceTree = "<group>"; };
 		821D13431F94BB0B00BB401E /* BYBSearchHomeHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSearchHomeHotCell.h; sourceTree = "<group>"; };
 		821D13441F94BB0B00BB401E /* BYBSearchHomeHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchHomeHotCell.m; sourceTree = "<group>"; };
+		829D33351F95AF1500B6C7CA /* BYBSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSearchViewController.h; sourceTree = "<group>"; };
+		829D33361F95AF1500B6C7CA /* BYBSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchViewController.m; sourceTree = "<group>"; };
+		829D33381F95B0E900B6C7CA /* BYBSearchTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSearchTool.h; sourceTree = "<group>"; };
+		829D33391F95B0E900B6C7CA /* BYBSearchTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchTool.m; sourceTree = "<group>"; };
 		B238622EB5D08EC3F32AAB9E /* Pods-BYBStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.debug.xcconfig"; sourceTree = "<group>"; };
 		CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BYBStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F331BA313C508C63468B4D7F /* Pods-BYBStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -475,6 +481,8 @@
 			children = (
 				821D13331F945E8600BB401E /* BYBSearchHomeViewController.h */,
 				821D13341F945E8600BB401E /* BYBSearchHomeViewController.m */,
+				829D33351F95AF1500B6C7CA /* BYBSearchViewController.h */,
+				829D33361F95AF1500B6C7CA /* BYBSearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -745,6 +753,8 @@
 				F3C04A5F1F78A77A00EE8FAF /* BYBCheckTools.m */,
 				F34AEB1F1F7B47E1000E650A /* JXFactoryTool.h */,
 				F34AEB201F7B47E1000E650A /* JXFactoryTool.m */,
+				829D33381F95B0E900B6C7CA /* BYBSearchTool.h */,
+				829D33391F95B0E900B6C7CA /* BYBSearchTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1348,6 +1358,7 @@
 				82116C1E1F90B528004D4E4A /* BYBCategoryTitleView.m in Sources */,
 				F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */,
 				F3F1A2291F7CE2A900BFC2E3 /* UIBarButtonItem+Item.m in Sources */,
+				829D333A1F95B0E900B6C7CA /* BYBSearchTool.m in Sources */,
 				F36475291F7F8AD3001EB478 /* BYBGoodDetailsMayLikeCollectionViewCell.m in Sources */,
 				F34AEB2D1F7B9494000E650A /* BYBHomeBranViewController.m in Sources */,
 				F38F505E1F76412E00848619 /* JXRelayoutButton.m in Sources */,
@@ -1373,6 +1384,7 @@
 				F3BBBF091F8CCC2D00B4D8AA /* JXPopoverView.m in Sources */,
 				F3C04A761F78EA2A00EE8FAF /* BYBBaseTableViewController.m in Sources */,
 				F38F50511F76398F00848619 /* BYBShareOrderViewController.m in Sources */,
+				829D33371F95AF1500B6C7CA /* BYBSearchViewController.m in Sources */,
 				F3C04A791F78F41600EE8FAF /* BYBRefreshHeader.m in Sources */,
 				82116C111F905759004D4E4A /* JXTagsCollectionViewFlowLayout.m in Sources */,
 				F3C04A601F78A77A00EE8FAF /* BYBCheckTools.m in Sources */,

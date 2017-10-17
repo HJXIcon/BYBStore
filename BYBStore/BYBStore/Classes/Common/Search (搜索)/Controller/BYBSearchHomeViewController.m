@@ -12,6 +12,8 @@
 #import "BYBSearchHomeHistoryCell.h"
 #import "BYBSearchHomeHotCell.h"
 #import "BYBCategoryHotTagModel.h"
+#import "BYBSearchTool.h"
+#import "BYBSearchViewController.h"
 
 #define KHeaderTitles @[@"     历史搜索",@"     热门搜索"]
 
@@ -20,10 +22,16 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, assign) CGFloat historyHeight;
 @property (nonatomic, strong) NSArray <BYBCategoryHotTagGroupModel *>*dataArray;
-
+@property (nonatomic, strong) NSArray <NSString *>*historyArray;
 @end
 
 @implementation BYBSearchHomeViewController
+- (NSArray<NSString *> *)historyArray{
+    if (_historyArray == nil) {
+        _historyArray = [[NSUserDefaults standardUserDefaults]objectForKey:HistorySearchArray];
+    }
+    return _historyArray;
+}
 
 - (UICollectionView *)collectionView{
     if (_collectionView == nil) {
@@ -59,9 +67,26 @@
     NSString *URLStr = @"http://openapi.biyabi.com/webservice.asmx/GetHotTagGroupJson";
     [PPNetworkHelper GET:URLStr parameters:nil responseCache:^(id responseCache) {
         
+         self.dataArray = [BYBCategoryHotTagGroupModel mj_objectArrayWithKeyValuesArray:responseCache];
+        if (self.historyArray.count) {
+            
+            [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
+        }else{
+            
+            [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+        }
+        
     } success:^(id responseObject) {
         self.dataArray = [BYBCategoryHotTagGroupModel mj_objectArrayWithKeyValuesArray:responseObject];
-        [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
+        
+        if (self.historyArray.count) {
+            
+            [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:1]];
+        }else{
+            
+            [self.collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
+        }
+        
         
     } failure:^(NSError *error) {
         [self loadData];
@@ -93,22 +118,27 @@
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 2;
+    
+    if (self.historyArray.count) {
+        return 2;
+    }
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    if (section == 0) {
-        return 1;
+    if (section == 0 && self.historyArray.count) {
+        return  1;
     }
     return self.dataArray[1].ListHotTag.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0 && self.historyArray.count) {
         
         BYBSearchHomeHistoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"historyCell" forIndexPath:indexPath];
         
-        cell.tagsArray = @[@"的贺年好的吧",@"贺年好的吧",@"贺年好贺年好的吧",@"贺年好的吧贺年好的吧",@"贺年好",@"的贺年好的吧",@"贺年好的吧",@"贺年好贺年好的吧",@"贺年好的吧贺年好的吧",@"贺年好"];
+        
+        cell.tagsArray = self.historyArray;
         JXWeakSelf;
         cell.updateCellHeightBlock = ^(CGFloat height) {
             weakSelf.historyHeight = height;
@@ -117,7 +147,17 @@
         
         cell.selectBlock = ^(NSInteger index) {
             JXLog(@"history -- %ld",index);
+            [[UIApplication sharedApplication].keyWindow endEditing:YES];
             
+            [BYBSearchTool writeSearchTextAndSearch:weakSelf.historyArray[index]];
+            
+        };
+        
+        cell.clearHistoryBlock = ^{
+          
+            [[NSUserDefaults standardUserDefaults]setObject:nil forKey:HistorySearchArray];
+            self.historyArray = nil;
+             [weakSelf.collectionView reloadData];
         };
         return cell;
     }
@@ -131,54 +171,59 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.section == 0) {// 历史搜索
-        
+    if (indexPath.section == 0 && self.historyArray.count) {// 历史搜索
+        return;
     }
     
-    if (indexPath.section == 1) {// 热门搜索        
-    }
+    // 热门搜索
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+    [BYBControllerManger dismissSearchController];
+    
+    BYBCategoryHotTagModel *model = self.dataArray[1].ListHotTag[indexPath.row];
+    BYBSearchViewController *vc = [[BYBSearchViewController alloc]init];
+    vc.searchText = model.strTagName;
+    [[BYBControllerManger currentViewController].navigationController pushViewController:vc animated:YES];
 }
 
 
 #pragma mark - ****
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 1) {
+    if (indexPath.section == 0 && self.historyArray.count) {
         
-        return CGSizeMake((kScreenW - 50)/ 4, (kScreenW - 50)/ 4);
+        return CGSizeMake(kScreenW, self.historyHeight);
     }
-    return CGSizeMake(kScreenW, self.historyHeight);
+    return CGSizeMake((kScreenW - 50)/ 4, (kScreenW - 50)/ 4);
     
 }
 
 //设置垂直间距,默认的垂直和水平间距都是10
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    if (section == 1) {
-        
-        return  10;
+    if (section == 0 && self.historyArray.count) {
+        return 0;
     }
-    return 0;
+    return  10;
 }
 
 
 //设置水平间距
 -(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    if (section == 1) {
+    if (section == 0 && self.historyArray.count) {
         
-        return  10;
+        return  0;
     }
-    return 0;
+    return 10;
 }
 
 // 四周的边距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    if (section == 1) {
-        return UIEdgeInsetsMake(10, 10, 400, 10);
+    if (section == 0 && self.historyArray.count) {
+        return UIEdgeInsetsZero;
     }
-    return UIEdgeInsetsZero;
+    return UIEdgeInsetsMake(10, 10, 400, 10);
 }
 
 #pragma mark - header/footer
@@ -204,6 +249,8 @@
     
     return CGSizeMake(kScreenW, 35);
 }
+
+
 
 
 

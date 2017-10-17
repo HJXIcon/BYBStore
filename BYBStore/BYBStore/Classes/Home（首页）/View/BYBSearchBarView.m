@@ -8,7 +8,7 @@
 
 #import "BYBSearchBarView.h"
 #import "BYBSearchTextField.h"
-
+#import "BYBSearchTool.h"
 @interface BYBSearchBarView ()<UITextFieldDelegate>
 
 @property (nonatomic, strong) BYBSearchTextField *searchTextField;
@@ -33,6 +33,7 @@
 - (void)setStyle:(BYBSearchBarViewStyle)style{
     _style = style;
     self.msgBtn.hidden = style == BYBSearchBarViewStyleCategory;
+    self.cancelBtn.hidden = YES;
     if (style == BYBSearchBarViewStyleCategory) {
         [self.searchTextField mas_updateConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(self).insets(UIEdgeInsetsMake(0, 0, 0, 0));
@@ -49,6 +50,7 @@
     self.searchTextField = [[BYBSearchTextField alloc]init];
     [self addSubview:self.searchTextField];
     self.searchTextField.delegate = self;
+    self.searchTextField.returnKeyType = UIReturnKeySearch;
     [self.searchTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self).insets(UIEdgeInsetsMake(0, 0, 0, 40));
     }];
@@ -83,6 +85,8 @@
 
 #pragma mark - Actions
 - (void)msgAction{
+    [self.searchTextField resignFirstResponder];
+    
     if (self.msgBlock) {
         self.msgBlock();
     }
@@ -135,5 +139,20 @@
     }
 }
 
+//按return键键盘往下收  becomeFirstResponder
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];    //主要是[receiver resignFirstResponder]在哪调用就能把receiver对应的键盘往下收
+    [BYBSearchTool writeSearchTextAndSearch:textField.text];
+    textField.text = @"";
+    return YES;
+}
+
+
+
+// 如需要重新布局
+- (void)cancel{
+    [self cancelAction];
+}
 
 @end

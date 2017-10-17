@@ -15,14 +15,34 @@
 
 #define KHeaderTitles @[@"       热门类别",@"       热门电商"]
 
-@interface BYBCategoryCategoryController ()
+@interface BYBCategoryCategoryController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@property(nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSArray <BYBCategoryHotTagGroupModel *>*dataArray;
 @end
 
 @implementation BYBCategoryCategoryController
+- (UICollectionView *)collectionView{
+    if (_collectionView == nil) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+        layout.minimumLineSpacing = 10;
+        layout.minimumInteritemSpacing = 10;
+        _collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout];
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        _collectionView.showsVerticalScrollIndicator = NO;
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        
+    }
+    return _collectionView;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.view addSubview:self.collectionView];
     
     [self.collectionView registerClass:[BYBCategoryCategoryCell class] forCellWithReuseIdentifier:@"cell"];
     [self.collectionView registerClass:[BYBCategoryBusinessCell class] forCellWithReuseIdentifier:@"BusCell"];
@@ -35,8 +55,6 @@
     self.collectionView.backgroundColor = BYBBGColor;
 //    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 64 + 49, 0);
     
-    self.collectionView.mj_header.hidden = YES;
-    self.collectionView.mj_footer.hidden = YES;
     
     [self loadData];
 }
@@ -56,10 +74,6 @@
     
 }
 
-- (void)loadHeaderData{
-    self.isRefresh = YES;
-    [self endRefreshing];
-}
 
 #pragma mark - setter
 - (void)setDataArray:(NSArray<BYBCategoryHotTagGroupModel *> *)dataArray{

@@ -27,4 +27,6 @@
 
 + (void)showSearchController;
 + (void)dismissSearchController;
+//获取Window当前显示的ViewController
++ (UIViewController*)currentViewController;
 @end
