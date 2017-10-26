@@ -146,6 +146,8 @@
     [BYBSearchTool writeSearchTextAndSearch:textField.text];
     textField.text = @"";
     return YES;
+    
+    
 }
 
 

@@ -24,6 +24,7 @@
 
 #pragma mark - Life Cycle
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    
     if (!(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) return nil;
     self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = self.backgroundColor;

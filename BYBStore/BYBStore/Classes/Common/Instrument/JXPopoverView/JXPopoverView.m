@@ -32,6 +32,7 @@ float DegreesToRadians(float angle) {
 @property (nonatomic, assign) CGFloat windowWidth; ///< 窗口宽度
 @property (nonatomic, assign) CGFloat windowHeight; ///< 窗口高度
 @property (nonatomic, assign) BOOL isUpward; ///< 箭头指向, YES为向上, 反之为向下, 默认为YES.
+@property (nonatomic, assign) BOOL isRight; ///< 箭头位置, YES为偏右, 反之为偏左, 默认为YES.
 
 @end
 
@@ -85,6 +86,7 @@ float DegreesToRadians(float angle) {
     // data
     _actions = @[];
     _isUpward = YES;
+    _isRight  = YES;
     _style = PopoverViewStyleDefault;
     
     // current view
@@ -170,7 +172,8 @@ float DegreesToRadians(float angle) {
     self.frame = CGRectMake(currentX, currentY, currentW, currentH);
     
     // 截取箭头
-    CGPoint arrowPoint = CGPointMake(toPoint.x - CGRectGetMinX(self.frame) + CGRectGetWidth(self.frame) * 0.25, _isUpward ? 0 : currentH); // 箭头顶点在当前视图的坐标
+    CGFloat arrowX = _isRight ? toPoint.x - CGRectGetMinX(self.frame) : kPopoverViewMargin;
+    CGPoint arrowPoint = CGPointMake(arrowX + CGRectGetWidth(self.frame) * 0.25, _isUpward ? 0 : currentH); // 箭头顶点在当前视图的坐标
     CGFloat maskTop = _isUpward ? kPopoverViewArrowHeight : 0; // 顶部Y值
     CGFloat maskBottom = _isUpward ? currentH : currentH - kPopoverViewArrowHeight; // 底部Y值
     
@@ -342,6 +345,7 @@ float DegreesToRadians(float angle) {
     _actions = [actions copy];
     // 计算箭头指向方向
     _isUpward = toPoint.y <= _windowHeight - toPoint.y;
+    _isRight = toPoint.x >= _windowWidth / 2;
     [self showToPoint:toPoint];
 }
 

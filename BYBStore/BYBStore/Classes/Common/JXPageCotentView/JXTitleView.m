@@ -109,7 +109,7 @@
     [self titleLabelClick:label.gestureRecognizers.firstObject];
 }
 
-
+ 
 #pragma mark - UI
 - (void)setupUI{
     currentIndex = 0;

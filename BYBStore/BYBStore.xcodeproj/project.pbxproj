@@ -33,6 +33,8 @@
 		821D13451F94BB0B00BB401E /* BYBSearchHomeHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 821D13441F94BB0B00BB401E /* BYBSearchHomeHotCell.m */; };
 		829D33371F95AF1500B6C7CA /* BYBSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829D33361F95AF1500B6C7CA /* BYBSearchViewController.m */; };
 		829D333A1F95B0E900B6C7CA /* BYBSearchTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 829D33391F95B0E900B6C7CA /* BYBSearchTool.m */; };
+		82BD4B781FA1C5DB007003AC /* BYBSearchFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BD4B771FA1C5DB007003AC /* BYBSearchFilterModel.m */; };
+		82BD4B7B1FA1C698007003AC /* BYBSearchFilterListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 82BD4B7A1FA1C698007003AC /* BYBSearchFilterListModel.m */; };
 		F34AEADC1F79F987000E650A /* UIView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEADB1F79F987000E650A /* UIView+Placeholder.m */; };
 		F34AEAE61F7A34AF000E650A /* BYBLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAE51F7A34AF000E650A /* BYBLoadingView.m */; };
 		F34AEAEC1F7A4AF5000E650A /* BYBSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AEAEB1F7A4AF5000E650A /* BYBSearchTextField.m */; };
@@ -195,6 +197,10 @@
 		829D33361F95AF1500B6C7CA /* BYBSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchViewController.m; sourceTree = "<group>"; };
 		829D33381F95B0E900B6C7CA /* BYBSearchTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSearchTool.h; sourceTree = "<group>"; };
 		829D33391F95B0E900B6C7CA /* BYBSearchTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchTool.m; sourceTree = "<group>"; };
+		82BD4B761FA1C5DB007003AC /* BYBSearchFilterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSearchFilterModel.h; sourceTree = "<group>"; };
+		82BD4B771FA1C5DB007003AC /* BYBSearchFilterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchFilterModel.m; sourceTree = "<group>"; };
+		82BD4B791FA1C698007003AC /* BYBSearchFilterListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBSearchFilterListModel.h; sourceTree = "<group>"; };
+		82BD4B7A1FA1C698007003AC /* BYBSearchFilterListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBSearchFilterListModel.m; sourceTree = "<group>"; };
 		B238622EB5D08EC3F32AAB9E /* Pods-BYBStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.debug.xcconfig"; sourceTree = "<group>"; };
 		CAD3412317F561388F9FB3FB /* libPods-BYBStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BYBStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F331BA313C508C63468B4D7F /* Pods-BYBStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYBStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-BYBStore/Pods-BYBStore.release.xcconfig"; sourceTree = "<group>"; };
@@ -490,6 +496,10 @@
 		821D13311F945E3B00BB401E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				82BD4B761FA1C5DB007003AC /* BYBSearchFilterModel.h */,
+				82BD4B771FA1C5DB007003AC /* BYBSearchFilterModel.m */,
+				82BD4B791FA1C698007003AC /* BYBSearchFilterListModel.h */,
+				82BD4B7A1FA1C698007003AC /* BYBSearchFilterListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1286,6 +1296,7 @@
 				F3AE5DDF1F8DBCA400B254F3 /* BYBHomeHotDetailViewController.m in Sources */,
 				821D13281F944DFD00BB401E /* BYBCategorySubCategoryController.m in Sources */,
 				F34AEB1B1F7B38BE000E650A /* BYBHomeSpecialTopicCell.m in Sources */,
+				82BD4B7B1FA1C698007003AC /* BYBSearchFilterListModel.m in Sources */,
 				F34AEAFD1F7A5CD0000E650A /* JXPageStyle.m in Sources */,
 				F3E681381F8E13740033A153 /* BYBSellingListViewController.m in Sources */,
 				F34AEAFE1F7A5CD0000E650A /* JXPageView.m in Sources */,
@@ -1294,6 +1305,7 @@
 				F34AEB001F7A5CD0000E650A /* UIColor+pageExtension.m in Sources */,
 				F34AEB271F7B5258000E650A /* UIView+masonry.m in Sources */,
 				F36475261F7F86C7001EB478 /* BYBGoodDetailsMayLikeCell.m in Sources */,
+				82BD4B781FA1C5DB007003AC /* BYBSearchFilterModel.m in Sources */,
 				F3E6813B1F8E236C0033A153 /* BYBHomeSellingListController.m in Sources */,
 				821D132B1F944F3700BB401E /* BYBCategorySubCategoryModel.m in Sources */,
 				F3C04A881F78FD9F00EE8FAF /* BYBShareOrderOfFeaturedController.m in Sources */,
