@@ -28,6 +28,20 @@
     
 }
 
+// 其实底部角圆角的距离是34,我们可以在任意界面打印安全试图就可以找到,在viewSafeAreaInsetsDidChange方法里面打印
+/***！
+ 注意：
+ 1.介绍viewSafeAreaInsetsDidChange方法系统调用或者你设置控制器的additionalSafeAreaInsets安全区域边界
+ 2.顺序viewSafeAreaInsetsDidChange调用顺序实在viewWillAppear之后，在viewWillLayoutSubvies之前调用
+ 重点 ：设置你底部的按钮按钮底部距离底部34即可，但是不要让上面的试图的高度盖住底部按钮
+ 
+ */
+- (void)viewSafeAreaInsetsDidChange{
+    [super viewSafeAreaInsetsDidChange];
+    
+}
+
+
 
 - (void)setupAllChilderVc{
     
@@ -131,6 +145,7 @@
 - (void)setupNav{
     BYBSearchBarView *barView = [[BYBSearchBarView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 35)];
     _barView = barView;
+    
     MJWeakSelf;
     barView.msgBlock = ^{
     
@@ -144,7 +159,6 @@
     barView.cacelSearchBlock = ^{
         [BYBControllerManger dismissSearchController];
     };
-    
     
     self.navigationItem.titleView = barView;
 }

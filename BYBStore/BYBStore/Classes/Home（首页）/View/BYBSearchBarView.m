@@ -157,4 +157,9 @@
     [self cancelAction];
 }
 
+
+- (CGSize)intrinsicContentSize {
+    return UILayoutFittingExpandedSize;
+}
+
 @end

@@ -115,4 +115,8 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #define FontRadio(I)  I*[UIScreen mainScreen].bounds.size.width/375.0f
 #define PSFontRadio(I) FontRadio(PSFont(I))
 
+#pragma mark - 适配iOS 11、iPhone X
+/// 底部宏，吃一见长一智吧，别写数字了
+#define SafeAreaBottomHeight (kWJScreenHeight == 812.0 ? 34 : 0)
+
 #endif /* Define_h */
