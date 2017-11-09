@@ -138,7 +138,14 @@
         
         NSURL *cssURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"GoodDetail" ofType:@"css"]];
 //        [self.webView loadHTMLString:[self handleWithHtmlBody:strInfoContent] baseURL:cssURL];
-        [self.uiwebView loadHTMLString:[self handleWithHtmlBody:strInfoContent] baseURL:cssURL];
+        
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            // 处理耗时操作的代码块...
+            [self.uiwebView loadHTMLString:[self handleWithHtmlBody:strInfoContent] baseURL:cssURL];
+            
+        });
+        
+        
     }
 }
 
@@ -179,7 +186,9 @@
         
         JXLog(@"uilCell4Height --- ");
         
-        [[NSNotificationCenter defaultCenter]postNotificationName:UpdateGoodDetailCell4Height object:@(height)];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter]postNotificationName:UpdateGoodDetailCell4Height object:@(height)];
+        });
     }
     
 }
