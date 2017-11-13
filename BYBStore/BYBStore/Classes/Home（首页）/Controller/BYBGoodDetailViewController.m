@@ -143,7 +143,7 @@
     JXPopoverAction *action4 = [JXPopoverAction actionWithImage:[UIImage imageNamed:@"bangzhu_detail_20x20_"] title:@"帮助" handler:^(JXPopoverAction *action) {
         
     }];
-    [popView showToPoint:CGPointMake(kScreenW - 60,  64) withActions:@[action1,action2,action3,action4]];
+    [popView showToPoint:CGPointMake(kScreenW - 60, 64) withActions:@[action1,action2,action3,action4]];
 }
 
 - (void)loadFooterData{

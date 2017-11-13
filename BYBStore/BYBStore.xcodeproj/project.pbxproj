@@ -859,7 +859,6 @@
 				F38F50361F761D7F00848619 /* Others */,
 				F38F501A1F761A9100848619 /* Controller */,
 				F38F501B1F761A9100848619 /* Login&Register */,
-				F38F501C1F761A9100848619 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -883,13 +882,6 @@
 				F38F503F1F7636FE00848619 /* View */,
 			);
 			path = "Login&Register";
-			sourceTree = "<group>";
-		};
-		F38F501C1F761A9100848619 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F38F501D1F761A9100848619 /* Mine（我） */ = {

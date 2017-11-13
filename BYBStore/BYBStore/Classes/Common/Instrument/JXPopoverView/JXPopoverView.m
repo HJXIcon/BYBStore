@@ -143,7 +143,7 @@ float DegreesToRadians(float angle) {
     [_tableView reloadData];
     // 根据刷新后的ContentSize和箭头指向方向来设置当前视图的frame
     CGFloat currentW = [self calculateMaxWidth]; // 宽度通过计算获取最大值
-    CGFloat currentH = _tableView.contentSize.height + kPopoverViewArrowHeight;
+    CGFloat currentH = _tableView.contentSize.height;
     
     // 限制最高高度, 免得选项太多时超出屏幕
     CGFloat maxHeight = _isUpward ? (_windowHeight - toPoint.y - kPopoverViewMargin) : (toPoint.y - CGRectGetHeight([UIApplication sharedApplication].statusBarFrame));
