@@ -81,10 +81,12 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "JXDropDownMenu/JXDropDownMenu/JXDropDownMenu/picture.bundle"
+  install_resource "JXQRScan/JXQRScan/JXQRScan/JXQRScan.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "JXDropDownMenu/JXDropDownMenu/JXDropDownMenu/picture.bundle"
+  install_resource "JXQRScan/JXQRScan/JXQRScan/JXQRScan.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
 fi
 

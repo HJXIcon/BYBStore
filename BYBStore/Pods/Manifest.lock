@@ -20,6 +20,7 @@ PODS:
   - JPFPSStatus (0.1.1)
   - JTSImageViewController (1.5.1)
   - JXDropDownMenu (1.0.7)
+  - JXQRScan (1.0.5)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - JPFPSStatus (~> 0.1)
   - JTSImageViewController (~> 1.5.1)
   - JXDropDownMenu (~> 1.0.2)
+  - JXQRScan (~> 1.0.5)
   - Masonry (~> 1.0.2)
   - MBProgressHUD (~> 1.0.0)
   - MJExtension (~> 3.0.13)
@@ -66,6 +68,7 @@ SPEC CHECKSUMS:
   JPFPSStatus: 03f32aa3d4d7d0c5bf56f6f3e7cf8b7280a5f52c
   JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
   JXDropDownMenu: 9a644065a688e8e4d3b9073792e81c963bbeb570
+  JXQRScan: 7f4483b6e8e0207ecd2d40f9d082b7ebc0070827
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
@@ -75,6 +78,6 @@ SPEC CHECKSUMS:
   UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 7cf07a7976bcef010c519329316ea1dea5748581
+PODFILE CHECKSUM: b4d75795c0eb7e0bb62d303972d0af9caf0a6b69
 
 COCOAPODS: 1.2.1

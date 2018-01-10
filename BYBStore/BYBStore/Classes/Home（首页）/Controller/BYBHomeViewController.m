@@ -13,6 +13,7 @@
 #import "BYBHomeOtherSpecialController.h"
 #import "BYBHomeSellingListController.h"
 #import "BYBSellingListViewController.h"
+#import <JXQRScanViewController.h>
 
 
 @interface BYBHomeViewController ()<JXPageViewDelegate>
@@ -149,7 +150,7 @@
     MJWeakSelf;
     barView.msgBlock = ^{
     
-        
+        [weakSelf.navigationController pushViewController:[[JXQRScanViewController alloc]init] animated:YES];
     };
     
     barView.searchBlock = ^{
