@@ -37,6 +37,29 @@
 // 弱引用
 #define JXWeakSelf __weak typeof(self) weakSelf = self;
 
+//.h头文件中的单例宏
+#define OSingletonH(name) + (instancetype)shared##name;
+
+//.m文件中的单例宏
+#define OSingletonM(name) \
+static id _instance;\
++ (instancetype)allocWithZone:(struct _NSZone *)zone{\
+static dispatch_once_t onceToken;\
+dispatch_once(&onceToken, ^{\
+_instance = [super allocWithZone:zone];\
+});\
+return _instance;\
+}\
++ (instancetype)shared##name{\
+static dispatch_once_t onceToken;\
+dispatch_once(&onceToken, ^{\
+_instance = [[self alloc] init];\
+});\
+return _instance;\
+}\
+- (id)copyWithZone:(NSZone *)zone{\
+return _instance;\
+}
 
 
 
@@ -88,6 +111,7 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #import "NSString+JXExtension.h"
 #import "UIBarButtonItem+Item.h"
 #import "JXConst.h"
+#import "BYBUserInfoHelper.h"
 
 // 主题颜色
 #define BYBThemeColor [UIColor colorWithHexString:@"0xfb1951"]
@@ -115,8 +139,90 @@ static NSString *const kApiPrefix = @"https://www.baidu.com";
 #define FontRadio(I)  I*[UIScreen mainScreen].bounds.size.width/375.0f
 #define PSFontRadio(I) FontRadio(PSFont(I))
 
-#pragma mark - 适配iOS 11、iPhone X
+
+
+
+
+// ----- !***  判断  *** ----- ///
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+
+//数组是否为空
+#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+
+//字典是否为空
+#define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]])
+
+//是否是空对象
+#define kObjectIsEmpty(_object) (_object == nil \
+|| [_object isKindOfClass:[NSNull class]] \
+|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
+|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
+
+
+// >>>>>> 适配iOS 11、iPhone X
+#pragma mark -  *** 适配iOS 11、iPhone X
+
+#define isIOS11 [[UIDevice currentDevice].systemVersion floatValue] >= 11
+
 /// 底部宏，吃一见长一智吧，别写数字了
-#define SafeAreaBottomHeight (kWJScreenHeight == 812.0 ? 34 : 0)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define iPhone5s ([UIScreen mainScreen].bounds.size.width>=320.0f && [UIScreen mainScreen].bounds.size.height>=568.0f && IS_IPHONE)
+#define iPhoneX ([UIScreen mainScreen].bounds.size.width>=375.0f && [UIScreen mainScreen].bounds.size.height>=812.0f && IS_IPHONE)
+
+// 状态栏高度
+#define TP_StatusBarHeight (iPhoneX ? 44.f : 20.f)
+// 导航条高度
+#define TP_NavigationBarHeight  44.f
+
+
+// tabbar 高度
+#define TP_TabbarHeight (iPhoneX ? (49.f+34.f) : 49.f)
+// tabbarSafe
+#define TP_TabbarSafeBottomMargin (iPhoneX ? 34.f : 0.f)
+
+
+// 导航栏默认高度
+#define  TP_StatusBarAndNavigationBarHeight  (iPhoneX ? 88.f : 64.f)
+#define  TP_ViewSafeAreInsets(view) ({UIEdgeInsets insets; if(@available(iOS 11.0, *)) {insets = view.safeAreaInsets;} else {insets = UIEdgeInsetsZero;} insets;})
+
+
+/**!
+ iOS11设备上运行出现最多问题应该就是tableview莫名奇妙的偏移20pt或者64pt了。
+ 原因是iOS11弃用了automaticallyAdjustsScrollViewInsets属性，取而代之的
+ 是UIScrollView新增了contentInsetAdjustmentBehavior属性，这一切的罪魁
+ 祸首都是新引入的safeArea;
+ */
+// 适配TableView、ScrollView、CollectionView
+#define  adjustsScrollViewInsets(scrollView)\
+do {\
+_Pragma("clang diagnostic push")\
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"")\
+if ([scrollView respondsToSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:")]) {\
+NSMethodSignature *signature = [UIScrollView instanceMethodSignatureForSelector:@selector(setContentInsetAdjustmentBehavior:)];\
+NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];\
+NSInteger argument = 2;\
+invocation.target = scrollView;\
+invocation.selector = @selector(setContentInsetAdjustmentBehavior:);\
+[invocation setArgument:&argument atIndex:2];\
+[invocation retainArguments];\
+[invocation invoke];\
+}\
+_Pragma("clang diagnostic pop")\
+} while (0)
+
+// 适配iOS11 scrollView不偏移64p
+// self.automaticallyAdjustsScrollViewInsets = NO;
+#define  adjustsScrollViewInsets_NO(scrollView,vc)\
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+if ([UIScrollView instancesRespondToSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:")]) {\
+[scrollView   performSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:") withObject:@(2)];\
+} else {\
+vc.automaticallyAdjustsScrollViewInsets = NO;\
+}\
+_Pragma("clang diagnostic pop") \
+} while (0)
 
 #endif /* Define_h */

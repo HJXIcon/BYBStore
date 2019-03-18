@@ -60,6 +60,7 @@
 
 
 - (IBAction)loginAction:(id)sender {
+    self.loginBlock ? self.loginBlock() : nil;
 }
 - (IBAction)registerAction:(id)sender {
     

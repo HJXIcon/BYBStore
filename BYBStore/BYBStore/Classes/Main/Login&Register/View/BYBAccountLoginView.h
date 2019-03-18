@@ -9,5 +9,6 @@
 #import "BYBBaseView.h"
 
 @interface BYBAccountLoginView : BYBBaseView
-
+/** 登录*/
+@property (nonatomic, copy) void(^loginBlock)(void);
 @end

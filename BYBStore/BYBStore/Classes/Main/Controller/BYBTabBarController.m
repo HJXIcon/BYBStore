@@ -11,10 +11,11 @@
 #import "BYBHomeViewController.h"
 #import "BYBMineViewController.h"
 #import "BYBShopCarViewController.h"
-#import "BYBShareOrderViewController.h"
+//#import "BYBShareOrderViewController.h"
 #import "BYBCategoryViewController.h"
+#import "BYBUserInfoHelper.h"
 
-@interface BYBTabBarController ()
+@interface BYBTabBarController ()<UITabBarControllerDelegate>
 
 
 @end
@@ -48,8 +49,7 @@
     [super viewDidLoad];
     
     [self setUpAllChildVc];
-    
-    
+    self.delegate = self;
 }
 
 
@@ -59,7 +59,7 @@
 {
     [self setUpOneChildVcWithVc:[[BYBHomeViewController alloc]init] Image:@"newshouye_25x25_" selectedImage:@"newshouye-on_25x25_" title:@"首页"];
     [self setUpOneChildVcWithVc:[[BYBCategoryViewController alloc]init] Image:@"newfenlei_25x25_" selectedImage:@"newfenlei-on_25x25_" title:@"分类"];
-    [self setUpOneChildVcWithVc:[[BYBShareOrderViewController alloc]init] Image:@"newguangshaidan_25x25_" selectedImage:@"newguangshaidan-on_25x25_" title:@"逛晒单"];
+//    [self setUpOneChildVcWithVc:[[BYBShareOrderViewController alloc]init] Image:@"newguangshaidan_25x25_" selectedImage:@"newguangshaidan-on_25x25_" title:@"逛晒单"];
     [self setUpOneChildVcWithVc:[[BYBShopCarViewController alloc]init] Image:@"newgouwuche_25x25_" selectedImage:@"newgouwuche-on_25x25_" title:@"购物车"];
     [self setUpOneChildVcWithVc:[[BYBMineViewController alloc]init] Image:@"newwode_25x25_" selectedImage:@"newwode-on_25x25_" title:@"我"];
 
@@ -82,29 +82,28 @@
 {
     BYBNavigationController *nav = [[BYBNavigationController alloc] initWithRootViewController:Vc];
     
-    
     UIImage *myImage = [UIImage imageNamed:image];
     myImage = [myImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
     //tabBarItem，是系统提供模型，专门负责tabbar上按钮的文字以及图片展示
     Vc.tabBarItem.image = myImage;
-    
     UIImage *mySelectedImage = [UIImage imageNamed:selectedImage];
     mySelectedImage = [mySelectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
     Vc.tabBarItem.selectedImage = mySelectedImage;
-    
     Vc.tabBarItem.title = title;
-    
-
-    
-   
     Vc.navigationItem.title = title;
-        
-    
     [self addChildViewController:nav];
 }
 
-
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    if (kStringIsEmpty([BYBUserInfoHelper sharedUserInfo].token)) {
+        if ([[tabBarController.viewControllers objectAtIndex:3] isEqual:viewController]) {
+            [BYBControllerManger presentLoginController];
+            return NO;
+        }
+    }
+    
+    return YES;
+}
 
 @end

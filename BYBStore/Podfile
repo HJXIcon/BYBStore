@@ -22,5 +22,5 @@ pod 'JTSImageViewController', '~> 1.5.1'
 pod 'FXBlurView', '~> 1.6.4' #iOS7的背景实时模糊效果一样
 pod 'JXDropDownMenu', '~> 1.0.2'#下拉菜单
 pod 'JXQRScan', '~> 1.0.5' # 二维码
-
+pod 'Toast', '~> 4.0.0'
 end

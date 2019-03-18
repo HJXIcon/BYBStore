@@ -31,7 +31,8 @@ PODS:
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
-  - UITableView+FDTemplateLayoutCell (1.6)
+  - Toast (4.0.0)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
   - YYCache (1.0.4)
 
 DEPENDENCIES:
@@ -49,7 +50,27 @@ DEPENDENCIES:
   - MJRefresh (~> 3.1.12)
   - PPNetworkHelper (~> 0.8.0)
   - SDWebImage (~> 4.1.0)
-  - UITableView+FDTemplateLayoutCell (~> 1.6)
+  - Toast (~> 4.0.0)
+  - "UITableView+FDTemplateLayoutCell (~> 1.6)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - DOPDropDownMenu-Enhanced
+    - FXBlurView
+    - JPFPSStatus
+    - JTSImageViewController
+    - JXDropDownMenu
+    - JXQRScan
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - PPNetworkHelper
+    - SDWebImage
+    - Toast
+    - "UITableView+FDTemplateLayoutCell"
+    - YYCache
 
 EXTERNAL SOURCES:
   ARSegmentPager:
@@ -75,9 +96,10 @@ SPEC CHECKSUMS:
   MJRefresh: 238e6a37e2dba12160ee3b79f6d2a2b26abcab42
   PPNetworkHelper: 900d1af5cb9f2932b3f955ebf72148b7ec403d44
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
-  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: b4d75795c0eb7e0bb62d303972d0af9caf0a6b69
+PODFILE CHECKSUM: 65935db4aa4ba469ad91c3ad41edd7929380f91f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

@@ -22,7 +22,7 @@
     if (_navigationBarView == nil) {
         JXWeakSelf;
         _navigationBarView = [BYBNavigationBar viewForXib];
-        _navigationBarView.frame = CGRectMake(0, 20, kScreenW, 44);
+        _navigationBarView.frame = self.navigationController.navigationBar.bounds;
         _navigationBarView.backBlock = ^{
             [weakSelf dismissViewControllerAnimated:YES completion:nil];
         };

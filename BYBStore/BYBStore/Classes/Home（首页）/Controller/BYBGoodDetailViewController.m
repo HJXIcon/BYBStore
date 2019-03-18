@@ -20,6 +20,7 @@
 #import "BYBGoodDetailBottomView.h"
 #import "JXPopoverView.h"
 #import "BYBTabBarController.h"
+#import "BYBShopCarViewController.h"
 
 @interface BYBGoodDetailViewController ()
 /** goodDetailModel*/
@@ -40,7 +41,27 @@
 #pragma mark - lazy load
 - (BYBGoodDetailBottomView *)bottomView{
     if (_bottomView == nil) {
-        _bottomView = [[BYBGoodDetailBottomView alloc]initWithFrame:CGRectMake(0, kScreenH - 60, kScreenW, 60)];
+        JXWeakSelf
+        _bottomView = [[BYBGoodDetailBottomView alloc]initWithFrame:CGRectMake(0, kScreenH-60-TP_TabbarSafeBottomMargin, kScreenW, 60)];
+        _bottomView.buyNowBlock = ^{
+            [weakSelf.view makeToastActivity:CSToastPositionCenter];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakSelf.view hideToastActivity];
+                [[UIApplication sharedApplication].keyWindow makeToast:@"加入购物车成功"];
+            });
+        };
+        
+        _bottomView.shopCartBlock = ^{
+            [weakSelf.navigationController pushViewController:[[BYBShopCarViewController alloc]init] animated:YES];
+        };
+        
+        _bottomView.addShopCartBlock = ^{
+            [weakSelf.view makeToastActivity:CSToastPositionCenter];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakSelf.view hideToastActivity];
+                [[UIApplication sharedApplication].keyWindow makeToast:@"加入购物车成功"];
+            });
+        };
     }
     return _bottomView;
 }
@@ -77,8 +98,13 @@
     
     self.mayLikePage = 1;
     [self loadMayLikeData];
-    
+}
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [[UIApplication sharedApplication].keyWindow addSubview:self.bottomView];
+    self.bottomView.hidden = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

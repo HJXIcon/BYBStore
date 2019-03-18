@@ -9,5 +9,7 @@
 #import "BYBBaseView.h"
 
 @interface BYBGoodDetailBottomView : BYBBaseView
-
+@property (nonatomic, copy) void(^shopCartBlock)(void);
+@property (nonatomic, copy) void(^addShopCartBlock)(void);
+@property (nonatomic, copy) void(^buyNowBlock)(void);
 @end

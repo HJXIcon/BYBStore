@@ -60,7 +60,9 @@ static CGFloat const Scroll_Height = 350;
     if (_mainScrollView == nil) {
         _mainScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, Segment_Height + BG_Height, kScreenW, Scroll_Height)];
         _mainScrollView.contentSize = CGSizeMake(kScreenW * 2, kScreenH);
-        
+        _mainScrollView.pagingEnabled = YES;
+        _mainScrollView.showsHorizontalScrollIndicator = NO;
+        _mainScrollView.showsVerticalScrollIndicator = NO;
         JXWeakSelf;
         BYBPhoneLoginView *phoneView = [BYBPhoneLoginView viewForXib];
         phoneView.frame = CGRectMake(0, 0, kScreenW, Scroll_Height);
@@ -71,6 +73,9 @@ static CGFloat const Scroll_Height = 350;
         };
         
         BYBAccountLoginView *phoneView2 = [BYBAccountLoginView viewForXib];
+        phoneView2.loginBlock = ^{
+            [weakSelf loginAction];
+        };
         phoneView2.frame = CGRectMake(kScreenW, 0, kScreenW, Scroll_Height);
         [_mainScrollView addSubview:phoneView2];
         
@@ -99,7 +104,17 @@ static CGFloat const Scroll_Height = 350;
 
 #pragma makr - Actions
 - (void)loginAction{
-    
+    [self.view makeToastActivity:CSToastPositionCenter];
+    NSString *url = @"http://novel.juhe.im/sub-categories";
+    [PPNetworkHelper GET:url parameters:nil success:^(id responseObject) {
+        [self.view hideToastActivity];
+        [BYBUserInfoHelper sharedUserInfo].token = @"bybdededheihhdehbhidoheih";
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } failure:^(NSError *error) {
+        [self.view hideToastActivity];
+        [BYBUserInfoHelper sharedUserInfo].token = @"bybdededheihhdehbhidoheih";
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 - (void)tapAction{

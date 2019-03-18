@@ -9,6 +9,7 @@
 #import "BYBGoodDetailBottomView.h"
 #import "JXRelayoutButton.h"
 #import "JXEmitterButton.h"
+
 @interface BYBGoodDetailBottomView ()
 
 @property (nonatomic, strong) JXRelayoutButton *likeBtn;
@@ -110,10 +111,10 @@
 
 #pragma mark - Actions
 - (void)buyNowAction{
-    
+    self.buyNowBlock ? self.buyNowBlock() : nil;
 }
 - (void)enterShopCarAction{
-    
+    self.addShopCartBlock ? self.addShopCartBlock() : nil;
 }
 
 - (void)likeAction:(UIButton *)button{
@@ -125,7 +126,7 @@
 }
 
 - (void)shopAction{
-    
+    self.shopCartBlock ? self.shopCartBlock() : nil;
 }
 
 @end
